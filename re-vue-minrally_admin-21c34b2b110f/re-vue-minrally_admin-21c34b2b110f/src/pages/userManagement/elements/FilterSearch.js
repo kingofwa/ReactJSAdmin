@@ -60,12 +60,6 @@ const FilterSearch = ({ onSearchUser, fetchUsers, setCurrentParams }) => {
           // type="email"
         />
 
-        <TextInput
-        value= 'dfsfds'
-        label= "Test"
-        inputProps ={{placeholder: 'vanle test' , disabled: 'true'}}
-        />
-
         <DateRangeInput name="period" label="登録期間" />
 
         <div className="filter-actions">
