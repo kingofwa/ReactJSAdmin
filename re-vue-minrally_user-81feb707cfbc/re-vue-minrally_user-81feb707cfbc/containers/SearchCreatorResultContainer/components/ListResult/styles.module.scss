@@ -1,0 +1,116 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.listResultWrapper {
+  background-color: $white;
+  // padding-bottom: set-vw(100);
+  min-height: calc(100vh - set-vw(266)); //266 = height header+ height menu
+
+  .totalResult {
+    background-color: $mercury;
+    padding: set-vw(30);
+    font-weight: bold;
+    @include fs-vw(28);
+    color: $text-color;
+  }
+
+  .listResult {
+    padding: 0 set-vw(30);
+    background-color: $white;
+    height: 100%;
+
+    .listResultItem {
+      padding: set-vw(20) 0;
+      &:not(:first-child) {
+        border-top: 1px solid $silver;
+      }
+      .listResultItemTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: set-vw(20);
+        .infoCreator {
+          display: flex;
+          align-items: center;
+
+          .avatar {
+            margin-right: set-vw(20);
+            width: set-vw(80);
+            height: set-vw(80);
+            flex-shrink: 0;
+            cursor: pointer;
+          }
+          .name {
+            @include fs-vw(24);
+            line-height: set-vw(24);
+            font-weight: bold;
+            cursor: pointer;
+          }
+          .creator {
+            @include fs-vw(20);
+            color: $text-color;
+            padding: set-vw(3) set-vw(13);
+            background: #fffa91;
+            // margin-left: set-vw(15);
+            width: max-content;
+          }
+          .infoName {
+            display: flex;
+            gap: set-vw(15);
+            flex-wrap: wrap;
+          }
+        }
+        .btnFollow {
+          padding: 0;
+          display: block;
+          width: set-vw(140);
+          height: set-vw(40) !important;
+          background-color: $text-color;
+          @include fs-vw(22);
+          line-height: set-vw(40);
+          font-weight: bold;
+          border: none;
+          border-radius: set-vw(8);
+          &.isFollow {
+            background-color: $malibu;
+          }
+        }
+        button {
+          right: 0;
+          position: inherit;
+        }
+      }
+
+      .listResultItemBot {
+        @include fs-vw(24);
+        line-height: set-vw(30);
+        min-height: set-vw(60);
+        color: $text-color;
+        text-align: justify;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  .follower {
+    color: #999999;
+    font-weight: 400;
+    @include fs-vw(20);
+    line-height: set-vw(24);
+    padding: set-vw(1) set-vw(4);
+    background: #f2f2f2;
+    border-radius: set-vw(4);
+    max-width: fit-content;
+    margin-top: set-vw(10);
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

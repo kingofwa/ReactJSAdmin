@@ -1,0 +1,28 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.backToTop {
+  width: 100%;
+  :global {
+    .ant-back-top {
+      background-color: $malibu;
+      width: 100%;
+      max-width: $max-width;
+      height: set-vw(4);
+      top: set-vw(99);
+      left: 50%;
+      transform: translateX(-50%);
+      color: $white;
+    }
+  }
+  .content {
+    background: $malibu;
+    position: absolute;
+    right: 0;
+    padding: 0 set-vw(6);
+  }
+  .icTop {
+    width: set-vw(10);
+    height: set-vw(4);
+  }
+}

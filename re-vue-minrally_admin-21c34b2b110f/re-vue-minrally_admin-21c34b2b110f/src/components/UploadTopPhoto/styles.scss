@@ -1,0 +1,24 @@
+@import '@styles/variables';
+
+.upload-top-photos {
+  .ant-upload.ant-upload-select-picture-card {
+    width: auto;
+    height: 100%;
+    border: none;
+  }
+
+  .ant-upload-picture-card-wrapper {
+    width: max-content;
+  }
+
+  .upload-img {
+    position: relative;
+    margin-top: 10px;
+
+    .upload-close-icon {
+      position: absolute;
+      top: -57px;
+      right: -56px;
+    }
+  }
+}

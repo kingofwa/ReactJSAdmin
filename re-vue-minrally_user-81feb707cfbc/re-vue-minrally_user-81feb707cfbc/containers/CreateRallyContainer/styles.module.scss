@@ -1,0 +1,8 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.noteHead {
+  margin: set-vw(40) auto 0;
+  @include fs-vw(26);
+  text-align: center;
+}

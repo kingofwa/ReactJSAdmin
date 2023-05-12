@@ -1,0 +1,40 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.tab {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  justify-content: center;
+  padding: set-vw(13) set-vw(39);
+  border-bottom: solid 1px $border-color-primary;
+  a {
+    border-left: solid 2px $border-color-primary;
+    padding: 0 set-vw(16);
+
+    span {
+      font-weight: 700;
+      padding-bottom: set-vw(14);
+      white-space: nowrap;
+      @include fs-vw(28);
+    }
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  a:first-child {
+    border-left: none;
+  }
+}
+
+.active {
+  span {
+    color: $text-color;
+    border-bottom: solid set-vw(4) $malibu;
+  }
+}
+
+.nonActive {
+  color: $dusty-gray;
+}

@@ -1,0 +1,18 @@
+@import '@styles/variables';
+
+.recommendation-management-detail {
+  &-actions {
+    display: flex;
+    margin-bottom: 13px;
+  }
+  &-search {
+    display: flex;
+    gap: 23px;
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    input {
+      width: 530px;
+    }
+  }
+}

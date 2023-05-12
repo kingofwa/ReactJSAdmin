@@ -1,0 +1,42 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.setting {
+  .settingItem {
+    position: relative;
+    align-items: center;
+    padding: set-vw(25) 0;
+    margin: 0 set-vw(30);
+    border-bottom: 1px solid $border-color-primary;
+    &:first-child {
+      border-top: 1px solid $border-color-primary;
+    }
+    @include fs-vw(26);
+    color: $black;
+    &:last-child {
+      border-bottom: unset;
+    }
+    .title {
+      font-weight: bold;
+    }
+    .value {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .btnSetting {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: $black;
+      color: $white;
+      @include fs-vw(22);
+      font-weight: bold;
+      height: set-vw(40) !important;
+      width: set-vw(120);
+      padding: 0;
+      border-radius: 8px;
+    }
+  }
+}

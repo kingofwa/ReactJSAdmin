@@ -1,0 +1,214 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.required {
+  margin-left: 10px;
+  font-weight: bold;
+  @include fs-vw(20);
+  color: #ff6666;
+}
+.formWrapper {
+  padding: set-vw(30);
+  .note,
+  .noteType2 {
+    margin-top: set-vw(20);
+    @include fs-vw(20);
+    font-weight: 400;
+  }
+  .noteType2 {
+    margin-bottom: set-vw(50);
+  }
+  .label {
+    @include fs-vw(26);
+    line-height: set-vw(31);
+    font-weight: bold;
+    .icInfo {
+      width: set-vw(30);
+      height: set-vw(30);
+      margin-left: set-vw(14);
+      cursor: pointer;
+    }
+  }
+  .hashTag {
+    margin-top: set-vw(20);
+
+    :global {
+      .ant-select-selector {
+        padding: 0 set-vw(8);
+        height: auto !important;
+      }
+      .ant-select-selection-item-content {
+        @include fs-vw(18);
+      }
+      .ant-select-selection-item {
+        display: flex;
+        align-items: center;
+        padding: set-vw(4) set-vw(12);
+        height: unset;
+        line-height: unset !important;
+        border-radius: 4px;
+        .ant-select-selection-item-remove {
+          position: absolute;
+          top: 0;
+          right: set-vw(2);
+        }
+      }
+      .ant-select-selection-overflow-item-suffix {
+        flex: 1;
+        .ant-select-selection-search {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+  :global {
+    .ant-form-item-label {
+      padding-bottom: 0;
+      label {
+        @include fs-vw(26);
+        line-height: set-vw(31);
+        font-weight: bold;
+      }
+    }
+    .ant-form-item-control-input input {
+      margin-top: set-vw(20);
+      height: set-vw(60);
+      @include fs-vw(26);
+      font-weight: 400;
+    }
+    .ant-form-item-control-input textarea {
+      margin-top: set-vw(20);
+      @include fs-vw(25);
+      font-weight: 400;
+    }
+    .ant-checkbox-wrapper,
+    .ant-radio-wrapper {
+      @include fs-vw(26);
+      align-items: center;
+      .ant-checkbox:hover .ant-checkbox-inner,
+      .ant-radio .ant-radio-inner {
+        border-color: #999;
+      }
+      .ant-checkbox-checked::after,
+      .ant-radio-checked::after {
+        border-color: #999;
+      }
+      .ant-checkbox-inner,
+      .ant-radio-inner {
+        border-radius: 50% !important;
+        width: set-vw(22);
+        height: set-vw(22);
+        border: 1px solid #999 !important;
+      }
+      .ant-checkbox-checked .ant-checkbox-inner::after,
+      .ant-radio-checked .ant-radio-inner::after {
+        display: unset;
+        margin-top: unset;
+        margin-left: unset;
+        border: unset;
+        width: set-vw(10);
+        height: set-vw(10);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: #999;
+      }
+    }
+  }
+  .formItem,
+  .formItemDefault {
+    .select {
+      margin-top: set-vw(20);
+
+      :global {
+        .ant-select-selector {
+          height: set-vw(60);
+        }
+        .ant-select-selection-item,
+        .ant-select-selection-placeholder {
+          @include fs-vw(26);
+          font-weight: 400;
+          line-height: set-vw(60);
+        }
+      }
+    }
+  }
+  .addSerie {
+    display: block;
+    margin-top: set-vw(30);
+    margin-bottom: set-vw(50);
+    padding: 0 set-vw(23);
+    height: set-vw(60);
+    width: fit-content;
+    border-radius: set-vw(8);
+    background-color: $text-color;
+    @include fs-vw(22);
+    line-height: set-vw(60);
+    font-weight: bold;
+  }
+  .formItemDefault {
+    margin-bottom: set-vw(20) !important;
+  }
+
+  .checkWrap {
+    display: flex;
+    align-items: center;
+    margin-top: set-vw(20);
+    margin-bottom: set-vw(50);
+    .formItem {
+      margin-bottom: 0 !important;
+    }
+
+    .btnLink {
+      cursor: pointer;
+      color: $white;
+      background-color: $text-color;
+      height: set-vw(40);
+      padding: 0 set-vw(17);
+      margin-left: set-vw(12);
+      @include fs-vw(22);
+      line-height: set-vw(40);
+      font-weight: bold;
+      border-radius: set-vw(8);
+    }
+
+    :global {
+      .ant-radio-group {
+        display: flex;
+        align-items: center;
+        .ant-radio-wrapper {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+  .formItemBtn {
+    :global {
+      .ant-form-item-control-input .ant-form-item-control-input-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .btnSubmit,
+    .btnSaveDraft {
+      width: set-vw(300);
+    }
+    .btnSubmit {
+      background-color: $malibu;
+      margin-top: set-vw(30);
+    }
+    .btnSaveDraft {
+      background-color: $text-color;
+      margin-top: set-vw(30);
+    }
+  }
+}
+
+.attention {
+  @include fs-vw(20);
+  color: $color-notification;
+  margin-top: set-vw(20);
+}

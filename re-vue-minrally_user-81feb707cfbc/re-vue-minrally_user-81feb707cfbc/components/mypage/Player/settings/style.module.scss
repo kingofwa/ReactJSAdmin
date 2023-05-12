@@ -1,0 +1,180 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.formWrapper {
+  background-color: $white;
+  padding: set-vw(30) set-vw(30) set-vw(24);
+  min-height: calc(
+    100vh - set-vw(260)
+  ); // header 100 + footer 100 + copyright 60 = 260
+  :global {
+    .ant-row.ant-form-item {
+      width: 100%;
+      flex-direction: row;
+      margin: set-vw(24) 0 !important;
+      & input {
+        @include fs-vw(26);
+        color: $text-color;
+      }
+      .ant-form-item-label {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        & label {
+          font-weight: bold;
+          @include fs-vw(26);
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  .userNameDes {
+    color: #333;
+    margin-top: set-vw(10);
+    @include fs-vw(26);
+  }
+
+  .selectInput {
+    :global {
+      .ant-form-item-control-input {
+        border: 1px solid $border-color-primary;
+        border-radius: set-vw(5);
+      }
+    }
+  }
+
+  .datePicker {
+    :global {
+      .ant-form-item-control-input {
+        position: relative;
+        &::after {
+          content: "年";
+          position: absolute;
+          font-weight: bold;
+          @include fs-vw(26);
+          color: $text-color;
+          top: 50%;
+          right: set-vw(60);
+          transform: translateY(-50%);
+        }
+      }
+      .ant-picker-input {
+        & > input {
+          padding-right: 50px;
+        }
+      }
+    }
+  }
+
+  .rowItem {
+    position: relative;
+
+    &:not(:first-child)::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(0px - set-vw(30));
+      width: calc(100% + set-vw(60));
+      height: 1px;
+      background-color: $border-color-primary;
+    }
+
+    .btnLogout {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      background-color: $text-color;
+      color: $white;
+      @include fs-vw(22);
+      font-weight: bold;
+      height: set-vw(40) !important;
+      width: set-vw(120);
+      padding: 2px;
+      border-radius: set-vw(8);
+    }
+    .formItemDefault {
+      margin-bottom: set-vw(40) !important;
+      align-items: center;
+      :global {
+        .ant-form-item-label label {
+          @include fs-vw(24);
+          font-weight: bold;
+        }
+      }
+
+      .iconSelect {
+        @include fs-vw(26);
+      }
+    }
+  }
+
+  .saveBtn {
+    margin: set-vw(36) auto;
+    padding: set-vw(16) set-vw(40) !important;
+    background: #333333;
+    border-radius: 8px;
+    color: $white !important;
+    line-height: set-vw(26);
+    min-width: set-vw(200);
+    border-radius: set-vw(8);
+  }
+
+  .title {
+    font-weight: bold;
+    @include fs-vw(26);
+    color: $text-color;
+    margin: set-vw(30) 0;
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+  .value {
+    @include fs-vw(26);
+    color: $text-color;
+    margin: set-vw(30) 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .formWrapper {
+    :global {
+      .ant-row.ant-form-item {
+        margin: 20px 0 !important;
+      }
+      .ant-form-item-label {
+        margin-bottom: 10px;
+      }
+    }
+    .title {
+      margin-top: 20px;
+    }
+    .value {
+      margin: 20px 0;
+      &:first-child {
+        margin-top: 12px;
+      }
+    }
+    .rowItem {
+      .btnLogout {
+        font-size: 10px;
+        line-height: 10px;
+        border-radius: 2px;
+        top: 0;
+        transform: translateY(12px);
+      }
+    }
+    .rowItem:last-child {
+      padding-bottom: 20px;
+    }
+    .saveBtn {
+      margin-top: 30px;
+      font-size: 14px;
+      height: 38px !important;
+      padding: 0 32px !important;
+      line-height: 38px;
+      border-radius: 4px;
+    }
+  }
+}

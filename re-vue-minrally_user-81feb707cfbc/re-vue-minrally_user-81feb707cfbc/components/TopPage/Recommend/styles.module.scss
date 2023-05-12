@@ -1,0 +1,22 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  padding: set-vw(30);
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  .infiniteScroll {
+    overflow: unset !important;
+  }
+  .descNoneResult {
+    margin-top: set-vw(169);
+    text-align: center;
+    @include fs-vw(26);
+    line-height: set-vw(26);
+    color: $black;
+  }
+  .filter {
+    min-width: set-vw(265);
+  }
+}

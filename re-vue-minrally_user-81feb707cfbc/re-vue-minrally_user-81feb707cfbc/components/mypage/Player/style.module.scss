@@ -1,0 +1,13 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.listWrapper {
+  // padding-top: set-vw(79);
+  max-width: $max-width;
+  margin: 0 auto;
+  :global {
+    .ant-list {
+      min-height: calc(100vh - set-vw(270));
+    }
+  }
+}

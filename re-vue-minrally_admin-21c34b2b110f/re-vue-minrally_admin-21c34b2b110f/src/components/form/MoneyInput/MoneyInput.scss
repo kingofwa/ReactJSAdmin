@@ -1,0 +1,25 @@
+.number-input-row {
+  display: flex;
+  align-items: center;
+
+  .number-input-suffix {
+    margin-left: 10px;
+  }
+}
+
+.money-input {
+  display: flex;
+  width: 100%;
+  .ant-form-item {
+    width: 100%;
+  }
+
+  .ant-input-affix-wrapper {
+    position: relative;
+    .ant-input-suffix {
+      position: absolute;
+      right: -23px;
+      color: #000;
+    }
+  }
+}

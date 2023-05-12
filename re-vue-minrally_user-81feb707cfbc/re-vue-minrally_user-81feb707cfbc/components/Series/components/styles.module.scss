@@ -1,0 +1,443 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.topContent {
+  .btnRally {
+    background-color: #66ccff;
+    border-radius: 5px;
+    padding: 0 set-vw(66);
+    height: set-vw(80) !important;
+    @include fs-vw(28);
+    color: $white;
+    border: unset;
+    font-weight: bold;
+    margin: set-vw(30) 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: set-vw(8);
+  }
+}
+
+.serieTitle {
+  display: flex;
+  align-items: center;
+  padding: 0 set-vw(100);
+  text-align: center;
+}
+
+.container {
+  padding-bottom: set-vw(30) !important;
+  padding: set-vw(20) set-vw(34);
+  background-color: $white;
+}
+.rallyListTitle {
+  padding-bottom: set-vw(21);
+  border-bottom: solid 1px $border-color-primary;
+
+  span {
+    padding-left: set-vw(10);
+    border-left: solid 2px $malibu;
+    @include fs-vw(28);
+    font-weight: bold;
+  }
+
+  b {
+    color: $malibu;
+  }
+}
+.list {
+  .rallyItem {
+    padding: set-vw(20) set-vw(7) set-vw(20) 0;
+    border-bottom: solid 1px $border-color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:last-child {
+      border-bottom: none;
+    }
+    .finished {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      @include fs-vw(14);
+      background: #fffa91;
+      height: set-vw(128);
+      padding: 0 set-vw(15);
+      text-align: center;
+    }
+
+    .rallyTitleInfo {
+      display: flex;
+      align-items: center;
+      margin-bottom: set-vw(14);
+
+      .rallyTitle {
+        margin: 0;
+        @include fs-vw(26);
+        font-weight: bold;
+        color: $text-color;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        white-space: unset;
+        overflow: hidden;
+      }
+
+      .icCheck {
+        width: set-vw(29);
+        height: set-vw(18);
+        margin-right: set-vw(17);
+      }
+    }
+
+    .rallyInfo {
+      display: flex;
+      gap: set-vw(15);
+
+      span {
+        font-weight: 400;
+        @include fs-vw(22);
+      }
+    }
+    .tagList {
+      margin-bottom: set-vw(15);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      white-space: unset;
+      overflow: hidden;
+      color: $malibu;
+      .tagItem {
+        margin-right: set-vw(30);
+        @include fs-vw(24);
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+    .bottom {
+      display: flex;
+      margin: set-vw(30) 0 set-vw(10);
+      .bottomItem {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        height: set-vw(20);
+        img {
+          width: set-vw(38);
+          margin-right: 5px;
+        }
+        span {
+          color: $malibu;
+          @include fs-vw(24);
+          font-weight: bold;
+        }
+        &:first-child {
+          padding-left: 0;
+        }
+        &:not(:last-child) {
+          margin-right: set-vw(40);
+        }
+      }
+    }
+    .icGoDetail {
+      width: set-vw(14);
+      height: set-vw(20);
+    }
+  }
+
+  :global {
+    .ant-list-pagination {
+      display: flex;
+      justify-content: center;
+      .ant-pagination-prev {
+        display: none;
+      }
+      .ant-pagination-item {
+        border: unset;
+        font-weight: bold;
+        height: set-vw(40);
+        min-width: set-vw(40);
+        @include fs-vw(28);
+        line-height: set-vw(40);
+        border-radius: unset;
+        a {
+          color: $black;
+        }
+        &.ant-pagination-item-active {
+          background-color: $border-color-primary;
+          a {
+            color: $white;
+          }
+        }
+      }
+      .ant-pagination-next {
+        display: none;
+      }
+    }
+  }
+}
+
+.head {
+  padding-top: set-vw(40);
+  background-color: $white;
+  .nameSerie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: set-vw(40);
+    @include fs-vw(28);
+    line-height: set-vw(28);
+    font-weight: bold;
+    color: $text-color;
+    position: relative;
+    img {
+      margin-right: set-vw(20);
+      width: set-vw(34);
+    }
+    .icBack {
+      position: absolute;
+      left: set-vw(30);
+      width: set-vw(36);
+      cursor: pointer;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .seriImage {
+    width: 100%;
+    height: set-vw(422);
+    position: relative;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .userInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: set-vw(20);
+      bottom: set-vw(20);
+      padding: set-vw(10);
+      border-radius: 8px;
+      max-width: set-vw(480);
+      background: rgba(255, 255, 255, 0.7);
+
+      .userName {
+        margin-left: set-vw(10);
+        margin-right: set-vw(30);
+        @include fs-vw(20);
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .follow {
+        background: $text-color;
+        color: $white;
+        border-radius: set-vw(8);
+        padding: set-vw(7) set-vw(10);
+        cursor: pointer;
+        line-height: 1;
+        font-weight: 700;
+        @include fs-vw(22);
+      }
+      .active {
+        background: $malibu;
+      }
+      .avt {
+        width: set-vw(60);
+        height: set-vw(60);
+        border-radius: 50%;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      button {
+        position: relative !important;
+        right: 0;
+      }
+    }
+  }
+
+  .tagList {
+    margin-bottom: set-vw(15);
+    padding: 0 set-vw(30);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: unset;
+    overflow: hidden;
+    .tagItem {
+      margin-right: set-vw(30);
+      @include fs-vw(24);
+      font-weight: bold;
+      color: $malibu;
+      cursor: pointer;
+    }
+  }
+  .interactive {
+    padding: 0 set-vw(30) set-vw(30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border-bottom: 1px solid $border-color-primary;
+
+    .react {
+      display: flex;
+      align-items: center;
+      .heartIcon {
+        cursor: pointer;
+      }
+      .reactItem {
+        @include fs-vw(24);
+        color: $text-color;
+        font-weight: bold;
+        img {
+          margin-right: set-vw(15);
+          width: set-vw(38);
+        }
+        &:not(:last-child) {
+          margin-right: set-vw(40);
+        }
+      }
+    }
+    .btnShare {
+      background-color: $text-color;
+      padding: set-vw(7) set-vw(6);
+      border-radius: set-vw(8);
+      @include fs-vw(22);
+      line-height: set-vw(26);
+      font-weight: bold;
+      color: $white;
+      img {
+        margin-left: set-vw(10);
+        width: set-vw(24);
+      }
+    }
+  }
+  .profileInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: set-vw(20);
+    .nameUser {
+      @include fs-vw(20);
+      line-height: set-vw(24);
+      font-weight: bold;
+      margin-right: set-vw(30);
+      .avatar {
+        width: set-vw(60);
+        height: set-vw(60);
+        margin-right: set-vw(10);
+        cursor: pointer;
+      }
+    }
+    .btnFollow {
+      padding: set-vw(7);
+      background-color: $black;
+      @include fs-vw(22);
+      line-height: set-vw(26);
+      font-weight: bold;
+      color: $white;
+      border-radius: set-vw(8);
+    }
+    .active {
+      background-color: $malibu;
+    }
+  }
+  .nameWrap {
+    position: relative;
+    .time {
+      position: absolute;
+      left: set-vw(30);
+      background: $black;
+      z-index: 1;
+      bottom: set-vw(20);
+      line-height: set(26);
+      padding: set-vw(7) 0;
+      @include fs-vw(22);
+      color: $white;
+      font-weight: 700;
+      border-radius: set-vw(8);
+      min-width: set-vw(140);
+      text-align: center;
+    }
+  }
+}
+.tabTop {
+  margin-top: 0;
+  a {
+    min-width: set-vw(150);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .tab {
+    a {
+      min-width: set-vw(80);
+    }
+  }
+}
+
+.limitTime {
+  position: absolute;
+  left: set-vw(20);
+  bottom: set-vw(20);
+  background-color: black;
+  color: white;
+  @include fs-vw(26);
+  padding: set-vw(7) set-vw(28);
+  border-radius: set-vw(8);
+}
+
+.CouponWrapper {
+  background: $concrete;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: set-vw(20) set-vw(24);
+
+  .Coupon {
+    text-align: center;
+    color: $malibu;
+    padding: set-vw(22) 0;
+    border: solid 1px $malibu;
+    border-radius: set-vw(100);
+    font-weight: 700;
+    @include fs-vw(28);
+    line-height: set-vw(34);
+    width: 100%;
+    background-color: $white;
+    cursor: pointer;
+  }
+}
+.imageOverlay {
+  position: absolute;
+  background: $bg-back-rgba;
+  color: $white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: set-vw(60);
+  @include fs-vw(50);
+  font-weight: 700;
+}

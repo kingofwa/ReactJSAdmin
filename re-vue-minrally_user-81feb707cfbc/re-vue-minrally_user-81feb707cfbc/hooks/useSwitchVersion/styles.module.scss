@@ -1,0 +1,58 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.switchWrapper {
+  width: 100%;
+  padding: set-vw(10) set-vw(30) set-vw(30);
+  background: $concrete;
+
+  .switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $white;
+    border-radius: set-vw(8);
+    padding: 0 set-vw(20);
+    height: set-vw(80);
+
+    .select {
+      border: 2px solid $border-color-primary;
+      width: set-vw(295);
+      border-radius: set-vw(4);
+    }
+
+    .label {
+      font-style: normal;
+      font-weight: 400;
+      @include fs-vw(28);
+      line-height: set-vw(28);
+      color: $text-color;
+    }
+
+    .btnSubmit {
+      padding: unset;
+      background: $text-color;
+      color: $white;
+      height: set-vw(40) !important;
+      width: set-vw(120);
+      font-size: set-vw(22);
+      line-height: set-vw(26);
+      font-weight: bold;
+      border-radius: set-vw(8);
+      border: unset;
+    }
+
+    .icInfo {
+      width: set-vw(30);
+      height: set-vw(30);
+      margin-left: set-vw(14);
+      cursor: pointer;
+    }
+  }
+}
+
+.titleTooltip {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}

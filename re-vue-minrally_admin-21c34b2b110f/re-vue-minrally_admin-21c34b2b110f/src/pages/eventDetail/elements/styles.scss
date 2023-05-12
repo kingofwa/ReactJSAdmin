@@ -1,0 +1,61 @@
+@import '@styles/variables';
+
+.event-detail {
+  &-title {
+    background: $mercury;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &-download-qr {
+    cursor: pointer;
+    text-decoration-line: underline;
+  }
+
+  .qr-code-canvas {
+    display: none;
+  }
+
+  &-body {
+    padding: 20px;
+    background-color: $alabaster;
+  }
+
+  &-actions {
+    text-align: center;
+    padding-top: 20px;
+    gap: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-note {
+    border-top: solid 1px $silver;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prefecture-col {
+    margin-left: 36px;
+    flex: 1;
+  }
+  .select-date {
+    margin-left: 60px;
+    &-text {
+      font-weight: bold;
+      margin-right: 25px;
+    }
+  }
+}

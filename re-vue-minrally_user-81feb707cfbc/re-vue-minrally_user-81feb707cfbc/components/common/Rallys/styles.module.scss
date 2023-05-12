@@ -1,0 +1,447 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.grid {
+  :global {
+    .ant-list-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .ant-list-empty-text {
+      margin-top: set-vw(50);
+      // display: none;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: set-vw(186);
+    background-color: $mercury;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  .card {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    background-color: $white;
+    margin-bottom: set-vw(10);
+    border-radius: 0 0 5px 5px;
+    height: 100%;
+  }
+
+  .cardRank {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    background-color: $white;
+    margin-bottom: set-vw(10);
+    border-radius: 0 0 5px 5px;
+  }
+
+  .cardWrapper {
+    width: calc(50% - set-vw(15));
+    margin-top: set-vw(30);
+  }
+
+  .date {
+    @include fs-vw(20);
+    padding: set-vw(9) set-vw(15);
+  }
+
+  .listDate {
+    display: none;
+  }
+
+  .titleName {
+    display: flex;
+    gap: set-vw(15);
+    align-items: center;
+    margin-bottom: set-vw(18);
+
+    .name {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      white-space: unset;
+      word-break: normal;
+      overflow: hidden;
+      @include fs-vw(24);
+      cursor: pointer;
+      line-height: 1.5;
+      font-style: normal;
+      font-weight: 700;
+      color: $text-color;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: 0 set-vw(30) set-vw(30);
+  margin: set-vw(21) max(set-vw(-15), -15px) 0;
+  margin-bottom: set-vw(-30) !important;
+
+  .titleName {
+    display: flex;
+    gap: set-vw(15);
+    align-items: center;
+    margin-bottom: set-vw(18);
+
+    .name {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      white-space: unset;
+      word-break: normal;
+      overflow: hidden;
+      @include fs-vw(24);
+      cursor: pointer;
+      line-height: 1.5;
+      font-style: normal;
+      font-weight: 700;
+      color: $text-color;
+    }
+  }
+
+  :global {
+    .ant-list-empty-text {
+      position: absolute;
+      margin-top: set-vw(21);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: set-vw(25);
+      background-color: $concrete;
+      width: 100%;
+      width: calc(100% + set-vw(60));
+      display: none;
+    }
+  }
+  .cardWrapper {
+    display: flex;
+    border-bottom: solid 1px $gallery;
+    align-items: center;
+  }
+  .user {
+    max-width: 70%;
+  }
+  .ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+
+    .rank {
+      margin-left: 0;
+      white-space: nowrap;
+      margin-top: set-vw(10);
+    }
+  }
+  .image {
+    display: none;
+  }
+
+  .card {
+    width: calc(100% - set-vw(60));
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px $gallery;
+  }
+
+  .cardRank {
+    width: calc(100% - set-vw(60));
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px $gallery;
+  }
+
+  .w100 {
+    width: 100%;
+  }
+
+  .card:last-child {
+    border: none;
+  }
+
+  .listDate {
+    font-weight: 400;
+    color: $dusty-gray;
+    white-space: nowrap;
+    @include fs-vw(22);
+  }
+}
+
+.single {
+  :global {
+    .ant-list-items {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: min(30px, 4vw);
+      gap: min(30px, 4vw);
+      margin-top: set-vw(30);
+    }
+    .ant-list-empty-text {
+      margin-top: set-vw(50);
+      display: none;
+    }
+  }
+
+  .titleName {
+    display: flex;
+    gap: set-vw(15);
+    align-items: center;
+    margin-bottom: set-vw(18);
+
+    .name {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      white-space: unset;
+      word-break: normal;
+      overflow: hidden;
+      @include fs-vw(24);
+      cursor: pointer;
+      line-height: 1.5;
+      font-style: normal;
+      font-weight: 700;
+      color: $text-color;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: set-vw(388);
+    background-color: $mercury;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .pr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $dusty-gray;
+      color: $white;
+      border-radius: 4px 0 0 0;
+      line-height: 1;
+      @include fs-vw(20);
+      font-weight: 700;
+      padding: set-vw(11);
+    }
+
+    .date {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: $dusty-gray;
+      color: $white;
+      padding: set-vw(9) set-vw(16);
+      font-weight: 700;
+      line-height: 1;
+      @include fs-vw(20);
+    }
+  }
+
+  .card {
+    width: 100%;
+    background-color: $white;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .cardRank {
+    width: 100%;
+    background-color: $white;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .listDate {
+    display: none;
+  }
+  .cardWrapper {
+    width: 100%;
+    &:not(:first-child) {
+      margin-top: set-vw(20);
+    }
+  }
+}
+
+.reaction {
+  display: flex;
+  align-items: center;
+  margin-bottom: set-vw(18);
+
+  .reactionItem {
+    display: flex;
+    align-items: center;
+    margin-right: set-vw(20);
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .reactionIcon {
+    width: set-vw(30);
+    height: set-vw(30);
+    margin-right: set-vw(10);
+  }
+
+  .reactionLabel {
+    color: $text-color;
+    @include fs-vw(20);
+    font-weight: bold;
+  }
+}
+
+.userInfo {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    // max-width: 70%;
+  }
+
+  .avatar {
+    flex-shrink: 0;
+    cursor: pointer;
+
+    img {
+      width: set-vw(40);
+      height: set-vw(40);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .userName {
+    font-weight: 700;
+    margin-left: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $dusty-gray;
+    @include fs-vw(24);
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  color: $text-color;
+  margin: set-vw(24) 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include fs-vw(28);
+  cursor: pointer;
+  // line-height: 1;
+}
+
+.tags {
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .tag {
+    font-style: normal;
+    font-weight: bold;
+    color: $malibu;
+    @include fs-vw(24);
+    white-space: nowrap;
+    line-height: 1;
+    cursor: pointer;
+    margin-right: set-vw(20);
+  }
+}
+
+.info {
+  padding: set-vw(24);
+  width: 100%;
+}
+
+.pr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $dusty-gray;
+  color: $white;
+  border-radius: 4px 0 0 0;
+  font-weight: 400;
+  padding: set-vw(10);
+  @include fs-vw(20);
+  line-height: 1;
+}
+
+.date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: $white;
+  padding: set-vw(13) set-vw(30);
+  font-weight: 400;
+  @include fs-vw(24);
+  line-height: 1;
+}
+
+.ranking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: set-vw(18);
+  height: set-vw(50);
+
+  .rank {
+    font-weight: 700;
+    color: $text-color;
+    margin-left: set-vw(10);
+    @include fs-vw(34);
+  }
+
+  .rankIcon {
+    width: set-vw(50);
+    height: set-vw(42);
+  }
+}
+
+@media screen and (min-width: $max-width) {
+  .list {
+    margin: set-vw(21) max(set-vw(-24), -24px) 0;
+  }
+}
+
+.listNoData {
+  :global {
+    .ant-list-pagination {
+      display: none;
+    }
+    .ant-list-empty-text {
+      display: none;
+    }
+  }
+}
+
+.grandIcon {
+  width: set-vw(34);
+  height: set-vw(34);
+}

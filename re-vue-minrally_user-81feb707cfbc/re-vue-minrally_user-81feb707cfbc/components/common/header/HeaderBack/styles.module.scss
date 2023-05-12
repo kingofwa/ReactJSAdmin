@@ -1,0 +1,62 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.headHistory {
+  position: fixed;
+  // top: set-vw(100);
+  // top: 0;
+  // left: 50%;
+  // transform: translateX(-50%);
+  z-index: 10;
+  width: 100%;
+  max-width: $max-width;
+  display: flex;
+  justify-content: center;
+  height: set-vw(79);
+  align-items: center;
+  background-color: $white;
+  color: $text-color;
+  font-weight: bold;
+  border-bottom: 1px solid $border-color-primary;
+  top: 0;
+  @include fs-vw(28);
+
+  .goBack {
+    cursor: pointer;
+    .imgBack {
+      position: absolute;
+      left: set-vw(30);
+      top: 50%;
+      transform: translateY(-50%);
+      width: set-vw(36);
+    }
+  }
+}
+
+.headHistoryMenu {
+  position: fixed;
+  top: set-vw(99);
+  z-index: 10;
+  width: 100%;
+  max-width: $max-width;
+  display: flex;
+  justify-content: center;
+  height: set-vw(79);
+  align-items: center;
+  background-color: $white;
+  color: $text-color;
+  font-weight: bold;
+  border-bottom: 1px solid $border-color-primary;
+  @include fs-vw(28);
+
+  .goBack {
+    cursor: pointer;
+    .imgBack {
+      position: absolute;
+      left: set-vw(30);
+      top: 50%;
+      transform: translateY(-50%);
+      width: set-vw(36);
+    }
+  }
+}

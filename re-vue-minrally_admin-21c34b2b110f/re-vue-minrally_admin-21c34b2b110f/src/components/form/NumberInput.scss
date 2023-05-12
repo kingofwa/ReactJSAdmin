@@ -1,0 +1,28 @@
+.number-input-row {
+  display: flex;
+  align-items: center;
+
+  .number-input-suffix {
+    margin-left: 10px;
+  }
+}
+
+.number-input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+  .ant-form-item {
+    width: 100%;
+  }
+
+  .number-input-suffix {
+    position: absolute;
+    left: 205px;
+  }
+
+  input {
+    width: 200px !important;
+  }
+}

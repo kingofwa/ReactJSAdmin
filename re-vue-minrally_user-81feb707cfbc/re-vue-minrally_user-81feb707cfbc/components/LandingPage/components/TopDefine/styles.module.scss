@@ -1,0 +1,166 @@
+@import "@styles/variables";
+
+.main {
+  margin-bottom: 30px;
+
+  .textWrap {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: $text-color;
+    margin-bottom: 30px;
+  }
+
+  .mapDefine {
+    margin-bottom: 80px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .mapCheckin {
+    padding-bottom: 90px;
+    &Title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 20px;
+    }
+
+    .textDetail {
+      margin-bottom: 50px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .signup {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    button {
+      border: 2px solid $text-color;
+      padding: 26px 16px 26px 14px;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 28px;
+      background-color: #fffa91;
+      box-shadow: 0px 4px 4px 0px #00000040;
+      border-radius: 8px;
+      cursor: pointer;
+      color: $text-color;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-bottom: 10px;
+
+    .textWrap {
+      margin-top: 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .mapDefine {
+      margin-bottom: 40px;
+    }
+
+    .mapCheckin {
+      padding-bottom: 25px;
+      &Title {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 20px;
+      }
+
+      .textDetail {
+        margin-bottom: 40px;
+        font-size: 16px;
+        line-height: 28px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .signup {
+      padding-bottom: 40px;
+
+      button {
+        padding: 14px 8px;
+        font-size: 18px;
+        line-height: 18px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+// @media (max-width: 640px) {
+//   .mapDefine {
+//     img {
+//       // height: 135px;
+//     }
+//   }
+// }
+
+.isTop.main {
+  margin-bottom: 10px;
+
+  .textWrap {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .mapDefine {
+    margin-bottom: 40px;
+  }
+
+  .mapCheckin {
+    &Title {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    .textDetail {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  .signup {
+    padding-bottom: 40px;
+
+    button {
+      padding: 14px 8px;
+      font-size: 18px;
+      line-height: 18px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  }
+}
+
+.onlySp {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .onlySp {
+    display: block;
+  }
+}

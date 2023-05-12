@@ -1,0 +1,97 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  .required {
+    margin-left: 10px;
+    font-weight: bold;
+    @include fs-vw(20);
+    color: #ff6666;
+  }
+  .titleSpot {
+    display: flex;
+    align-items: center;
+    margin-top: set-vw(30);
+    padding: 0 set-vw(30);
+    @include fs-vw(26);
+    font-weight: bold;
+  }
+
+  .noteSpot {
+    padding: set-vw(20) set-vw(30);
+    @include fs-vw(20);
+    font-weight: 400;
+  }
+  .spotList {
+    background-color: $white;
+    padding: 0 set-vw(30);
+    padding-bottom: set-vw(30);
+    .spotItem {
+      padding: set-vw(25) 0;
+      &:not(:last-child) {
+        border-bottom: 1px solid $border-color-primary;
+      }
+      @include fs-vw(26);
+      line-height: set-vw(31);
+      .spotName {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+      .option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .btnEdit {
+          height: set-vw(40);
+          padding: 0 set-vw(28);
+          @include fs-vw(22);
+          line-height: set-vw(40);
+          font-weight: bold;
+          background-color: $black;
+          border-radius: 8px;
+        }
+        .unregistered {
+          color: $silver;
+        }
+      }
+      .btnDelete {
+        padding: 0;
+        img {
+          width: set-vw(40);
+          height: set-vw(40);
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+
+  .btnGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: set-vw(120);
+    .btnSubmit,
+    .btnSaveDraft {
+      width: set-vw(300);
+    }
+    .btnSubmit {
+      background-color: $malibu;
+      margin-top: set-vw(50);
+      &[disabled] {
+        color: rgba(0, 0, 0, 0.25) !important;
+        background: #e0dfdf !important;
+      }
+    }
+    .btnSaveDraft {
+      background-color: $black;
+      margin-top: set-vw(30);
+    }
+  }
+
+  .btnAdd {
+    background-color: $black;
+    margin-top: set-vw(30);
+    padding: set-vw(15) !important;
+  }
+}

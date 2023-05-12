@@ -1,0 +1,8 @@
+@import '@styles/variables';
+
+.user {
+  &-content {
+    display: flex;
+    place-items: flex-start;
+  }
+}

@@ -1,0 +1,35 @@
+@import '@styles/variables';
+
+.featured-management {
+  &-actions {
+    display: flex;
+    margin-bottom: 13px;
+  }
+  &-search {
+    display: flex;
+    gap: 23px;
+    .ant-form-item {
+      margin-bottom: 0 !important;
+    }
+    input {
+      width: 530px;
+    }
+  }
+  &-body {
+    display: flex;
+    gap: 40px;
+  }
+  &-main-table {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &-ranking {
+    width: 452px;
+  }
+}
+.featured-management-body {
+  .table__statistic {
+    justify-content: center !important;
+  }
+}

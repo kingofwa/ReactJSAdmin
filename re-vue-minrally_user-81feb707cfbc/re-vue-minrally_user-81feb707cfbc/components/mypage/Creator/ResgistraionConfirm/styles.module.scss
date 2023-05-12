@@ -1,0 +1,35 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.contentConfirm {
+  // padding-top: 46px;
+  display: grid;
+  justify-items: center;
+  .title {
+    @include fs-vw(26);
+    margin-top: set-vw(60);
+    font-weight: bold;
+    // margin-bottom: set-vw(26);
+  }
+  .desc {
+    margin-top: set-vw(60);
+    @include fs-vw(20);
+    text-align: center;
+    // span {
+    //   color: $malibu;
+    // }
+  }
+  .btnMyPage {
+    width: set-vw(300);
+    height: set-vw(80) !important;
+    padding: 0 set-vw(38);
+    margin-top: set-vw(100);
+    background-color: $black;
+    color: $white;
+    border-radius: 8px;
+    cursor: pointer;
+    @include fs-vw(28);
+    line-height: set-vw(80);
+    font-weight: bold;
+  }
+}

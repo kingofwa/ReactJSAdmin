@@ -1,0 +1,7 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.btn {
+  border-radius: set-vw(8);
+  min-width: set-vw(300);
+}

@@ -1,0 +1,28 @@
+image: atlassian/default-image:3
+
+pipelines:
+  branches:
+    release/staging:
+      - step:
+          name: Deploy to dev-admin.37rally.com
+          deployment: staging
+          script:
+            - ssh $USER_NAME@$HOST_NAME "cd $PUBLIC_PATH && git pull"
+    release/test:
+      - step:
+          name: Deploy to test-admin.37rally.com
+          deployment: test
+          script:
+            - ssh $USER_NAME@$HOST_NAME "cd $PUBLIC_PATH && git pull"
+    release/beta:
+      - step:
+          name: Deploy to beta-admin.37rally.com
+          deployment: beta
+          script:
+            - ssh $USER_NAME@$HOST_NAME "cd $PUBLIC_PATH && git pull"
+    # release/production:
+    #   - step:
+    #       name: Deploy to admin.37rally.com
+    #       deployment: production
+    #       script:
+    #         - ssh $USER_NAME@$HOST_NAME "cd $PUBLIC_PATH && git pull"

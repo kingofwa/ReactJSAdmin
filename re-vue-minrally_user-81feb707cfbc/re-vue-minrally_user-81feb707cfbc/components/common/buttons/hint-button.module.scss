@@ -1,0 +1,22 @@
+@import "@styles/variables";
+
+.btn {
+  height: auto;
+  width: auto;
+  min-width: unset;
+  margin-left: 0.625rem;
+  padding: 0;
+  border: 0;
+
+  &::after {
+    display: none;
+  }
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+.btnOk {
+  font-weight: $font-weight-normal;
+}

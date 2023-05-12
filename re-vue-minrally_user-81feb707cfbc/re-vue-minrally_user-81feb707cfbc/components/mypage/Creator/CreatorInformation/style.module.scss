@@ -1,0 +1,317 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.topContent {
+  .btnRally {
+    background-color: #66ccff;
+    border-radius: 5px;
+    padding: 0 set-vw(66);
+    height: set-vw(80) !important;
+    @include fs-vw(28);
+    color: $white;
+    border: unset;
+    font-weight: bold;
+    margin: set-vw(30) 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: set-vw(8);
+  }
+}
+
+.list {
+  padding-bottom: set-vw(30) !important;
+
+  .rallyItem {
+    padding: set-vw(20) 0;
+    margin: 0 set-vw(30);
+    border-bottom: 1px solid $border-color-primary;
+
+    &:first-child {
+      border-top: 1px solid $border-color-primary;
+    }
+
+    .content {
+      cursor: pointer;
+
+      .top {
+        display: flex;
+        margin-bottom: set-vw(20);
+        align-items: center;
+
+        .icCopy {
+          width: set-vw(34);
+          margin-right: set-vw(20);
+        }
+
+        .btnRelease {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $malibu;
+          height: set-vw(30) !important;
+          width: set-vw(80);
+          padding: 0;
+          margin-right: set-vw(20);
+          border-radius: unset;
+          font-weight: bold;
+          @include fs-vw(20);
+        }
+
+        .btnDraft {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $silver;
+          height: set-vw(30) !important;
+          width: set-vw(80);
+          padding: 0;
+          margin-right: set-vw(20);
+          border-radius: unset;
+          font-weight: bold;
+          @include fs-vw(20);
+        }
+
+        .title {
+          font-weight: bold;
+          @include fs-vw(26);
+          color: $text-color;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .mid {
+        display: flex;
+        margin-bottom: set-vw(20);
+
+        div {
+          @include fs-vw(20);
+          font-weight: bold;
+          color: $text-color;
+          line-height: set-vw(20);
+
+          &:first-child {
+            margin-right: set-vw(30);
+          }
+
+          span {
+            margin-left: set-vw(15);
+            font-weight: 400;
+          }
+        }
+      }
+
+      .bottom {
+        display: flex;
+        margin: set-vw(30) 0 set-vw(10);
+        gap: set-vw(40);
+
+        .bottomItem {
+          display: flex;
+          align-items: center;
+          gap: set-vw(14);
+
+          img {
+            width: set-vw(38);
+          }
+
+          span {
+            color: $malibu;
+            @include fs-vw(24);
+            font-weight: bold;
+            width: set-vw(70);
+          }
+        }
+      }
+    }
+
+    .action {
+      text-align: center;
+
+      .btnEdit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black;
+        color: $white;
+        font-weight: bold;
+        width: set-vw(120);
+        height: set-vw(40) !important;
+        border-radius: set-vw(8);
+        padding: 0;
+        @include fs-vw(22);
+      }
+
+      :global {
+        .ant-btn[disabled],
+        .ant-btn[disabled]:hover,
+        .ant-btn[disabled]:focus,
+        .ant-btn[disabled]:active {
+          background-color: $silver !important;
+        }
+      }
+    }
+  }
+
+  .listItem {
+    padding: 0;
+    min-height: set-vw(60);
+    display: flex;
+    align-items: center;
+    margin: 0 set-vw(30);
+    border-bottom: 1px solid $border-color-primary;
+
+    &:first-child {
+      border-top: 1px solid $border-color-primary;
+    }
+
+    :global {
+      .ant-list-item-extra {
+        margin: 0;
+      }
+
+      .ant-list-item-main {
+        padding: set-vw(10) 0;
+        color: $text-color;
+        @include fs-vw(26);
+        font-weight: bold;
+      }
+    }
+
+    .avatar {
+      width: set-vw(60);
+      height: set-vw(60);
+      margin-right: set-vw(10);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .btnFollow {
+      background-color: $black;
+      height: set-vw(40) !important;
+      width: set-vw(140);
+      color: $white;
+      font-weight: bold;
+      @include fs-vw(15);
+      padding: 0 8px;
+      border-radius: 5px;
+      border: unset;
+
+      &.active {
+        background-color: #66ccff;
+      }
+    }
+  }
+
+  :global {
+    .ant-list-pagination {
+      display: flex;
+      justify-content: center;
+
+      .ant-pagination-prev {
+        display: none;
+      }
+
+      .ant-pagination-item {
+        border: unset;
+        font-weight: bold;
+        height: set-vw(40);
+        min-width: set-vw(40);
+        @include fs-vw(28);
+        line-height: set-vw(40);
+        border-radius: unset;
+
+        a {
+          color: $text-color;
+        }
+
+        &.ant-pagination-item-active {
+          background-color: $border-color-primary;
+
+          a {
+            color: $white;
+          }
+        }
+      }
+
+      .ant-pagination-next {
+        display: none;
+      }
+    }
+  }
+}
+
+.listNoData {
+  :global {
+    .ant-list-pagination {
+      display: none;
+    }
+
+    .ant-list-empty-text {
+      display: none;
+    }
+  }
+}
+
+.deleteTrash {
+  margin-top: set-vw(15);
+}
+
+.iconTrash {
+  margin: 10px 0px;
+  width: set-vw(45);
+  cursor: pointer;
+}
+
+.btnTrash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1 !important;
+
+  span {
+    color: #ff6666;
+  }
+}
+
+@media screen and (min-width: $max-width) {
+  .deleteTrash {
+    margin-top: set-vw(23);
+  }
+}
+
+.actionTrash {
+  height: 20px;
+  border: none !important;
+
+  span {
+    color: #ff6666;
+  }
+
+  .textDeleteDraft:hover {
+    background-color: white;
+  }
+}
+
+.TooltipContain {
+  border-radius: 2px;
+
+  span {
+    display: none !important;
+  }
+}
+
+.textDeleteDraft,
+.textDeleteDraft:hover {
+  cursor: pointer;
+  color: #ff6666;
+  border: none;
+  background: white;
+  @media screen and (max-width: $max-width) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $max-width) {
+    font-size: 18px;
+  }
+}

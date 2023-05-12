@@ -1,0 +1,52 @@
+@import '@styles/variables';
+
+.event-registration-info {
+  &-title {
+    background: $mercury;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &-body {
+    padding: 20px;
+    background-color: $alabaster;
+  }
+
+  &-actions {
+    border-top: solid 1px $silver;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-action {
+      min-width: 140px;
+    }
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prefecture-col {
+    margin-left: 36px;
+    flex: 1;
+  }
+  .select-date {
+    margin-left: 60px;
+    &-text {
+      font-weight: bold;
+      margin-right: 25px;
+    }
+  }
+}
+
+.d-none {
+  display: none;
+}

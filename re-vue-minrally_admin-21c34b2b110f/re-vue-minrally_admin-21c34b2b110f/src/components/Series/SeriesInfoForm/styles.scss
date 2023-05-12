@@ -1,0 +1,91 @@
+@import '@styles/variables';
+
+.series-info {
+  &-title {
+    background: $mercury;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &-body {
+    padding: 20px;
+    background-color: $alabaster;
+  }
+
+  &-actions {
+    border-top: solid 1px $silver;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  .rally {
+    &-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+      margin-top: 27px;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+    }
+
+    &-item {
+      font-size: 12px;
+      line-height: 14px;
+      color: $black;
+    }
+  }
+
+  .input-extra {
+    margin-top: 10px;
+  }
+
+  .rally-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .rally-note {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #ff6666;
+  }
+}
+
+.tag-input {
+  input {
+    background: none !important;
+  }
+}
+
+.rally-period-setting {
+  .radio-group-input-row {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .extra-row {
+      margin-left: 0;
+      margin-top: 10px;
+
+      .ant-form-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+
+.label-date-picker {
+  line-height: 28px;
+  padding: 5px;
+}

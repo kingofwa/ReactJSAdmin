@@ -1,0 +1,77 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.steps {
+  margin-top: set-vw(54);
+  :global {
+    .ant-steps-item-title {
+      @include fs-vw(20);
+      font-weight: bold;
+      color: $text-color !important;
+    }
+    .ant-steps-item-tail {
+      margin-left: set-vw(70);
+      &::after {
+        background-color: $black !important;
+      }
+    }
+    .ant-steps-item-icon {
+      position: relative;
+      margin-left: set-vw(67);
+    }
+    .ant-steps-item-wait {
+      .ant-steps-icon {
+        display: block;
+        border-radius: 50%;
+        width: set-vw(10);
+        height: set-vw(10);
+        background-color: $black;
+      }
+    }
+    .ant-steps-icon {
+      position: unset;
+    }
+    .ant-steps-item-content {
+      width: set-vw(140);
+    }
+  }
+}
+.process {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  transform: translateY(-50%);
+  width: set-vw(30);
+  height: set-vw(30);
+  background-color: $malibu;
+  border-radius: 50%;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: set-vw(10);
+    height: set-vw(10);
+    background-color: $white;
+    border-radius: 50%;
+  }
+}
+
+.finish {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: set-vw(30);
+  height: set-vw(30);
+  background-color: $malibu;
+  border-radius: 50%;
+  img {
+    width: set-vw(17);
+  }
+}

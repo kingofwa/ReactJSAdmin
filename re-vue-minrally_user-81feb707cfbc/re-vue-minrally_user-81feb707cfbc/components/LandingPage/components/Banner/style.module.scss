@@ -1,0 +1,59 @@
+@import "@styles/variables";
+
+@function set-vw-lp($target) {
+  $vw: 1280 * 0.01;
+  @return min($target * 1px, ($target / $vw) * 1vw);
+}
+
+@function set-vw-lp-sp($target) {
+  $vw: 375 * 0.01;
+  @return min($target * 1px, ($target / $vw) * 1vw);
+}
+
+.bannerContainer {
+  position: relative;
+  padding-top: $height-header-pc;
+  .banner,
+  .bannerMobile {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .bannerMobile {
+    display: none;
+  }
+
+  .btnHome {
+    position: absolute;
+    bottom: set-vw-lp(179);
+    left: set-vw-lp(163);
+    width: set-vw-lp(350);
+    height: set-vw-lp(60);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bannerContainer {
+    padding-top: 64px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bannerContainer {
+    .bannerMobile {
+      display: block;
+    }
+    .banner {
+      display: none;
+    }
+    .btnHome {
+      position: absolute;
+      bottom: set-vw-lp-sp(87);
+      left: set-vw-lp-sp(16);
+      width: set-vw-lp-sp(213);
+      height: set-vw-lp-sp(40);
+      cursor: pointer;
+    }
+  }
+}

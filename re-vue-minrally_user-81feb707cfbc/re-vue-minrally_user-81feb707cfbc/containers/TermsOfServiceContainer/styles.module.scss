@@ -1,0 +1,13 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  padding: set-vw(26) set-vw(30);
+  margin-top: set-vw(80);
+  .content {
+    background-color: white;
+    padding: set-vw(40) set-vw(35);
+    @include fs-vw(26);
+    border-radius: set-vw(8);
+  }
+}

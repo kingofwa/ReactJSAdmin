@@ -1,0 +1,36 @@
+@import '@styles/variables';
+
+.banner-info {
+  &-title {
+    background: $mercury;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &-body {
+    padding: 20px;
+    background-color: $alabaster;
+  }
+
+  &-actions {
+    border-top: solid 1px $silver;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn-action {
+    min-width: 140px;
+  }
+}

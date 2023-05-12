@@ -1,0 +1,11 @@
+@import '@styles/variables';
+
+.banner-management {
+  position: relative;
+
+  .submit-button {
+    position: absolute;
+    right: 30px;
+    top: 14px;
+  }
+}

@@ -1,0 +1,17 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.contactContainer {
+  padding: set-vw(30) set-vw(30) 0 set-vw(30);
+}
+
+.description {
+  @include fs-vw(26);
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

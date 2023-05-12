@@ -1,0 +1,12 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  padding-top: set-vw(79);
+  padding-bottom: set-vw(100);
+  .noteHead {
+    @include fs-vw(26);
+    padding-top: set-vw(40);
+    text-align: center;
+  }
+}

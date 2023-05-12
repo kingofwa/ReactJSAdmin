@@ -1,0 +1,58 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.creatorList {
+  background-color: $white;
+  padding: set-vw(30);
+
+  .title {
+    border-bottom: solid 1px $border-color-primary;
+    padding-bottom: set-vw(15);
+    span {
+      font-weight: 700;
+      @include fs-vw(28);
+      border-left: solid 2px $malibu;
+      padding-left: set-vw(10);
+    }
+  }
+}
+
+.creatorItem {
+  display: flex;
+  align-items: center;
+  padding: set-vw(14) 0;
+  gap: set-vw(14);
+  border-bottom: solid 1px $border-color-primary;
+}
+
+.creatorItem:last-child {
+  border-bottom: none;
+}
+
+.avatar {
+  width: set-vw(40);
+  height: set-vw(40);
+  border-radius: 50%;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+}
+
+.userName {
+  font-weight: 700;
+  @include fs-vw(26);
+  color: $text-color;
+  margin: 0;
+  cursor: pointer;
+}
+
+.creator {
+  @include fs-vw(20);
+  color: $text-color;
+  padding: set-vw(3) set-vw(13);
+  background: #fffa91;
+}

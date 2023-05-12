@@ -1,0 +1,120 @@
+@import "@styles/variables";
+
+.checkinRally {
+  margin-bottom: 30px;
+  .desc {
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .spotItem {
+    .imgRally {
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+      margin-top: 30px;
+      width: 100%;
+      height: 180px;
+      // background-color: #c4c4c4;
+    }
+    .descRally {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 26px;
+      word-break: break-word;
+    }
+  }
+  .planWapper {
+    margin-top: 60px;
+    .planNote {
+      margin-bottom: 60px;
+      font-size: 28px;
+      line-height: 28px;
+      font-weight: bold;
+    }
+    img {
+      width: 100%;
+    }
+    .imgMb {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+    .desc {
+      margin-top: 20px;
+      font-size: 16px;
+    }
+    .spotItem {
+      .imgRally {
+        margin-top: 20px;
+        // height: 86px;
+        height: auto;
+      }
+      .descRally {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 19px;
+        word-break: break-word;
+      }
+    }
+    .planWapper {
+      margin-top: 40px;
+      .planNote {
+        margin-bottom: 23px;
+        font-size: 20px;
+      }
+      .imgMb {
+        display: block;
+      }
+      .imgPC {
+        display: none;
+      }
+    }
+  }
+}
+
+.isTop.checkinRally {
+  margin-bottom: 10px;
+  .desc {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .listSpot {
+    margin-left: -11.5px !important;
+    margin-right: -11.5px !important;
+    .spotItem {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-left: 11.5px !important;
+      padding-right: 11.5px !important;
+
+      .imgRally {
+        margin-top: 20px;
+        // height: 86px;
+        height: auto;
+      }
+      .descRally {
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 19px;
+        word-break: break-word;
+      }
+    }
+  }
+
+  .planWapper {
+    margin-top: 40px;
+    .planNote {
+      margin-bottom: 23px;
+      font-size: 20px;
+    }
+    .imgMb {
+      display: block;
+    }
+    .imgPC {
+      display: none;
+    }
+  }
+}

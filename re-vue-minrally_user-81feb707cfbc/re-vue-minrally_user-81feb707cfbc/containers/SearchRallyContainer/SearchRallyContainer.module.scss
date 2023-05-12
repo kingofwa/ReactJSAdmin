@@ -1,0 +1,60 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.searchInput {
+  padding: 0 set-vw(30);
+  margin: set-vw(30) 0;
+}
+
+.searchRallyContainer {
+  background-color: $concrete;
+}
+
+.contentItem {
+  background-color: $white;
+  padding: set-vw(30);
+  margin-bottom: set-vw(30);
+}
+
+.title {
+  padding-bottom: set-vw(15);
+  span {
+    font-weight: 700;
+    @include fs-vw(28);
+    border-left: solid set-vw(4) $malibu;
+    padding-left: set-vw(10);
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: set-vw(30);
+  padding: set-vw(10);
+}
+
+.tag {
+  color: $malibu;
+  @include fs-vw(26);
+  line-height: 1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tagTitle {
+  background-color: $concrete;
+  padding: set-vw(10);
+  color: $malibu;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnSearchRally {
+  margin: 0 auto set-vw(30);
+  min-width: set-vw(420);
+  background-color: $malibu;
+  color: $white;
+  &:hover {
+    background-color: $malibu;
+  }
+}

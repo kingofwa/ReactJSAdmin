@@ -1,0 +1,11 @@
+@import "@styles/variables";
+
+#main {
+  min-height: calc(100vh - 11.5rem);
+  margin-bottom: 3.75rem;
+  padding: 3.4375rem $padding-x 0;
+
+  @include media(">tablet") {
+    min-height: calc(100vh - 12.5rem);
+  }
+}

@@ -1,0 +1,20 @@
+.btn {
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  line-height: 0;
+
+  &::after {
+    display: none;
+  }
+}
+
+.icon {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+}

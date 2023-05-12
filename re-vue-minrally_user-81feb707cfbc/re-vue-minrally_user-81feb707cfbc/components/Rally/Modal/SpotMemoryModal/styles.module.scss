@@ -1,0 +1,83 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.spotMemoryModal {
+  :global {
+    .ant-modal-body {
+      padding: set-vw(84) set-vw(25) set-vw(10);
+    }
+  }
+  .title {
+    @include fs-vw(28);
+    font-weight: bold;
+    line-height: set-vw(28);
+    justify-content: center;
+    padding-bottom: set-vw(30);
+  }
+  .btnGroup {
+    :global {
+      .ant-form-item-control-input-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .ant-upload-picture-card-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .ant-upload.ant-upload-select-picture-card {
+        height: unset;
+      }
+    }
+    .btnAction {
+      min-width: set-vw(300);
+      height: unset !important;
+    }
+    .note {
+      @include fs-vw(24);
+      margin-bottom: set-vw(20);
+    }
+    .uploadImg {
+      margin-top: set-vw(20);
+      margin-bottom: set-vw(20);
+
+      :global {
+        .ant-upload-list-item {
+          padding: 0;
+          border: 1px solid #66ccff;
+          min-height: 50px; // avoid interface breakage with viewport < 400px
+        }
+
+        //hide overlay
+        .ant-upload-list-item-info::before {
+          background-color: transparent !important;
+        }
+        .ant-upload-list-picture-card-container {
+          width: set-vw(149);
+          height: set-vw(84);
+          margin-right: set-vw(15);
+          margin-bottom: 0;
+        }
+
+        //close icon
+        .ant-upload-list-item-actions,
+        .ant-upload-list-item-card-actions-btn {
+          opacity: 1 !important;
+          width: set-vw(40);
+        }
+        .ant-upload-list-item-actions {
+          right: 0;
+          top: 0;
+          transform: translate(35%, -35%);
+          left: unset;
+          z-index: 10;
+        }
+      }
+    }
+    .icClose {
+      width: set-vw(40);
+    }
+  }
+}

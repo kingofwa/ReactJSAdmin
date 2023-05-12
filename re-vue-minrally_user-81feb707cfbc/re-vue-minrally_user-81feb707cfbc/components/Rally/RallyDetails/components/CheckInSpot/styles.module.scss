@@ -1,0 +1,20 @@
+@import "@styles/mixins";
+@import "@styles/variables";
+
+.btnParticipation {
+  cursor: pointer;
+}
+
+.imgParticipation {
+  position: fixed;
+  bottom: set-vw(250);
+  right: set-vw(50);
+  width: set-vw(130);
+  height: set-vw(130);
+}
+
+.imgParticipation {
+  @media screen and (min-width: $max-width) {
+    right: calc((100vw - set-vw(650)) / 2);
+  }
+}

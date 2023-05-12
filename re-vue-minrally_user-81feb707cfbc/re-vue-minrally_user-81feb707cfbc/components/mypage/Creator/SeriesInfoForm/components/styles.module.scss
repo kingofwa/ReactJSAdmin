@@ -1,0 +1,101 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.modalSelection {
+  max-width: $max-width;
+  padding: 0 set-vw(30);
+  :global {
+    .ant-modal-content {
+      border-radius: set-vw(8);
+    }
+    .ant-modal-header {
+      padding: 0;
+      border-radius: set-vw(8);
+    }
+    .ant-modal-body {
+      padding: 0 set-vw(25);
+    }
+    .ant-modal-close {
+      top: set-vw(14);
+      right: set-vw(14);
+    }
+  }
+  .icClose {
+    width: set-vw(40);
+  }
+  .title {
+    @include fs-vw(28);
+    font-weight: bold;
+    padding: set-vw(30) 0;
+    border-bottom: 1px solid $border-color-primary;
+  }
+
+  .checkboxGroup {
+    margin-bottom: set-vw(100);
+    max-height: 50vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    font-weight: normal;
+    padding-top: set-vw(42);
+
+    :global {
+      .ant-checkbox-wrapper {
+        margin-left: set-vw(8);
+        @include fs-vw(26);
+        // align-items: center;
+        &:not(:last-child) {
+          margin-bottom: set-vw(20);
+        }
+        .ant-checkbox-checked::after {
+          border: 1px solid #ccc;
+          border-radius: unset;
+        }
+        .ant-checkbox-inner {
+          width: set-vw(30);
+          height: set-vw(30);
+          border: 1px solid #ccc;
+        }
+        .ant-checkbox-checked .ant-checkbox-inner::after {
+          border: set-vw(4) solid #999;
+          border-top: 0;
+          border-left: 0;
+          width: set-vw(10);
+          height: set-vw(16);
+        }
+        .ant-checkbox-disabled + span {
+          color: $black;
+        }
+        .ant-checkbox-disabled .ant-checkbox-inner {
+          background-color: $white;
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      height: 6px;
+      width: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .btnSubmitModal {
+    display: block;
+    margin: 0 auto set-vw(50);
+    height: set-vw(80) !important;
+    width: set-vw(390);
+    background-color: $black;
+    border-radius: set-vw(8);
+    @include fs-vw(28);
+    font-weight: bold;
+    color: $white;
+  }
+}
+
+.dNone {
+  display: none;
+}

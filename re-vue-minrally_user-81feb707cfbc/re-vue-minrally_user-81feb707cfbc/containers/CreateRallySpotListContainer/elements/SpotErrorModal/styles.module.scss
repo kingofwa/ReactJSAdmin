@@ -1,0 +1,55 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.modal {
+  width: set-vw(690) !important;
+
+  .modalBody {
+    text-align: center;
+    padding-top: set-vw(94);
+    padding-bottom: set-vw(50);
+
+    .modalTitle {
+      color: #333333;
+      @include fs-vw(28);
+      margin-bottom: set-vw(50);
+      font-weight: bold;
+    }
+
+    .modalMessage {
+      @include fs-vw(26);
+      font-weight: 400;
+      color: #333333;
+      margin-bottom: set-vw(50);
+      text-align: center;
+    }
+  }
+
+  .btnDelete {
+    background-color: $black;
+    margin-top: set-vw(30);
+    padding: set-vw(15) !important;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: set-vw(30);
+
+    .btnSubmit,
+    .btnSaveDraft {
+      width: set-vw(300);
+    }
+    .btnSubmit {
+      background-color: $malibu;
+      &[disabled] {
+        color: rgba(0, 0, 0, 0.25) !important;
+        background: #e0dfdf !important;
+      }
+    }
+    .btnSaveDraft {
+      background-color: $black;
+    }
+  }
+}

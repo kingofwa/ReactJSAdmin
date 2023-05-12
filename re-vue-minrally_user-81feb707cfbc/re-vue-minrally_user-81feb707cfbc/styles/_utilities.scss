@@ -1,0 +1,47 @@
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.25rem;
+}
+
+.mt-5 {
+  margin-top: 2.5rem !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-weight-normal {
+  font-weight: $font-weight-normal !important;
+}

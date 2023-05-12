@@ -1,0 +1,97 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  background-color: $white;
+  padding: set-vw(30);
+  padding-bottom: 0;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    .avatarWrapper {
+      display: flex;
+      align-items: center;
+      //   width: 60%;
+      .avatar {
+        width: set-vw(80);
+        height: set-vw(80);
+        margin-right: 10px;
+        flex-shrink: 0;
+
+        // cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .nameWrapper {
+        color: $text-color;
+        font-size: set-vw(26);
+        line-height: set-vw(26);
+        display: flex;
+        align-items: center;
+        gap: set-vw(11);
+        padding-right: set-vw(10);
+
+        .name {
+          max-width: 300px;
+          display: inline-block;
+          // cursor: pointer;
+        }
+        .settingBtn {
+          img {
+            width: set-vw(26);
+            height: set-vw(26);
+          }
+        }
+        // }
+        .ageWrapper {
+          font-size: set-vw(24);
+          .ageTag {
+            width: set-vw(40);
+            display: inline-block;
+            background-color: #fffa91;
+            border-radius: 50%;
+            text-align: center;
+          }
+          span + span {
+            margin-left: set-vw(10);
+          }
+        }
+      }
+    }
+    .profileBtn {
+      background-color: $text-color;
+      color: white !important;
+      // padding: set-vw(26) set-vw(24) !important;
+      width: set-vw(216) !important;
+      border-radius: set-vw(8);
+      height: set-vw(80) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        @include fs-vw(28);
+        line-height: set-vw(28);
+      }
+    }
+  }
+  .followWrap {
+    font-size: set-vw(24);
+    margin-top: set-vw(24);
+    a + a {
+      margin-left: set-vw(30);
+    }
+    & a {
+      color: $text-color;
+    }
+  }
+  .tabUserInfo {
+    width: calc(100% + set-vw(60));
+    margin-left: calc(0px - set-vw(30)); // (-30px)
+  }
+}

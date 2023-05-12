@@ -1,0 +1,27 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.resgisWrapper {
+  display: grid;
+  justify-items: center;
+  padding-bottom: set-vw(30);
+  .desc {
+    max-width: 80%;
+    @include fs-vw(20);
+    line-height: set-vw(30);
+    text-align: center;
+    margin: set-vw(60) auto;
+  }
+  .btnRegis {
+    background-color: #66ccff;
+    padding: 0 set-vw(38);
+    color: $white;
+    border-radius: 5px;
+    height: set-vw(80) !important;
+    @include fs-vw(28);
+    line-height: set-vw(80);
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: set-vw(8);
+  }
+}

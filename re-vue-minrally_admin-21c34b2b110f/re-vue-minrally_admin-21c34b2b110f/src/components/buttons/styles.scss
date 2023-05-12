@@ -1,0 +1,67 @@
+@import '@styles/variables';
+
+.btn-custom {
+  background: $scorpion;
+  border: 1px solid $scorpion;
+  border-radius: 10px;
+  color: $white;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px 27px;
+  height: 100%;
+
+  &:hover {
+    background: $scorpion;
+    border: 1px solid $scorpion;
+  }
+}
+
+.btn-primary {
+  background: $malibu !important;
+  border: 1px solid $malibu !important;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: $scorpion;
+  border: 1px solid $scorpion;
+  color: $white;
+}
+
+.btn-outLine {
+  background: $white !important;
+  border: 1px solid $gray !important;
+  color: $black !important;
+}
+
+.btn-outLine-second {
+  background: $white !important;
+  border: 1px solid $gray !important;
+  color: $black !important;
+  border-radius: 5px !important;
+  min-width: 203px;
+}
+
+.btn-no-select {
+  background: $silver;
+  border: 1px solid $mercury;
+}
+
+.upload-button {
+  padding: 10px 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: $black;
+  height: 100%;
+  background: $alabaster;
+  border: 1px solid $gray;
+  border-radius: 5px;
+
+  .ant-upload.ant-upload-select-picture-card {
+    height: 100% !important;
+    width: 100% !important;
+    border: none !important;
+  }
+}

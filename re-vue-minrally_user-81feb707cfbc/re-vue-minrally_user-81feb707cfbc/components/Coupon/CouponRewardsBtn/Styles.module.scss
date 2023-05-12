@@ -1,0 +1,24 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.CouponWrapper {
+  background: $concrete;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: set-vw(20) set-vw(24);
+}
+
+.Coupon {
+  text-align: center;
+  color: $malibu;
+  padding: set-vw(22) 0;
+  border: solid 1px $malibu;
+  border-radius: set-vw(100);
+  font-weight: 700;
+  @include fs-vw(28);
+  line-height: set-vw(34);
+  width: 100%;
+  background-color: $white;
+  cursor: pointer;
+}

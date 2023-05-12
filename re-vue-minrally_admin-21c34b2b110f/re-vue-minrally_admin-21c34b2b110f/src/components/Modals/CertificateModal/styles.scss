@@ -1,0 +1,141 @@
+@import '@styles/variables';
+
+.certificate-modal {
+  padding-bottom: 30px;
+  .note {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .content {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+
+    .certificate {
+      position: relative;
+      background-image: url('/img/bg-certificate.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 45px 30px 0;
+      height: 546px;
+      width: 400px;
+
+      .formItemName {
+        width: 100%;
+        margin-bottom: 0 !important;
+        .ant-input {
+          // height: 47px;
+          padding: 0;
+          border-radius: 2px;
+          font-weight: bold;
+          text-align: center;
+          font-size: 40px;
+        }
+      }
+      .formItemDesc {
+        width: 100%;
+        margin: 10px 0 10px !important;
+
+        .ant-input {
+          // height: 35px;
+          padding: 0;
+          border-radius: 4px;
+          font-weight: bold;
+          text-align: center;
+          font-size: 26px;
+        }
+      }
+      .rallyName {
+        margin-top: 25px;
+        // line-height: 36px;
+        font-weight: bold;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+      }
+      .playerName {
+        margin-top: 7px;
+        line-height: 20px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .date {
+        margin-top: 7px;
+        line-height: 21px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .desc {
+        margin-top: 25px;
+        font-weight: bold;
+        font-size: 14px;
+        width: 100%;
+      }
+      .signature {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: flex-end;
+        text-align: right;
+        line-height: 18px;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      .number {
+        position: absolute;
+        bottom: 23px;
+        left: 50%;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: 30px auto 25px;
+    width: 150px;
+    background-color: $black;
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .ant-modal-header {
+    background: $mercury;
+
+    .ant-modal-title {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .modal-title {
+    font-size: 12px;
+    line-height: 14px;
+    color: $text-color;
+  }
+
+  .btn-cancel {
+    background: none !important;
+    border: none;
+    color: $black;
+    outline: none;
+    box-shadow: none;
+  }
+}

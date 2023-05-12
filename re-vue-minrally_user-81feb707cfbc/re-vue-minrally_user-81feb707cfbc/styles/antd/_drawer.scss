@@ -1,0 +1,28 @@
+.ant-drawer {
+  & &-header-no-title &-close {
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 0;
+    margin-right: unset;
+    top: 1rem;
+    left: 1.25rem;
+    background: transparent url(/close-icon.png) no-repeat center center;
+    background-size: 100% auto;
+
+    &,
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  & &-body {
+    font-size: 1em;
+  }
+  & &-header {
+    border-bottom: unset;
+  }
+
+  .ant-drawer-body {
+    padding: 0;
+  }
+}

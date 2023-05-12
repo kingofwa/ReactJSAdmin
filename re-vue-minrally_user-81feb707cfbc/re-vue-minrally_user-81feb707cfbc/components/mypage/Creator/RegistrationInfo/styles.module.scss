@@ -1,0 +1,212 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.formContainer {
+  padding: set-vw(30) set-vw(30) 0;
+  .formItem {
+    :global {
+      .ant-form-item-label label {
+        @include fs-vw(26);
+        font-weight: bold;
+        color: $black;
+        margin-bottom: set-vw(10);
+        line-height: set-vw(31);
+      }
+      .ant-select {
+        border: 1px solid $border-color-primary !important;
+        border-radius: 5px;
+      }
+      .ant-form-item-label > label::after {
+        display: none;
+      }
+      .ant-form-item-control-input-content input {
+        height: set-vw(60);
+        @include fs-vw(26);
+        line-height: set-vw(26);
+      }
+
+      .ant-select-selector {
+        height: set-vw(60);
+      }
+      .ant-select-selection-item,
+      .ant-select-selection-placeholder {
+        @include fs-vw(26);
+        font-weight: 400;
+        line-height: set-vw(60);
+      }
+      .ant-radio-inner {
+        margin-bottom: set-vw(6);
+      }
+    }
+
+    .field {
+      @include fs-vw(26);
+      line-height: set-vw(31);
+      margin-bottom: set-vw(20);
+      font-weight: bold;
+      color: $black;
+      display: flex;
+      align-items: center;
+    }
+
+    .spanDate {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include fs-vw(26);
+      margin-bottom: set-vw(50);
+      height: set-vw(60);
+      min-height: 40px;
+    }
+    .radioGroup {
+      display: flex;
+      align-items: center;
+      :global {
+        .ant-radio-wrapper {
+          @include fs-vw(26);
+          align-items: center;
+          &:not(:last-child) {
+            margin-bottom: 0;
+          }
+          .ant-checkbox:hover .ant-checkbox-inner,
+          .ant-radio .ant-radio-inner {
+            border-color: #999;
+          }
+          .ant-checkbox-checked::after,
+          .ant-radio-checked::after {
+            border-color: #999;
+          }
+          .ant-checkbox-inner,
+          .ant-radio-inner {
+            border-radius: 50% !important;
+            width: set-vw(22);
+            height: set-vw(22);
+            border: 1px solid #999 !important;
+          }
+          .ant-checkbox-checked .ant-checkbox-inner::after,
+          .ant-radio-checked .ant-radio-inner::after {
+            display: unset;
+            margin-top: unset;
+            margin-left: unset;
+            border: unset;
+            width: set-vw(10);
+            height: set-vw(10);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: #999;
+          }
+        }
+      }
+    }
+  }
+
+  .rowItemInput {
+    position: relative;
+    margin-bottom: set-vw(17);
+    .removeIcon {
+      position: absolute;
+      top: set-vw(30);
+      transform: translateY(-50%);
+      & > svg {
+        width: set-vw(30);
+        height: set-vw(30);
+        fill: #999999;
+      }
+    }
+  }
+  .labelFormList {
+    margin-bottom: set-vw(20);
+    @include fs-vw(20);
+  }
+  .addLink {
+    margin-bottom: set-vw(50);
+    @include fs-vw(24);
+    font-weight: bold;
+    color: $malibu;
+    cursor: pointer;
+  }
+  .note {
+    width: 100%;
+    text-align: center;
+    margin-bottom: set-vw(40);
+  }
+  .btnSubmit {
+    display: block;
+    padding: 0 set-vw(39);
+    height: set-vw(80) !important;
+    background-color: #66ccff;
+    color: $white;
+    @include fs-vw(28);
+    font-weight: bold;
+    border: unset;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  .required {
+    margin-left: 10px;
+    font-weight: bold;
+    @include fs-vw(20);
+    line-height: 24px;
+    color: #ff6666;
+  }
+
+  // :global {
+  //   @media (max-width: 575px) {
+  //     .ant-form-item-label {
+  //       //col-5
+  //       flex: 0 0 20.83333333% !important;
+  //       max-width: 20.83333333% !important;
+  //     }
+  //     .ant-form-item-control {
+  //       //col-19
+  //       flex: 0 0 79.16666667% !important;
+  //       max-width: 79.16666667% !important;
+  //     }
+  //   }
+  // }
+  .label {
+    @include fs-vw(26);
+    font-weight: bold;
+    color: $black;
+    margin-bottom: set-vw(20);
+  }
+  .formArea {
+    // margin-bottom: set-vw(20) !important;
+    :global {
+      .ant-form-item-control {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+      .ant-form-item-control-input-content textarea {
+        @include fs-vw(26);
+        line-height: set-vw(31);
+      }
+    }
+  }
+}
+
+.dropdownRender {
+  .divider {
+    margin: set-vw(8) 0;
+  }
+  .space {
+    padding: 0 set-vw(8) set-vw(4);
+  }
+  :global {
+    & input {
+      @include fs-vw(26);
+      color: $black;
+    }
+    & button {
+      font-weight: bold;
+      @include fs-vw(26);
+      color: $black;
+    }
+  }
+}
+
+.mb20 {
+  margin-bottom: set-vw(20) !important;
+}

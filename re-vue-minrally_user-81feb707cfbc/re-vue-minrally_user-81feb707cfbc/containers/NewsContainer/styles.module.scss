@@ -1,0 +1,46 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.newsList {
+  padding: set-vw(30) 0;
+}
+.btnFixed {
+  width: set-vw(275);
+  padding: 4px !important;
+  span {
+    color: #ff6666;
+  }
+}
+.boxWrapper {
+  position: relative;
+  height: 15px;
+}
+.boxFixed {
+  display: flex;
+  justify-content: end;
+  width: set-vw(750);
+  z-index: 99999999;
+  position: fixed;
+  background-color: #f2f2f2;
+}
+
+.btnReadAll {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #66ccff !important;
+  text-decoration: underline;
+  text-align: right;
+  padding: 5px;
+  width: set-vw(255);
+  margin-right: set-vw(20);
+  @include fs-vw(24);
+}
+
+.textReadAll {
+  padding: 5px !important;
+  @include fs-vw(24);
+}
+.textReadAll:hover {
+  background-color: white;
+}

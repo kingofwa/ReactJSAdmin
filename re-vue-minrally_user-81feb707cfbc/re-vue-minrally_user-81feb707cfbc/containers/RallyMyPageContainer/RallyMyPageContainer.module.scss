@@ -1,0 +1,201 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.actions {
+  padding: 0 set-vw(50) set-vw(30);
+  display: flex;
+  align-items: center;
+  gap: set-vw(50);
+  justify-content: center;
+  margin-top: set-vw(30);
+
+  :global {
+    button {
+      padding: set-vw(22) set-vw(35) set-vw(22) set-vw(32) !important;
+      line-height: 1;
+      background-color: $text-color !important;
+      span {
+        color: $white !important;
+        @include fs-vw(28);
+        font-weight: 700;
+      }
+      border-radius: 6px;
+    }
+  }
+}
+
+.iconLocation {
+  width: set-vw(21);
+  height: set-vw(35);
+}
+
+.iconLocation {
+  width: set-vw(21);
+  height: set-vw(35);
+  margin-right: set-vw(15);
+}
+
+.iconCollected {
+  width: set-vw(38);
+  height: set-vw(38);
+  margin-right: set-vw(15);
+}
+
+.spotList {
+  padding: set-vw(20) set-vw(34);
+  background-color: $white;
+}
+
+.spotListTitle {
+  padding-bottom: set-vw(21);
+  border-bottom: solid 1px $border-color-primary;
+
+  span {
+    padding-left: set-vw(10);
+    border-left: solid 2px $malibu;
+    @include fs-vw(28);
+    font-weight: bold;
+  }
+
+  b {
+    color: $malibu;
+  }
+}
+
+.spotItem {
+  padding: set-vw(20) set-vw(7) set-vw(20) 0;
+  border-bottom: solid 1px $border-color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .spotTitleInfo {
+    display: flex;
+    align-items: center;
+    // margin-bottom: set-vw(14);
+
+    .spotTitle {
+      margin: 0;
+      @include fs-vw(26);
+      font-weight: bold;
+      color: $text-color;
+    }
+
+    .icCheck {
+      width: set-vw(29);
+      height: set-vw(18);
+      margin-right: set-vw(17);
+    }
+  }
+
+  .spotInfo {
+    display: flex;
+    gap: set-vw(15);
+    margin-top: set-vw(14);
+
+    span {
+      font-weight: 400;
+      @include fs-vw(22);
+    }
+  }
+}
+
+.history {
+  background-color: $white;
+  margin: set-vw(30) 0;
+  padding: set-vw(20) set-vw(34);
+  background-color: $white;
+
+  .historyTitle {
+    padding-bottom: set-vw(21);
+    border-bottom: solid 1px $border-color-primary;
+
+    span {
+      padding-left: set-vw(10);
+      border-left: solid 2px $malibu;
+      @include fs-vw(28);
+      font-weight: bold;
+    }
+  }
+
+  .historyRow {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px $border-color-primary;
+    padding: set-vw(20) set-vw(7) set-vw(20) 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .historyLabel {
+      font-weight: bold;
+      @include fs-vw(26);
+      width: set-vw(250);
+    }
+  }
+}
+
+.hightLight {
+  color: $malibu;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.historyInfo {
+  font-weight: 400;
+  @include fs-vw(26);
+  flex: 1;
+}
+
+.icGoDetail {
+  width: set-vw(14);
+  height: set-vw(20);
+  cursor: pointer;
+}
+
+.noPlaying {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: set-vw(70) 0;
+
+  span {
+    font-weight: 700;
+    @include fs-vw(26);
+  }
+
+  .btnParticipation {
+    position: absolute;
+    bottom: set-vw(-100);
+    right: set-vw(50);
+  }
+}
+
+.goDetail {
+  padding: set-vw(15);
+}
+
+.CouponWrapper {
+  padding: set-vw(40) set-vw(30);
+  padding-top: set-vw(10);
+}
+
+.note {
+  font-weight: 400;
+  @include fs-vw(28);
+  line-height: set-vw(34);
+  color: #ff6666;
+
+  padding: 0 set-vw(40) set-vw(40) set-vw(40);
+}

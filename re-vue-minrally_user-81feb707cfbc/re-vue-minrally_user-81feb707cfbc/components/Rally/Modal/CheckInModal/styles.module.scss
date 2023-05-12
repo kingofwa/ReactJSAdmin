@@ -1,0 +1,124 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+.checkInModal {
+  justify-content: center;
+  display: flex;
+
+  :global {
+    .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: set-vw(84) set-vw(25) set-vw(40);
+    }
+    .ant-modal-content {
+      max-width: set-vw(690);
+    }
+  }
+  .name,
+  .description {
+    @include fs-vw(28);
+    line-height: set-vw(28);
+    font-weight: bold;
+    margin-bottom: set-vw(20);
+  }
+  .time {
+    @include fs-vw(26);
+    font-weight: normal;
+  }
+  .divider {
+    margin: set-vw(40) 0 set-vw(30);
+    border-top: 2px solid $border-color-primary;
+  }
+  .doneIcon {
+    width: set-vw(256);
+    height: set-vw(256);
+    margin: set-vw(20) 0 set-vw(40);
+  }
+  .helpText {
+    @include fs-vw(24);
+    text-align: center;
+    margin-bottom: set-vw(40);
+  }
+  .shareIcon {
+    margin: 0 set-vw(15) 0 set-vw(8);
+  }
+  .modalBody {
+    width: 100%;
+    .btnGroup {
+      :global {
+        .ant-form-item-control-input-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .ant-upload-picture-card-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .ant-upload.ant-upload-select-picture-card {
+          height: unset;
+        }
+        .ant-upload-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: set-vw(20);
+        }
+      }
+      .btnAction {
+        min-width: set-vw(300);
+        height: unset !important;
+      }
+      .note {
+        @include fs-vw(24);
+        margin-bottom: set-vw(20);
+      }
+      .uploadImg {
+        margin-top: set-vw(20);
+        margin-bottom: set-vw(20);
+
+        ::before {
+          display: none;
+        }
+
+        :global {
+          .ant-upload-list-item {
+            padding: 0;
+            border: 1px solid #66ccff;
+            min-height: 50px; // avoid interface breakage with viewport < 400px
+          }
+
+          //hide overlay
+          .ant-upload-list-item-info::before {
+            background-color: transparent !important;
+          }
+          .ant-upload-list-picture-card-container {
+            width: set-vw(149);
+            height: set-vw(84);
+            margin: 0 !important;
+            // margin-right: set-vw(15);
+          }
+
+          //close icon
+          .ant-upload-list-item-actions,
+          .ant-upload-list-item-card-actions-btn {
+            opacity: 1 !important;
+            width: set-vw(40);
+          }
+          .ant-upload-list-item-actions {
+            right: 0;
+            top: 0;
+            transform: translate(35%, -35%);
+            left: unset;
+            z-index: 10;
+          }
+        }
+      }
+      .icClose {
+        width: set-vw(40);
+      }
+    }
+  }
+}

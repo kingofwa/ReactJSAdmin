@@ -1,0 +1,18 @@
+@import '@styles/variables';
+
+.main {
+  padding-top: 50px;
+  min-height: 100vh;
+
+  &-title {
+    padding: 19px 30px;
+    background-color: $mercury;
+
+    &-text {
+      color: $black;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}

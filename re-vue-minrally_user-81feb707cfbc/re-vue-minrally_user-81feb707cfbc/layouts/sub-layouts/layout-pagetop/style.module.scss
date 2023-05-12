@@ -1,0 +1,12 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  background: #f2f2f2;
+  // min-height: 100vh;
+  min-height: calc(100vh - set-vw(350));
+  position: relative;
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}

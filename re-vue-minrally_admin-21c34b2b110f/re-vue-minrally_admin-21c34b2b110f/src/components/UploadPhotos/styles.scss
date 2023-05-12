@@ -1,0 +1,68 @@
+@import '@styles/variables';
+
+.upload-photos {
+  .ant-upload.ant-upload-select-picture-card {
+    width: auto;
+    height: 100%;
+    border: none;
+  }
+
+  .ant-upload-picture-card-wrapper {
+    width: max-content;
+    display: unset;
+  }
+
+  .upload-img {
+    position: relative;
+    margin-top: 10px;
+
+    .upload-close-icon {
+      position: absolute;
+      top: -57px;
+      right: -56px;
+    }
+  }
+
+  .ant-upload-list {
+    margin-top: 10px;
+  }
+}
+
+.upload-photos-required {
+  .ant-form-item-label {
+    label::before {
+      display: inline-block;
+      margin-right: 4px;
+      color: #ff4d4f;
+      font-size: 14px;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: '*';
+    }
+  }
+
+  .ant-upload.ant-upload-select-picture-card {
+    width: auto;
+    height: 100%;
+    border: none;
+  }
+
+  .ant-upload-picture-card-wrapper {
+    width: max-content;
+    display: unset;
+  }
+
+  .upload-img {
+    position: relative;
+    margin-top: 10px;
+
+    .upload-close-icon {
+      position: absolute;
+      top: -57px;
+      right: -56px;
+    }
+  }
+  .ant-upload-list {
+    margin-top: 10px;
+  }
+}

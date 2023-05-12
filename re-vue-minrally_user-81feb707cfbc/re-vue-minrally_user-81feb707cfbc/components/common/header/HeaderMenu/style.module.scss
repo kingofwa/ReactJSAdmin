@@ -1,0 +1,60 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.tab {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  justify-content: center;
+  padding: set-vw(13) set-vw(30);
+  border-bottom: solid 1px $border-color-primary;
+  position: fixed;
+  z-index: 9;
+  top: set-vw(99);
+  width: 100%;
+  max-width: $max-width;
+  // left: 50%;
+  // transform: translate(-50%, 0);
+
+  a {
+    border-left: solid 2px $border-color-primary;
+    padding: 0 set-vw(30);
+
+    span {
+      font-weight: 700;
+      padding-bottom: set-vw(14);
+      white-space: nowrap;
+      @include fs-vw(28);
+      position: relative;
+      color: $dusty-gray;
+    }
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  a:first-child {
+    border-left: none;
+  }
+}
+
+.active {
+  span {
+    color: $text-color !important;
+    border-bottom: set-vw(4) solid $malibu;
+  }
+}
+
+.nonActive {
+  color: $silver;
+}
+
+// @media screen and (min-width: 751px) {
+//   .tab {
+//     justify-content: space-between;
+//     max-width: 750px;
+//     margin: 0 auto;
+//     padding-left: 0;
+//     padding-right: 0;
+//   }
+// }

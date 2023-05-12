@@ -1,0 +1,19 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.CouponBtn {
+  background: $malibu;
+  border-radius: set-vw(8);
+  width: 100%;
+  text-align: center;
+  @include fs-vw(40);
+  font-weight: 700;
+  cursor: pointer;
+  color: $white;
+  margin-top: set-vw(10);
+  margin-bottom: set-vw(40);
+  height: set-vw(120);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

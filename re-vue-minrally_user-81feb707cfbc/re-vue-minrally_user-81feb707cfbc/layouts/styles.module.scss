@@ -1,0 +1,97 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.main {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.contentRanking {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.searchContent {
+  max-width: $max-width;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.mainLayout {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  background-color: $concrete;
+  overflow-x: hidden;
+  margin-top: set-vw(171);
+  padding-bottom: set-vw(50);
+  // height: calc(100vh - set-vw(270));
+  // overflow-y: auto;
+}
+
+.children {
+  padding-top: set-vw(72);
+}
+
+.layout {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-bottom: set-vw(164);
+  background-color: $mercury;
+  min-height: 100vh;
+}
+
+.rankingContainer {
+  width: 100%;
+  background-color: $mercury;
+  min-height: 100vh;
+  padding-top: set-vw(72);
+}
+
+.onlyFooterLayout {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-bottom: set-vw(100);
+  background-color: $concrete;
+  // min-height: 100vh;
+  .container {
+    min-height: calc(100vh - set-vw(100));
+    // overflow: auto;
+    // height: calc(100vh - set-vw(100));
+  }
+}
+
+.mainLayoutWrapper {
+  background-color: #b0e4fb;
+  background-image: url("/img/main-bg.png");
+  height: 100vh;
+  // overflow: hidden;
+  position: relative;
+  overflow-y: auto;
+}
+
+.rallyCreateLayout {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-bottom: set-vw(100);
+  padding-top: set-vw(79);
+  background-color: $concrete;
+  min-height: 100vh;
+  .container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - set-vw(179));
+    padding-bottom: set-vw(100);
+  }
+}
+
+.CreateContainer {
+  max-width: 600px;
+  background: #f2f2f2;
+  min-height: calc(100vh - set-vw(100));
+}

@@ -1,0 +1,80 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.carouselImage {
+  position: relative;
+
+  :global {
+    .thumbs-wrapper {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .carousel {
+      position: inherit;
+    }
+
+    .carousel .thumbs-wrapper {
+      padding: set-vw(40);
+      margin: 0;
+    }
+
+    .carousel .thumb {
+      width: set-vw(206) !important;
+      height: set-vw(116) !important;
+    }
+    .carousel .thumb img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+
+  .noImage {
+    margin: set-vw(20) 0;
+    text-align: center;
+    @include fs-vw(60);
+  }
+
+  .imgWrapper {
+    width: 100vw;
+    height: 56vw;
+    max-width: $max-width;
+    max-height: 422px;
+    cursor: pointer;
+    & > img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+  }
+}
+
+.Pre {
+  position: absolute;
+  bottom: set-vw(100);
+  cursor: pointer;
+  left: set-vw(15);
+  border: solid black;
+  border-width: 0 set-vw(3) set-vw(3) 0;
+  display: inline-block;
+  padding: set-vw(10);
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.Back {
+  position: absolute;
+  bottom: set-vw(100);
+  right: set-vw(15);
+  cursor: pointer;
+  border: solid black;
+  border-width: 0 set-vw(3) set-vw(3) 0;
+  display: inline-block;
+  padding: set-vw(10);
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}

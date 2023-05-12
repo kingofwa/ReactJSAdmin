@@ -1,0 +1,47 @@
+@import '@styles/variables';
+
+.change-email-modal {
+  .ant-modal-header {
+    display: none;
+  }
+
+  .ant-modal-footer {
+    display: none;
+  }
+  .ant-modal-body {
+    padding: 40px;
+  }
+
+  .modal-body {
+    text-align: center;
+
+    .modal-title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+    }
+    .modal-message {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #6d6d6d;
+      text-align: left;
+    }
+    .note {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: #6d6d6d;
+      margin-bottom: 9px;
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+  }
+}

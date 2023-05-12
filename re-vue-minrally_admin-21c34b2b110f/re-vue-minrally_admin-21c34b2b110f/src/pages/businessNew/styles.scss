@@ -1,0 +1,27 @@
+@import '@styles/variables';
+
+.business-detail {
+  .card {
+    margin-top: 30px;
+
+    &-title {
+      background: $mercury;
+      padding: 8px 10px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+    }
+
+    &-body {
+      padding: 20px;
+      background-color: $alabaster;
+    }
+
+    &-actions {
+      border-top: solid 1px $silver;
+      text-align: center;
+      padding-top: 20px;
+    }
+  }
+}

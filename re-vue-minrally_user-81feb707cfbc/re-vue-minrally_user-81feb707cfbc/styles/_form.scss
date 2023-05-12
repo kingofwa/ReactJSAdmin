@@ -1,0 +1,22 @@
+// .form {
+//   &--custom-required-mark {
+//     .ant-form-item-required::before {
+//       padding: 0.25rem 0.5rem;
+//       content: "必須" !important;
+//       background: $red-important-color;
+//       color: white !important;
+//       top: 0;
+//       right: -3.75rem;
+//     }
+//   }
+// }
+
+.ant-radio-wrapper {
+  @include media("<tablet") {
+    display: flex !important;
+
+    &:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}

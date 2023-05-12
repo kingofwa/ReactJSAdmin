@@ -1,0 +1,307 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.formWrapper {
+  padding: set-vw(30);
+  .note,
+  .noteType2 {
+    margin-top: set-vw(20);
+    @include fs-vw(20);
+    font-weight: 400;
+  }
+  .noteType2 {
+    margin-bottom: set-vw(50);
+  }
+  .noteDefault {
+    margin-top: set-vw(20);
+    padding: set-vw(20);
+    @include fs-vw(25);
+    line-height: set-vw(30);
+    font-weight: 400;
+    border: 1px solid $border-color-primary;
+    border-radius: 5px;
+  }
+  .noteCreat {
+    margin-top: set-vw(20);
+    @include fs-vw(24);
+    font-weight: 400;
+    span {
+      display: inline-block;
+      margin-left: set-vw(20);
+      color: $silver;
+    }
+  }
+  :global {
+    .ant-form-item-label {
+      padding-bottom: 0;
+      label {
+        @include fs-vw(26);
+        line-height: set-vw(31);
+        font-weight: bold;
+      }
+    }
+    .ant-form-item-control-input input {
+      // margin-top: set-vw(20);
+      height: set-vw(60);
+      @include fs-vw(26);
+      font-weight: 400;
+    }
+    .ant-form-item-control-input textarea {
+      margin-top: set-vw(20);
+      @include fs-vw(25);
+      font-weight: 400;
+    }
+    .ant-upload.ant-upload-select-picture-card {
+      width: set-vw(298);
+      height: set-vw(168);
+      margin-bottom: 0;
+    }
+  }
+  .formItem,
+  .formItemDefault {
+    .avatarWrapper {
+      margin-top: set-vw(20);
+      .imgEmpty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: $malibu;
+        img {
+          width: set-vw(56);
+          height: set-vw(41);
+        }
+      }
+      .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: unset;
+        cursor: pointer;
+      }
+
+      .rallyImage {
+        width: set-vw(298);
+        height: set-vw(168);
+        position: relative;
+        .icon {
+          position: absolute;
+          width: set-vw(56);
+          height: set-vw(41);
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        .icClose {
+          position: absolute;
+          width: set-vw(60);
+          height: set-vw(60);
+          right: set-vw(-10);
+          top: set-vw(-10);
+          padding: set-vw(10);
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .select {
+      margin-top: set-vw(20);
+      width: 320px;
+
+      :global {
+        .ant-select-selector {
+          height: set-vw(60);
+        }
+        .ant-select-selection-item,
+        .ant-select-selection-placeholder {
+          @include fs-vw(26);
+          font-weight: 400;
+          line-height: set-vw(60);
+        }
+      }
+    }
+    .hashTag {
+      margin-top: set-vw(20);
+      :global {
+        .ant-select-selector {
+          padding: 0 set-vw(8);
+          height: auto !important;
+        }
+        .ant-select-selection-item-content {
+          @include fs-vw(18);
+        }
+        .ant-select-selection-item {
+          display: flex;
+          align-items: center;
+          padding: set-vw(4) set-vw(12);
+          height: unset;
+          line-height: unset !important;
+          border-radius: 4px;
+          .ant-select-selection-item-remove {
+            position: absolute;
+            top: 0;
+            right: set-vw(2);
+          }
+        }
+        .ant-select-selection-overflow-item-suffix {
+          flex: 1;
+          .ant-select-selection-search {
+            min-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .formItemDefault {
+    margin-bottom: set-vw(20) !important;
+    :global {
+      .ant-picker {
+        max-height: set-vw(60);
+        padding: 0 set-vw(19);
+        line-height: set-vw(60);
+        border-radius: set-vw(4);
+        input {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .formTagInput {
+    margin-bottom: set-vw(20) !important;
+    :global {
+      .ant-picker {
+        max-height: set-vw(60);
+        padding: 0 set-vw(19);
+        line-height: set-vw(60);
+        border-radius: set-vw(4);
+        input {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .radioGroup {
+    margin-top: set-vw(20);
+    display: flex;
+    align-items: center;
+    gap: set-vw(78);
+    :global {
+      .ant-radio-wrapper {
+        margin-bottom: 0 !important;
+        @include fs-vw(26);
+        line-height: 26px;
+        .ant-radio .ant-radio-inner {
+          border-color: #999;
+        }
+        .ant-radio-checked::after {
+          border-color: #999;
+        }
+        .ant-radio-inner {
+          border-radius: 50% !important;
+          width: set-vw(22);
+          height: set-vw(22);
+          border: 1px solid #999 !important;
+        }
+        .ant-radio-checked .ant-radio-inner::after {
+          display: unset;
+          margin-top: unset;
+          margin-left: unset;
+          border: unset;
+          width: set-vw(10);
+          height: set-vw(10);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background-color: #999;
+        }
+      }
+    }
+  }
+
+  .labelDate {
+    margin-bottom: set-vw(20);
+    @include fs-vw(26);
+    line-height: 31px;
+  }
+
+  .listWrapper {
+    margin-top: set-vw(50);
+  }
+  .label {
+    @include fs-vw(26);
+    line-height: set-vw(31);
+    font-weight: bold;
+
+    .required {
+      margin-left: 10px;
+      font-weight: bold;
+      @include fs-vw(20);
+      line-height: 24px;
+      color: #ff6666;
+    }
+  }
+
+  .formListItem {
+    width: 100%;
+    margin-bottom: set-vw(20);
+    align-items: center;
+    :global {
+      .ant-form-item {
+        margin-bottom: 0 !important;
+      }
+    }
+    .removeIcon {
+      // position: absolute;
+      // top: set-vw(50);
+      // transform: translateY(-50%);
+      & > svg {
+        width: set-vw(30);
+        height: set-vw(30);
+        fill: #999999;
+      }
+    }
+  }
+  .addLink {
+    @include fs-vw(24);
+    font-weight: bold;
+    color: $malibu;
+    cursor: pointer;
+  }
+  .formItemBtn {
+    :global {
+      .ant-form-item-control-input .ant-form-item-control-input-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .btnSubmit,
+    .btnSaveDraft {
+      width: set-vw(300);
+    }
+    .btnSubmit {
+      background-color: $malibu;
+      &:first-child {
+        margin-top: set-vw(50);
+      }
+      margin-top: set-vw(30);
+    }
+    .btnSaveDraft {
+      background-color: $black;
+      margin-top: set-vw(30);
+    }
+  }
+}
+
+.mb30 {
+  margin-bottom: set-vw(30);
+}

@@ -1,0 +1,145 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+.completedModal {
+  max-width: calc(100vw - set-vw(70)); //70 = padding: 35p*2
+  top: set-vw(35);
+  padding: 0;
+
+  color: $text-color;
+  :global {
+    .ant-modal-content {
+      background-image: url("/img/rally/completed-modal-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      .ant-modal-body {
+        padding: 0 0 set-vw(40);
+      }
+      margin-bottom: set-vw(30);
+      border-radius: set-vw(10);
+      overflow: hidden;
+    }
+    .ant-modal-close-x {
+      width: set-vw(56);
+      height: set-vw(56);
+      line-height: set-vw(56);
+    }
+  }
+  .closeIcon {
+    width: set-vw(34);
+    height: set-vw(34);
+  }
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .headName {
+      display: flex;
+      justify-content: center;
+      width: calc(100% - set-vw(100)); // padding 50 * 2 = 100;
+      margin: set-vw(73) 0 set-vw(32);
+      @include fs-vw(26);
+      font-weight: bold;
+      line-height: set-vw(56);
+      background-color: $white;
+      border-radius: 4px;
+      color: $text-color;
+    }
+    .headComplete {
+      @include fs-vw(46);
+      font-weight: bold;
+    }
+
+    .headCongratulations {
+      @include fs-vw(30);
+      font-weight: bold;
+    }
+    .headDetail {
+      @include fs-vw(24);
+      font-weight: bold;
+      text-align: center;
+      margin: set-vw(32) 0 set-vw(40);
+    }
+  }
+  .certificate {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: set-vw(680);
+    height: set-vw(930);
+    max-width: 100%;
+    background-image: url("/img/certificate-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: set-vw(90) set-vw(65) 0;
+    margin: 0 auto set-vw(40);
+    font-weight: bold;
+    .title {
+      width: set-vw(600);
+      @include fs-vw(80);
+      line-height: set-vw(80);
+      font-weight: bold;
+      justify-content: center;
+    }
+    .rallyName {
+      margin: set-vw(63) 0 set-vw(13);
+      @include fs-vw(27);
+      line-height: set-vw(36);
+    }
+    .playerName {
+      @include fs-vw(29);
+      line-height: set-vw(39);
+    }
+    .completed {
+      margin: set-vw(24) 0 set-vw(20);
+      @include fs-vw(52);
+      line-height: set-vw(52);
+    }
+    .date {
+      @include fs-vw(32);
+      line-height: set-vw(32);
+    }
+    .desc {
+      margin: set-vw(65) 0 set-vw(40);
+      @include fs-vw(27);
+    }
+    .signature {
+      width: 100%;
+      justify-content: flex-end;
+      text-align: right;
+      @include fs-vw(23);
+      font-weight: bold;
+    }
+    .number {
+      position: absolute;
+      bottom: set-vw(50);
+      @include fs-vw(21);
+      font-weight: normal;
+    }
+  }
+
+  .shareIcon {
+    // margin: 0 set-vw(12) 0 set-vw(33);
+    width: set-vw(20);
+    height: set-vw(20);
+    margin-right: set-vw(6);
+  }
+}
+
+.couponBtn {
+  @include fs-vw(24);
+  width: set-vw(300);
+  height: set-vw(76);
+  margin-bottom: set-vw(32);
+}
+
+.button {
+  min-width: set-vw(354);
+  height: set-vw(76) !important;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  margin-bottom: set-vw(14);
+
+  span {
+    @include fs-vw(24);
+  }
+}

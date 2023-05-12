@@ -1,0 +1,13 @@
+@import '@styles/variables';
+
+.custom-spinner {
+  position: fixed !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+  margin-left: 10px !important;
+  margin-top: 10px !important;
+  height: 50px;
+  left: 1em;
+  z-index: 200;
+  overflow: hidden;
+}

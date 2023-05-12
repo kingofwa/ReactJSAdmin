@@ -1,0 +1,8 @@
+@import '@styles/variables';
+
+.business {
+  &-content {
+    display: flex;
+    place-items: flex-start;
+  }
+}

@@ -1,0 +1,18 @@
+@import "@styles/mixins";
+@import "@styles/variables";
+
+.tabWrapper {
+  position: fixed;
+  width: 100%;
+  max-width: $max-width;
+  z-index: 10;
+
+  .tab {
+    margin-top: 0;
+    border-top: 0;
+  }
+}
+
+.children {
+  padding-top: set-vw(60);
+}

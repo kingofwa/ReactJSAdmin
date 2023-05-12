@@ -1,0 +1,13 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.btn {
+  display: block;
+  // width: 100%;
+  border: solid 2px $black;
+  border-radius: 6px;
+  color: $black;
+  font-weight: 700;
+  @include fs-vw(26);
+  padding: set-vw(13) set-vw(15) !important;
+}

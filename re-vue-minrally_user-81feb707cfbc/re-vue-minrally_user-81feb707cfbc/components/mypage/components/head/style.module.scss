@@ -1,0 +1,76 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: set-vw(50) 0;
+  border-bottom: 1px solid $border-color-primary;
+  background-color: $white;
+  .avatar {
+    width: set-vw(208);
+    height: set-vw(208);
+    margin-bottom: set-vw(25);
+    cursor: pointer;
+  }
+
+  .name {
+    margin-bottom: set-vw(26);
+    @include fs-vw(26);
+    line-height: set-vw(31);
+    font-weight: bold;
+    color: $black;
+  }
+
+  .btnProfile {
+    width: set-vw(300);
+    border-radius: 8px;
+    background-color: $black;
+    color: $white;
+    font-weight: bold;
+    @include fs-vw(28);
+    padding: 0;
+    height: set-vw(80);
+    line-height: set-vw(80);
+  }
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  padding: set-vw(10) 0;
+  background-color: $white;
+  border-bottom: 1px solid $border-color-primary;
+  a {
+    font-weight: bold;
+    @include fs-vw(28);
+    line-height: set-vw(28);
+    padding: 0 set-vw(20);
+    color: #999999;
+    position: relative;
+    &:first-child::before {
+      content: "";
+      position: absolute;
+      right: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: set-vw(30);
+      width: 2px;
+      background-color: $border-color-primary;
+    }
+    &.active {
+      color: $black;
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + set-vw(6)); //-padding:10 - height:3
+        left: set-vw(20);
+        width: calc(100% - set-vw(40));
+        background: #66ccff;
+        height: set-vw(4);
+        border-radius: 4px;
+      }
+    }
+  }
+}

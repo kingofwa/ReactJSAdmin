@@ -1,0 +1,15 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.copyright {
+  width: 100%;
+  background-color: $concrete;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: set-vw(18) 0;
+  @include fs-vw(20);
+  line-height: set-vw(24);
+  color: $text-color;
+  // box-shadow: 0 2px 2px -2px rgb(0 0 0 / 20%);
+}

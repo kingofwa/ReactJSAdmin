@@ -1,0 +1,21 @@
+@import '@styles/variables';
+
+.header-title {
+  padding: 19px 30px;
+  background-color: $mercury;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 74px;
+
+  &-text {
+    color: $black;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &-btn {
+    min-width: 203px;
+  }
+}

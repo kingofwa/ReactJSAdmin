@@ -1,0 +1,34 @@
+@import '@styles/variables';
+
+.user-tab {
+  flex: 1;
+}
+
+.tab-menu {
+  color: $black !important;
+}
+
+.filter {
+  &-search {
+    width: 364px;
+    margin-left: 30px;
+    border: 1px solid $black;
+    padding: 15px;
+
+    &-title {
+      font-size: 16px;
+      line-height: 19px;
+      color: $black;
+      margin-bottom: 35px;
+    }
+
+    .btn-reset {
+      color: $black;
+    }
+  }
+
+  &-actions {
+    border-top: solid 1px $silver;
+    padding-top: 13px;
+  }
+}

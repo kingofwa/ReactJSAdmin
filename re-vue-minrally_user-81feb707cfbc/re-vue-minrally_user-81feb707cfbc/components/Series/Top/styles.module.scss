@@ -1,0 +1,275 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.head {
+  padding-top: set-vw(40);
+  background-color: $white;
+  .nameSerie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: set-vw(40);
+    @include fs-vw(28);
+    line-height: set-vw(28);
+    font-weight: bold;
+    color: $black;
+    position: relative;
+    img {
+      margin-right: set-vw(20);
+      width: set-vw(34);
+    }
+    .icBack {
+      position: absolute;
+      left: set-vw(30);
+      width: set-vw(16);
+      // top: 50%;
+    }
+  }
+
+  .seriImage {
+    width: 100%;
+    height: set-vw(422);
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .userInfo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: set-vw(20);
+      bottom: set-vw(20);
+      background-color: $white;
+      padding: set-vw(10);
+      border-radius: 8px;
+
+      .userName {
+        margin-left: set-vw(10);
+        margin-right: set-vw(30);
+        @include fs-vw(20);
+        font-weight: 700;
+      }
+
+      .follow {
+        background: $text-color;
+        color: $white;
+        border-radius: set-vw(8);
+        padding: set-vw(7) set-vw(10);
+        cursor: pointer;
+        line-height: 1;
+        font-weight: 700;
+        @include fs-vw(22);
+      }
+      .active {
+        background: $malibu;
+      }
+      .avt {
+        width: set-vw(60);
+        height: set-vw(60);
+        border-radius: 50%;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .tagList {
+    margin-bottom: set-vw(15);
+    padding: 0 set-vw(30);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    white-space: unset;
+    overflow: hidden;
+    .tagItem {
+      margin-right: set-vw(30);
+      @include fs-vw(24);
+      font-weight: bold;
+      color: $malibu;
+      cursor: pointer;
+    }
+  }
+  .interactive {
+    padding: 0 set-vw(30) set-vw(30);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $border-color-primary;
+
+    .react {
+      display: flex;
+      align-items: center;
+      .heartIcon {
+        cursor: pointer;
+      }
+      .reactItem {
+        @include fs-vw(24);
+        color: $black;
+        font-weight: bold;
+        img {
+          margin-right: set-vw(15);
+          width: set-vw(38);
+        }
+        &:not(:last-child) {
+          margin-right: set-vw(40);
+        }
+      }
+    }
+    .btnShare {
+      background-color: $black;
+      padding: set-vw(7) set-vw(6);
+      border-radius: set-vw(8);
+      @include fs-vw(22);
+      line-height: set-vw(26);
+      font-weight: bold;
+      color: $white;
+      img {
+        margin-left: set-vw(10);
+        width: set-vw(24);
+      }
+    }
+  }
+  .profileInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: set-vw(20);
+    .nameUser {
+      @include fs-vw(20);
+      line-height: set-vw(24);
+      font-weight: bold;
+      margin-right: set-vw(30);
+      .avatar {
+        width: set-vw(60);
+        height: set-vw(60);
+        margin-right: set-vw(10);
+        cursor: pointer;
+      }
+    }
+    .btnFollow {
+      padding: set-vw(7);
+      background-color: $black;
+      @include fs-vw(22);
+      line-height: set-vw(26);
+      font-weight: bold;
+      color: $white;
+      border-radius: set-vw(8);
+    }
+    .active {
+      background-color: $malibu;
+    }
+  }
+  .nameWrap {
+    position: relative;
+    .time {
+      position: absolute;
+      left: set-vw(30);
+      background: $black;
+      z-index: 1;
+      bottom: set-vw(20);
+      line-height: set(26);
+      padding: set-vw(7) 0;
+      @include fs-vw(22);
+      color: $white;
+      font-weight: 700;
+      border-radius: set-vw(8);
+      min-width: set-vw(140);
+      text-align: center;
+    }
+  }
+}
+.descSerie {
+  margin: 0 set-vw(30);
+  padding: set-vw(20) set-vw(10) set-vw(30);
+  border-top: 1px solid $border-color-primary;
+  @include fs-vw(26);
+  line-height: 42px;
+}
+
+.history {
+  background-color: $white;
+  margin-top: set-vw(30);
+  padding: set-vw(20) set-vw(34);
+  background-color: $white;
+
+  .historyTitle {
+    padding-bottom: set-vw(21);
+    border-bottom: solid 1px $border-color-primary;
+
+    span {
+      padding-left: set-vw(10);
+      border-left: solid 2px $malibu;
+      @include fs-vw(28);
+      font-weight: bold;
+    }
+  }
+
+  .historyRow {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px $border-color-primary;
+    padding: set-vw(20) set-vw(7) set-vw(20) 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .historyLabel {
+      font-weight: bold;
+      @include fs-vw(26);
+      width: set-vw(250);
+    }
+    .icGoDetail {
+      width: set-vw(14);
+      height: set-vw(20);
+      cursor: pointer;
+    }
+  }
+  .historyInfo {
+    font-weight: 400;
+    @include fs-vw(26);
+    // font-weight: bold;
+    flex: 1;
+    .hightLight {
+      color: $malibu;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
+
+.tabTop {
+  margin-top: 0;
+  a {
+    min-width: set-vw(150);
+  }
+}
+
+@media screen and (max-width: $max-width) {
+  .tab {
+    a {
+      min-width: set-vw(80);
+    }
+  }
+}
+
+.goDetail {
+  padding: set-vw(15);
+}
+
+.CouponWrapper {
+  padding: set-vw(40) set-vw(30);
+}

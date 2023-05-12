@@ -1,0 +1,96 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.content {
+  padding: set-vw(24) set-vw(30);
+  background-color: $white;
+  :global {
+    .ant-list-pagination {
+      display: flex;
+      justify-content: center;
+      .ant-pagination-prev {
+        display: none;
+      }
+      .ant-pagination-item {
+        border: unset;
+        font-weight: bold;
+        height: set-vw(40);
+        min-width: set-vw(40);
+        @include fs-vw(28);
+        line-height: set-vw(40);
+        border-radius: unset;
+        a {
+          color: $black;
+        }
+        &.ant-pagination-item-active {
+          background-color: $border-color-primary;
+          a {
+            color: $white;
+          }
+        }
+      }
+      .ant-pagination-next {
+        display: none;
+      }
+    }
+  }
+}
+
+.title {
+  padding-bottom: set-vw(21);
+  border-bottom: solid 1px $border-color-primary;
+  display: flex;
+
+  p {
+    font-weight: 700;
+    @include fs-vw(28);
+    padding-left: set-vw(10);
+    border-left: solid set-vw(4) $malibu;
+    margin-bottom: 0;
+  }
+
+  span {
+    font-weight: normal;
+    @include fs-vw(28);
+    margin-left: set-vw(20);
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: set-vw(30);
+  padding-bottom: set-vw(30);
+  border-bottom: solid 1px $border-color-primary;
+
+  .action {
+    .iconEdit {
+      width: set-vw(26);
+      height: set-vw(40);
+      margin-right: set-vw(12);
+    }
+
+    :global {
+      button {
+        padding: set-vw(20) set-vw(78) !important;
+        line-height: 1;
+        background-color: $text-color !important;
+        span {
+          color: $white !important;
+          @include fs-vw(28);
+          font-weight: 700;
+        }
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+.listNoData {
+  :global {
+    .ant-list-pagination {
+      display: none;
+    }
+  }
+}

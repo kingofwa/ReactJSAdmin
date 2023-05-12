@@ -1,0 +1,119 @@
+@import '@styles/variables';
+
+.system-setting-info {
+  &-title {
+    background: $mercury;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &-body {
+    padding: 20px;
+    background-color: $alabaster;
+  }
+
+  &-actions {
+    border-top: solid 1px $silver;
+    text-align: center;
+    padding-top: 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-action {
+      min-width: 140px;
+    }
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prefecture-col {
+    margin-left: 36px;
+    flex: 1;
+  }
+  .select-date {
+    margin-left: 60px;
+    &-text {
+      font-weight: bold;
+      margin-right: 25px;
+    }
+  }
+
+  .spot-description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: $black;
+    margin-bottom: 10px;
+  }
+
+  .map {
+    width: 100%;
+    height: 395px;
+    margin-top: 10px;
+    background-color: $white;
+    border: 1px solid $silver;
+
+    &-row {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      .ant-input {
+        width: 83px;
+        margin-left: 20px;
+        margin-right: 5px;
+      }
+    }
+
+    &-des {
+      margin-left: 20px;
+    }
+  }
+
+  .input-search-map {
+    width: 295px;
+  }
+
+  .series-extra-description {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: $black;
+    margin: 10px 0;
+  }
+
+  .series-setting {
+    .ant-form-item-control-input {
+      width: 156px;
+    }
+  }
+
+  .number-input {
+    .ant-form-item-control {
+      flex-direction: row;
+    }
+  }
+
+  .input-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .ant-input {
+      width: 100px;
+      margin-right: 20px;
+    }
+  }
+}

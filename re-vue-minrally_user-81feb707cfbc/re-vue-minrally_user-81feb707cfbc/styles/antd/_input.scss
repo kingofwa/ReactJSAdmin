@@ -1,0 +1,133 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.ant-input-textarea-show-count::after {
+  content: attr(data-count) "文字" !important;
+  transition: margin-bottom 0.3s;
+}
+
+.ant-checkbox-inner {
+  border-radius: 2px !important;
+}
+.ant-btn[disabled],
+.ant-btn[disabled]:hover,
+.ant-btn[disabled]:focus,
+.ant-btn[disabled]:active {
+  border: none;
+}
+
+.ant-picker {
+  width: 100%;
+  height: set-vw(60);
+  min-height: 40px;
+  border-radius: set-vw(5) !important;
+  border: 1px solid $border-color-primary !important;
+
+  .ant-picker-input {
+    @include fs-vw(26);
+    & > input {
+      @include fs-vw(26);
+    }
+  }
+}
+
+.ant-picker-year-panel {
+  .ant-picker-cell-disabled::before {
+    margin: 0 set-vw(10);
+  }
+  .ant-picker-cell::before {
+    top: unset;
+    transform: unset;
+  }
+  .ant-picker-content {
+    cursor: not-allowed;
+  }
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+  background: $malibu !important;
+}
+
+.ant-input {
+  border-radius: set-vw(5) !important;
+  border: 1px solid $border-color-primary !important;
+}
+
+.text-input {
+  input {
+    height: set-vw(60);
+  }
+  .ant-form-item-required {
+    @include fs-vw(26);
+  }
+  .ant-form-item-label {
+    @include fs-vw(26);
+  }
+}
+
+.email-input {
+  input {
+    height: set-vw(60);
+  }
+  .ant-form-item-required {
+    @include fs-vw(26);
+  }
+  .ant-form-item-label {
+    @include fs-vw(26);
+  }
+}
+
+.text-area-input {
+  .ant-form-item-required {
+    @include fs-vw(26);
+  }
+
+  .ant-form-item-label {
+    label {
+      @include fs-vw(26);
+    }
+  }
+}
+
+.ant-form-item {
+  margin-bottom: set-vw(50) !important;
+}
+
+.select-input {
+  .ant-form-item-required {
+    @include fs-vw(26);
+  }
+  .ant-form-item-label {
+    label {
+      @include fs-vw(26);
+    }
+  }
+}
+
+.ant-btn {
+  height: 100% !important;
+}
+
+// update by new design - global
+.ant-form-item-required {
+  &::before {
+    position: absolute;
+    content: "必須" !important;
+    font-family: "Inter" !important;
+    right: calc(0px - set-vw(60));
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    font-weight: 700;
+    font-size: set-vw(20) !important;
+    line-height: set-vw(28) !important;
+    color: $color-notification !important;
+  }
+}
+
+.ant-picker-header button {
+  color: #333 !important;
+}
+.ant-picker-year-btn button {
+  color: #333 !important;
+}

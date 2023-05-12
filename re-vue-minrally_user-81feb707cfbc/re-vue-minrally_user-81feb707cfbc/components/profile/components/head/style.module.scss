@@ -1,0 +1,112 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.headProfile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: set-vw(30);
+  background-color: $white;
+
+  .avatar {
+    width: set-vw(212);
+    height: set-vw(212);
+    margin-bottom: set-vw(30);
+    cursor: pointer;
+  }
+  .btnImage {
+    position: absolute;
+    top: set-vw(30);
+    right: set-vw(30);
+    background-color: $text-color;
+    color: $white;
+    height: set-vw(40) !important;
+    width: set-vw(120);
+    padding: 0;
+    @include fs-vw(18);
+    line-height: set-vw(22);
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  .userName {
+    @include fs-vw(26);
+    font-weight: bold;
+    color: $text-color;
+    margin-bottom: set-vw(20);
+  }
+  .introduction {
+    @include fs-vw(24);
+    color: $text-color;
+    margin-bottom: 25px;
+    white-space: break-spaces;
+  }
+  .socialGroup {
+    // width: 100%;
+    padding: 0 set-vw(50);
+    color: $black;
+    .socialItem {
+      color: $malibu;
+      // text-transform: capitalize;
+      @include fs-vw(24);
+      font-weight: 400;
+      padding: 0 set-vw(20);
+    }
+  }
+  .follow {
+    width: 100%;
+    @include fs-vw(24);
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: set-vw(30);
+    display: flex;
+    justify-content: center;
+
+    span + span {
+      margin-left: set-vw(30);
+    }
+    .followText {
+      cursor: pointer;
+    }
+  }
+  .btnFollow {
+    position: absolute;
+    // top: 0;
+    right: set-vw(30);
+    background-color: $black;
+    color: $white;
+    height: set-vw(40) !important;
+    // width: set-vw(120);
+    padding: set-vw(2) set-vw(11);
+    @include fs-vw(24);
+    line-height: set-vw(30);
+    font-weight: bold;
+    border-radius: set-vw(8);
+  }
+  .active {
+    background-color: $malibu;
+  }
+
+  .follower {
+    color: #999999;
+    font-weight: 400;
+    @include fs-vw(20);
+    line-height: set-vw(24);
+    margin-bottom: set-vw(20);
+    padding: set-vw(1) set-vw(4);
+    background: #f2f2f2;
+    border-radius: set-vw(4);
+    max-width: fit-content;
+  }
+}
+
+.btnUnfollow {
+  padding: 5px;
+  width: 160px;
+  span {
+    color: #f96666;
+  }
+}
+.btnFloat {
+  z-index: 1;
+}

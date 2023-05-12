@@ -1,0 +1,81 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.select {
+  width: 100%;
+  max-width: $max-width;
+  position: relative;
+  height: 3.5em;
+  z-index: 99999999;
+}
+
+.rallySelect {
+  width: set-vw(265);
+}
+
+.tagUser {
+  @include fs-vw(20);
+  color: $white;
+  padding: set-vw(4) set-vw(30);
+  background-color: $color-notification;
+  border: none;
+  font-weight: bold;
+  line-height: 20px;
+  margin-left: set-vw(40);
+  letter-spacing: set-vw(5);
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.newsList {
+  padding: set-vw(30) 0;
+}
+
+.btnFixed {
+  width: set-vw(275);
+  span {
+    color: #ff6666;
+  }
+}
+
+.boxFixed {
+  position: relative;
+}
+
+.btnReadAll {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #66ccff !important;
+  text-decoration: underline;
+  text-align: right;
+  padding: 5px;
+  font-weight: normal;
+  margin-right: set-vw(20);
+  max-width: set-vw(300);
+  @include fs-vw(24);
+}
+
+.background {
+  background-color: #f2f2f2;
+  height: set-vw(80);
+  position: fixed;
+  width: set-vw(750);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  @media screen and (max-width: 750px) {
+    height: set-vw(100);
+  }
+
+  @media screen and (min-width: 750px) {
+    padding-left: set-vw(30);
+  }
+}
+.textReadAll {
+  @include fs-vw(24);
+}
+.textReadAll:hover {
+  background-color: white;
+}

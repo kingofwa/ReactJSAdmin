@@ -1,0 +1,24 @@
+.message {
+  padding-top: 1rem;
+  margin-bottom: -0.5rem;
+  text-align: center;
+  color: #000;
+}
+.messageErrorTitle {
+  padding-top: 2rem;
+  color: red;
+}
+.messageSuccessTitle {
+  padding-top: 3rem;
+  color: black;
+  font-weight: 900;
+  font-size: large;
+}
+
+.modalMessage {
+  :global {
+    .ant-btn-link {
+      background-color: black;
+    }
+  }
+}

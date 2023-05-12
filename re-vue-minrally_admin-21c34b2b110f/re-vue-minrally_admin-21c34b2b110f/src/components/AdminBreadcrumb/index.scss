@@ -1,0 +1,25 @@
+.admin-breadcrumb {
+  margin-left: 20px;
+
+  &.ant-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+    line-height: 1;
+
+    > span:last-child .ant-breadcrumb-separator {
+      display: inline-block;
+    }
+
+    .ant-breadcrumb-link,
+    .ant-breadcrumb-link .ant-typography,
+    span:last-child {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #838282;
+    }
+  }
+}

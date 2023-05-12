@@ -1,0 +1,26 @@
+@import '@styles/variables';
+
+.add-photo {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 104px;
+  cursor: pointer;
+}
+
+.upload-required {
+  .ant-form-item-label {
+    label::before {
+      display: inline-block;
+      margin-right: 4px;
+      color: #ff4d4f;
+      font-size: 14px;
+      font-family: SimSun, sans-serif;
+      line-height: 1;
+      content: '*';
+    }
+  }
+}

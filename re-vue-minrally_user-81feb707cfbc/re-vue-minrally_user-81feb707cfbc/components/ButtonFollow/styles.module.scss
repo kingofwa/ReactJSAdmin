@@ -1,0 +1,90 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.btnFollow {
+  position: absolute;
+  right: set-vw(30);
+  background-color: #333333;
+  color: $white;
+  height: set-vw(45) !important;
+  padding: set-vw(2) set-vw(11);
+  line-height: set-vw(30);
+  font-weight: normal;
+  border-radius: set-vw(8);
+  border: solid 1px $text-color;
+
+  width: set-vw(160);
+  height: set-vw(40);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    font-weight: 700;
+    @include fs-vw(24);
+  }
+}
+
+.active {
+  background-color: $malibu;
+  border: solid 1px $malibu;
+}
+
+.btnFollow:hover,
+.btnFollow:focus,
+.btnFollow:active,
+.active:hover,
+.active:focus,
+.active:active {
+  background-color: $malibu;
+  color: white;
+}
+
+.follower {
+  color: #999999;
+  font-weight: 400;
+  line-height: set-vw(24);
+  margin-bottom: set-vw(20);
+  padding: set-vw(1) set-vw(4);
+  background: #f2f2f2;
+  border-radius: set-vw(4);
+  max-width: fit-content;
+  border: solid 1px $malibu;
+}
+
+.btnUnfollow {
+  padding: 5px;
+  width: 160px;
+
+  span {
+    color: #ff6666;
+  }
+}
+
+.btnFloat {
+  z-index: 1;
+}
+
+.textUnfollow {
+  font-size: 12px;
+}
+.textUnfollow:hover {
+  background-color: white;
+}
+
+.TooltipContain {
+  border-radius: 2px;
+
+  span {
+    display: none !important;
+  }
+}
+
+.textConfirmUnFollow,
+.textConfirmUnFollow:hover {
+  cursor: pointer;
+  color: #ff6666;
+  border: none;
+  background: white;
+  @include fs-vw(24);
+}

@@ -1,0 +1,62 @@
+@import "@styles/mixins";
+@import "@styles/variables";
+
+.topContainer,
+.topContainerBanner {
+  .carousel {
+    margin: set-vw(20) 0;
+    .wrapper {
+      width: 87.24%;
+      margin-right: set-vw(15);
+    }
+    .wrapperNonURl {
+      width: 87.24%;
+      margin-right: set-vw(15);
+      cursor: default;
+    }
+    .carouselCell {
+      background-size: cover;
+      object-fit: cover;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+
+  .helpText {
+    text-align: center;
+    font-weight: 700;
+    @include fs-vw(28);
+    line-height: 34px;
+    margin: set-vw(30) 0 set-vw(40);
+  }
+  .btnAction {
+    margin: 0 auto set-vw(40);
+    background: $malibu;
+    padding: set-vw(26) set-vw(83) !important;
+  }
+}
+
+.acceptRallyWrapper {
+  iframe {
+    width: 100% !important;
+  }
+}
+
+// @media screen and (min-width: 769px) {
+//   .topContainerBanner {
+//     margin-top: 65vh;
+//     .carousel {
+//       position: absolute;
+//       left: 0;
+//       right: 0;
+//       top: set-vw(174);
+//       .wrapper {
+//         width: 50%;
+//       }
+//     }
+//   }
+// }
+
+// .flickity-viewport {
+//   height: 56vw !important;
+// }

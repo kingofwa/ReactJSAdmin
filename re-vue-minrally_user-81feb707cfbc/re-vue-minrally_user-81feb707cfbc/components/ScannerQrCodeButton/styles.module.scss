@@ -1,0 +1,55 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.ScannerQrCodeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: set-vw(30) 0;
+
+  .ButtonScanner {
+    display: flex;
+    align-items: center;
+    gap: set-vw(10);
+    font-weight: bold;
+    @include fs-vw(32);
+    color: $text-color;
+    background: $witch-haze;
+    border: solid 1px $black;
+    padding: set-vw(30) set-vw(39);
+    border-radius: set-vw(12);
+    text-align: center;
+    cursor: pointer;
+    // width: set-vw(500);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    position: fixed;
+    bottom: set-vw(90);
+    z-index: 999999;
+  }
+
+  .ButtonScannerScroll {
+    display: flex;
+    align-items: center;
+    gap: set-vw(10);
+    opacity: 0.1;
+    font-weight: bold;
+    @include fs-vw(32);
+    color: $text-color;
+    background: $witch-haze;
+    border: solid 1px $black;
+    padding: set-vw(30) set-vw(39);
+    border-radius: set-vw(12);
+    text-align: center;
+    cursor: pointer;
+    // width: set-vw(500);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    position: fixed;
+    bottom: set-vw(90);
+    z-index: 999999;
+    pointer-events: none;
+  }
+}

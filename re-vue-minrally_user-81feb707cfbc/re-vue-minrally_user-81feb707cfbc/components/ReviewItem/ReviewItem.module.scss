@@ -1,0 +1,145 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.reviewItem {
+  padding-bottom: set-vw(27);
+  border-bottom: solid 1px $border-color-primary;
+}
+
+.avatar {
+  width: set-vw(60);
+  height: set-vw(60);
+  border-radius: 50%;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: set-vw(20);
+
+  .userName {
+    font-weight: 700;
+    @include fs-vw(26);
+    margin-bottom: 0;
+  }
+
+  .date {
+    font-weight: 400;
+    @include fs-vw(26);
+    margin-bottom: 0;
+  }
+}
+
+.header {
+  padding: set-vw(20) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  font-weight: 400;
+  @include fs-vw(26);
+  margin-bottom: set-vw(20);
+}
+
+.seeMore {
+  font-weight: 700;
+  @include fs-vw(26);
+  margin-left: set-vw(5);
+  color: #66ccff;
+  cursor: pointer;
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  gap: set-vw(20);
+  flex-wrap: wrap;
+
+  .image {
+    width: set-vw(150);
+    height: set-vw(150);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.reaction {
+  margin-top: set-vw(26);
+  display: flex;
+  align-items: center;
+  gap: set-vw(64);
+
+  .comment {
+    display: flex;
+    align-items: center;
+    gap: set-vw(15);
+    cursor: pointer;
+
+    .icComment {
+      width: set-vw(36);
+      height: set-vw(36);
+    }
+
+    .commentTitle {
+      color: $malibu;
+      font-weight: bold;
+      @include fs-vw(26);
+      margin-bottom: 0;
+    }
+  }
+
+  .like {
+    display: flex;
+    align-items: center;
+    gap: set-vw(15);
+    cursor: pointer;
+
+    .icLike {
+      width: set-vw(36);
+      height: set-vw(36);
+    }
+
+    .likeCount {
+      @include fs-vw(26);
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.icAction {
+  width: set-vw(30);
+  height: set-vw(36);
+  cursor: pointer;
+}
+
+.action {
+  padding: set-vw(26);
+}
+
+.popup {
+  border-radius: 8px;
+}
+
+.popupItem {
+  cursor: pointer;
+  white-space: nowrap;
+  // @include fs-vw(26);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

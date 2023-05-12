@@ -1,0 +1,148 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.drawer {
+  :global {
+    .ant-drawer-content-wrapper {
+      width: set-vw(570) !important;
+    }
+
+    .ant-drawer-body {
+      overflow-x: hidden;
+    }
+  }
+}
+
+.toggler {
+  margin-left: 0.25rem;
+}
+
+.togglerIcon {
+  background-image: url("/menu-icon.svg");
+  width: set-vw(46);
+  height: set-vw(40);
+  margin-bottom: set-vw(13);
+}
+
+.togglerIconActive {
+  background-image: url("/active-menu-icon.svg");
+  width: set-vw(46);
+  height: set-vw(40);
+  margin-bottom: set-vw(13);
+}
+
+.closeIcon {
+  background-image: url("/menu-close-icon.svg");
+  width: 20px;
+  height: 20px;
+}
+
+.nav {
+  margin: 0;
+  list-style: none;
+  padding: 0 30px;
+}
+
+.navItem {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.navSearchItem {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.navItem span {
+  color: $text-color !important;
+  // font-weight: $font-weight-normal;
+  // font-size: 13;
+  cursor: pointer;
+}
+
+.logOut {
+  color: $text-color !important;
+  font-weight: $font-weight-bold;
+  font-size: 13px;
+  padding: 0 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.navSearchItem a {
+  color: $black !important;
+  font-weight: $font-weight-bold;
+  font-size: 13px;
+}
+
+.divider {
+  margin: set-vw(20) 0;
+  background-color: $gallery;
+  margin-top: 20px;
+}
+
+.authMenu {
+  display: flex;
+  gap: 20px;
+  padding: 0 30px;
+  align-items: center;
+  :global {
+    .custom-button {
+      width: 100%;
+      font-size: 13px;
+      padding: 7px 0;
+      span {
+        font-size: 13px;
+      }
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.navSearch {
+  padding: 0 30px;
+  font-weight: 700;
+}
+
+.userInfo {
+  display: flex;
+  gap: 20px;
+  padding: 0 30px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.userName {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  color: $text-color;
+}
+
+.copyright {
+  // position: absolute;
+  // left: 50%;
+  // bottom: 20px;
+  // transform: translateX(-50%);
+  text-align: center;
+}
+
+.navBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}

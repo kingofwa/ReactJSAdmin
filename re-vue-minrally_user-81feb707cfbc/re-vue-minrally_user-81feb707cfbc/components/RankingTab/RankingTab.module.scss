@@ -1,0 +1,29 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.tab {
+  display: flex;
+  justify-content: space-around;
+  padding: set-vw(30) set-vw(22);
+  border-bottom: solid 1px $border-color-primary;
+  align-items: center;
+  margin-bottom: 0;
+  font-weight: 400;
+  @include fs-vw(22);
+  gap: set-vw(20);
+}
+
+.item {
+  a {
+    color: $black;
+  }
+}
+
+.itemActive {
+  a {
+    color: $white;
+    background-color: $malibu;
+    padding: set-vw(10);
+    border-radius: 20px;
+  }
+}

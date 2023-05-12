@@ -1,0 +1,12 @@
+.horizontal-list {
+  .ant-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+
+.ant-list {
+  & &-empty-text {
+    padding: 0;
+  }
+}

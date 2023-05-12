@@ -1,0 +1,59 @@
+@import "@styles/variables";
+
+.blockWrapper {
+  padding: 50px 90px 0;
+  background-color: $white;
+  .icVector {
+    margin-right: 20px;
+    width: 33px;
+  }
+  .title {
+    flex-flow: inherit;
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 40px;
+      line-height: 40px;
+      font-weight: 400;
+      color: $text-color;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 20px 20px 0;
+    .title {
+      h2 {
+        font-size: 20px;
+        line-height: 20px;
+      }
+      .is18px {
+        font-size: 18px;
+      }
+    }
+    .icVector {
+      margin-right: 10px;
+      width: 23px;
+    }
+  }
+  .pcOnly {
+    background: red;
+  }
+}
+
+.isTop.blockWrapper {
+  padding: 20px 20px 0;
+
+  .title {
+    flex-flow: inherit !important;
+  }
+  // .title {
+  //   h2 {
+  //     font-size: 40px;
+  //     line-height: 40px;
+  //   }
+  // }
+  // .icVector {
+  //   margin-right: 20px;
+  //   width: 33px;
+  // }
+}

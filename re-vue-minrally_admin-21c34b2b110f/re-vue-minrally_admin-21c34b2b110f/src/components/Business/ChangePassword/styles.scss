@@ -1,0 +1,30 @@
+@import '@styles/variables';
+
+.business-change-password {
+  margin-top: 40px;
+
+  &__title {
+    background: $mercury;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &__body {
+    padding: 20px;
+    background-color: $alabaster;
+  }
+
+  &__actions {
+    border-top: solid 1px $silver;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+}

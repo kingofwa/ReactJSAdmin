@@ -1,0 +1,137 @@
+@import './overrides/antd/form';
+@import './overrides/antd/spin';
+@import './overrides/antd/button';
+@import '@styles/variables';
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.custom-table {
+  margin-top: 10px;
+
+  .ant-table-thead {
+    tr {
+      th {
+        background-color: $white;
+        color: $gray;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .ant-pagination {
+    display: none;
+  }
+
+  .ant-table-cell {
+    max-width: 300px;
+    color: $black;
+  }
+}
+
+.custom-pagination {
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    color: $black;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.form-vertical {
+  .ant-form-item-row {
+    display: block;
+    .ant-form-item-label {
+      label {
+        font-weight: bold;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.ant-form-item-label {
+  font-weight: bold;
+  label {
+    color: $black;
+  }
+}
+
+.table-no-background {
+  table {
+    thead {
+      tr {
+        th {
+          background: $alabaster !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          background: $alabaster !important;
+        }
+      }
+    }
+  }
+}
+
+.table__statistic {
+  display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  justify-content: flex-end;
+  padding: 20px 0;
+  margin-top: 20px;
+  color: $black;
+}
+
+.ant-form-item-extra {
+  color: $black;
+}
+
+.ant-form-item {
+  color: $black;
+}
+
+.custom-spin {
+  .ant-spin-spinning {
+    max-height: 100% !important;
+  }
+}
+
+.ant-radio-group {
+  span {
+    color: $black;
+  }
+}
+
+.ant-pagination-item-active a {
+  color: $white !important;
+}
+
+.ant-pagination-item a {
+  color: $black;
+}

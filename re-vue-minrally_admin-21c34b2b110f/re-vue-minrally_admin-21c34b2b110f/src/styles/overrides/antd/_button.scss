@@ -1,0 +1,12 @@
+.ant-btn {
+  &-primary.ant-btn-background-ghost {
+    background-color: white !important;
+  }
+  span {
+    font-weight: bold;
+  }
+}
+
+.ant-upload.ant-upload-select-picture-card {
+  margin-bottom: 0;
+}

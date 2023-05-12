@@ -1,0 +1,133 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: $white;
+  color: $black;
+  width: 100%;
+  max-width: $max-width;
+  z-index: 999999;
+  // left: 50%;
+  // transform: translate(-50%, 0);
+}
+
+.menu {
+  text-align: center;
+  max-width: set-vw(660);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  padding: set-vw(19) 0 set-vw(14);
+  justify-content: space-between;
+  height: set-vw(100);
+}
+
+.itemWrapperCenter {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: set-vw(5);
+  width: set-vw(110);
+
+  & p {
+    color: $text-color;
+    font-style: normal;
+    font-weight: 600;
+    @include fs-vw(18);
+    margin-bottom: 0;
+  }
+  & img {
+    width: set-vw(40);
+    height: set-vw(40);
+    margin-bottom: set-vw(13);
+  }
+}
+
+.itemWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  width: set-vw(110);
+  & p {
+    color: $text-color;
+    font-style: normal;
+    font-weight: 600;
+    @include fs-vw(18);
+    margin-bottom: 0;
+  }
+  & img {
+    width: set-vw(40);
+    height: set-vw(40);
+    margin-bottom: set-vw(13);
+  }
+  .bell {
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   background: $color-notification;
+    //   border-radius: 50%;
+    //   top: 50%;
+    //   transform: translateY(calc(0px - set-vw(40)));
+    //   right: 0;
+    //   width: set-vw(10);
+    //   height: set-vw(10);
+    // }
+
+    position: absolute;
+    background: $color-notification;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(calc(0px - set-vw(40)));
+    right: 0;
+    width: set-vw(10);
+    height: set-vw(10);
+    .animation {
+      border: 1px solid $color-notification;
+      background: $color-notification;
+      opacity: 0.2;
+      border-radius: 100%;
+      display: block;
+      height: set-vw(10);
+      width: set-vw(10);
+
+      opacity: 1;
+      -moz-animation: sonar 1.25s linear infinite;
+      -o-animation: sonar 1.25s linear infinite;
+      -webkit-animation: sonar 1.25s linear infinite;
+      animation: sonar 1.25s linear infinite;
+    }
+  }
+}
+
+.divFake {
+  width: set-vw(110);
+  height: set-vw(80);
+}
+
+@keyframes sonar {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(3);
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.activeLabel {
+  color: $malibu !important;
+}

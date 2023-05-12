@@ -1,0 +1,23 @@
+.date-range-series {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__separator {
+    padding: 0 0.25rem;
+  }
+
+  .ant-picker {
+    flex: 1 0 0;
+  }
+
+  &-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .ant-picker-suffix {
+    display: none;
+  }
+}

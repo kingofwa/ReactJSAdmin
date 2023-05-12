@@ -1,0 +1,68 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+.versionModal {
+  :global {
+    .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: set-vw(21) set-vw(25) set-vw(50);
+    }
+  }
+
+  .date {
+    width: 100%;
+    @include fs-vw(26);
+    line-height: set-vw(26);
+    color: $text-color;
+    text-align: left;
+  }
+  .title {
+    @include fs-vw(28);
+    line-height: set-vw(28);
+    font-weight: bold;
+    margin: set-vw(45) 0 set-vw(50);
+  }
+  .description {
+    @include fs-vw(26);
+    font-weight: normal;
+    margin-bottom: set-vw(20);
+    text-align: center;
+  }
+  .divider {
+    margin: set-vw(30) 0;
+    border-top: 2px solid $border-color-primary;
+  }
+
+  .helpText {
+    @include fs-vw(24);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: set-vw(30);
+  }
+  .shareIcon {
+    margin: 0 set-vw(15) 0 set-vw(8);
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: set-vw(30);
+
+    .btnSubmit,
+    .btnSaveDraft {
+      width: set-vw(300);
+    }
+    .btnSubmit {
+      background-color: $malibu;
+      &[disabled] {
+        color: rgba(0, 0, 0, 0.25) !important;
+        background: #e0dfdf !important;
+      }
+    }
+    .btnSaveDraft {
+      background-color: $black;
+    }
+  }
+}

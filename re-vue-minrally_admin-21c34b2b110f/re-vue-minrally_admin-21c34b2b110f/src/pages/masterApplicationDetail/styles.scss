@@ -1,0 +1,11 @@
+@import '@styles/variables';
+
+.master-detail {
+  &-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+}

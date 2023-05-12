@@ -1,0 +1,21 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+.title {
+  position: relative;
+  margin-top: set-vw(40);
+  padding: set-vw(25) set-vw(44);
+  background-color: $white;
+  @include fs-vw(28);
+  line-height: set-vw(28);
+  font-weight: bold;
+  &::after {
+    content: "";
+    position: absolute;
+    left: set-vw(30);
+    top: 50%;
+    transform: translateY(-50%);
+    width: set-vw(4);
+    height: calc(100% - set-vw(46));
+    background-color: $malibu;
+  }
+}

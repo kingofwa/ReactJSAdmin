@@ -1,0 +1,30 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+.checkinOneTimeModal {
+  :global {
+    .ant-modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: set-vw(84) set-vw(50) set-vw(90);
+    }
+  }
+  .title,
+  .status {
+    @include fs-vw(28);
+    line-height: set-vw(28);
+    font-weight: bold;
+    margin-bottom: set-vw(20);
+  }
+  .description {
+    @include fs-vw(26);
+    font-weight: normal;
+    margin: set-vw(60) 0 set-vw(50);
+    text-align: center;
+  }
+
+  .btnSubmit {
+    min-width: set-vw(300);
+    height: set-vw(80) !important;
+  }
+}

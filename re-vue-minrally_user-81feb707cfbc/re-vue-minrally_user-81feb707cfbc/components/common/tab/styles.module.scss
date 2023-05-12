@@ -1,0 +1,51 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.tab {
+  display: flex;
+  justify-content: center;
+  background-color: $white;
+  border-top: 1px solid $border-color-primary;
+  border-bottom: 1px solid $border-color-primary;
+  margin-top: set-vw(24);
+  width: 100%;
+
+  a {
+    position: relative;
+    font-weight: bold;
+    @include fs-vw(28);
+    line-height: set-vw(28);
+    text-align: center;
+    min-width: set-vw(230);
+    margin: 0 set-vw(20);
+    padding: set-vw(16) 0;
+    color: $dusty-gray;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:not(:first-child)::before {
+      content: "";
+      position: absolute;
+      left: calc(0px - set-vw(21));
+      top: 50%;
+      transform: translateY(-50%);
+      height: set-vw(30);
+      width: 2px;
+      background-color: $border-color-primary;
+    }
+    &.active {
+      color: $text-color !important;
+      border-bottom: min(4px, 0.5333333333vw) solid #66ccff;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .tab {
+    a {
+      min-width: set-vw(120);
+    }
+  }
+}

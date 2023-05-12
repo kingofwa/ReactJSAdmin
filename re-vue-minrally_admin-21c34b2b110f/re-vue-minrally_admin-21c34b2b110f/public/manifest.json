@@ -1,0 +1,8 @@
+{
+  "short_name": "Minrally admin",
+  "name": "Minrally admin page",
+  "start_url": "./",
+  "display": "browser",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

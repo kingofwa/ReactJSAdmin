@@ -1,0 +1,41 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.footer {
+  width: 100%;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  background-color: $white;
+  max-width: $max-width;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.pageTop {
+  width: 100%;
+  background-color: $text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: set-vw(24) 0;
+  @include fs-vw(22);
+  color: $white;
+
+  .icTop {
+    width: set-vw(20);
+    height: set-vw(10);
+    margin-right: set-vw(10);
+  }
+}
+.minrally {
+  width: 100%;
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: set-vw(18) 0;
+  @include fs-vw(20);
+  color: $text-color;
+}

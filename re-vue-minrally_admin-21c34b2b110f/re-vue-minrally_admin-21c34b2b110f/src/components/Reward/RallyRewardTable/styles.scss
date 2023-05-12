@@ -1,0 +1,35 @@
+@import '@styles/variables';
+
+.reward-list-info {
+  &-title {
+    background: $mercury;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+  }
+
+  &-body {
+    padding: 20px;
+    background-color: $alabaster;
+  }
+
+  &-actions {
+    border-top: solid 1px $silver;
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .custom-table {
+    .ant-table-content {
+      .ant-table-cell {
+        padding: 30px 8px;
+      }
+    }
+  }
+}

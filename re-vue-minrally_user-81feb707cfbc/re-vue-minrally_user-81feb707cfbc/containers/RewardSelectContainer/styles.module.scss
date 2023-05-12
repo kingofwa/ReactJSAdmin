@@ -1,0 +1,309 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.icBack {
+  width: set-vw(36);
+  position: absolute;
+  left: set-vw(30);
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: set-vw(40) set-vw(30);
+  justify-content: center;
+  border-bottom: solid 1px $border-color-primary;
+  background-color: $white;
+}
+
+.rallyName {
+  margin-bottom: 0;
+  @include fs-vw(28);
+  font-weight: bold;
+  // padding-left: set-vw(50);
+  text-align: center;
+  word-break: break-word;
+  width: set-vw(561);
+}
+
+.title {
+  text-align: center;
+  padding: set-vw(20) set-vw(30);
+  @include fs-vw(28);
+  color: $text-color;
+  font-weight: 700;
+  background-color: $white;
+}
+
+.content {
+  margin: set-vw(20) 0;
+  padding: set-vw(40) set-vw(60);
+  background-color: $white;
+}
+
+.couponTitle {
+  text-align: center;
+  font-weight: 700;
+  @include fs-vw(28);
+  line-height: set-vw(34);
+  padding: 0 set-vw(30);
+}
+
+.couponImage {
+  height: set-vw(430);
+  margin-top: set-vw(40);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.formWrapper {
+  padding: set-vw(30);
+  .note,
+  .noteType2 {
+    margin-top: set-vw(20);
+    @include fs-vw(20);
+    font-weight: 400;
+  }
+  .noteType2 {
+    margin-bottom: set-vw(50);
+  }
+  .noteDefault {
+    margin-top: set-vw(20);
+    padding: set-vw(20);
+    @include fs-vw(25);
+    line-height: set-vw(30);
+    font-weight: 400;
+    border: 1px solid $border-color-primary;
+    border-radius: 5px;
+  }
+  .noteCreat {
+    margin-top: set-vw(20);
+    @include fs-vw(24);
+    font-weight: 400;
+    span {
+      display: inline-block;
+      margin-left: set-vw(20);
+      color: $silver;
+    }
+  }
+  :global {
+    .ant-form-item-label {
+      padding-bottom: 0;
+      label {
+        @include fs-vw(26);
+        line-height: set-vw(31);
+        font-weight: bold;
+      }
+    }
+    .ant-form-item-control-input input {
+      // margin-top: set-vw(20);
+      height: set-vw(60);
+      @include fs-vw(26);
+      font-weight: 400;
+    }
+    .ant-form-item-control-input textarea {
+      margin-top: set-vw(20);
+      @include fs-vw(25);
+      font-weight: 400;
+    }
+    .ant-upload.ant-upload-select-picture-card {
+      width: set-vw(298);
+      height: set-vw(168);
+      margin-bottom: 0;
+    }
+  }
+
+  .formItemDefault {
+    margin-bottom: set-vw(20) !important;
+    :global {
+      .ant-picker {
+        max-height: set-vw(60);
+        padding: 0 set-vw(19);
+        line-height: set-vw(60);
+        border-radius: set-vw(4);
+        input {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .radioGroup {
+    margin-top: set-vw(20);
+    display: flex;
+    align-items: center;
+    gap: set-vw(78);
+    :global {
+      .ant-radio-wrapper {
+        margin-bottom: 0 !important;
+        @include fs-vw(26);
+        line-height: 26px;
+        .ant-radio .ant-radio-inner {
+          border-color: #999;
+        }
+        .ant-radio-checked::after {
+          border-color: #999;
+        }
+        .ant-radio-inner {
+          border-radius: 50% !important;
+          width: set-vw(22);
+          height: set-vw(22);
+          border: 1px solid #999 !important;
+        }
+        .ant-radio-checked .ant-radio-inner::after {
+          display: unset;
+          margin-top: unset;
+          margin-left: unset;
+          border: unset;
+          width: set-vw(10);
+          height: set-vw(10);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background-color: #999;
+        }
+      }
+    }
+  }
+
+  .labelDate {
+    margin-bottom: set-vw(20);
+    @include fs-vw(26);
+    line-height: 31px;
+  }
+
+  .listWrapper {
+    margin-top: set-vw(50);
+  }
+  .label {
+    @include fs-vw(26);
+    line-height: set-vw(31);
+    font-weight: bold;
+
+    .required {
+      margin-left: 10px;
+      font-weight: bold;
+      @include fs-vw(20);
+      line-height: 24px;
+      color: #ff6666;
+    }
+  }
+
+  .formListItem {
+    width: 100%;
+    margin-bottom: set-vw(20);
+    :global {
+      .ant-form-item {
+        margin-bottom: 0 !important;
+      }
+    }
+    .removeIcon {
+      position: absolute;
+      top: set-vw(50);
+      transform: translateY(-50%);
+      & > svg {
+        width: set-vw(30);
+        height: set-vw(30);
+        fill: #999999;
+      }
+    }
+  }
+
+  .formItemBtn {
+    :global {
+      .ant-form-item-control-input .ant-form-item-control-input-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .btnSubmit,
+    .btnSaveDraft {
+      width: set-vw(300);
+    }
+    .btnSubmit {
+      background-color: $malibu;
+      &:first-child {
+        margin-top: set-vw(50);
+      }
+      margin-top: set-vw(30);
+    }
+    .btnSaveDraft {
+      background-color: $black;
+      margin-top: set-vw(30);
+    }
+  }
+}
+
+.mb30 {
+  margin-bottom: set-vw(30);
+}
+
+.checkboxGroup {
+  margin-bottom: set-vw(100);
+  max-height: 50vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  padding-top: set-vw(42);
+
+  :global {
+    .ant-checkbox-wrapper {
+      margin-left: set-vw(8);
+      @include fs-vw(26);
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: set-vw(20);
+      }
+      .ant-checkbox-checked::after {
+        border: 1px solid #ccc;
+        border-radius: unset;
+      }
+      .ant-checkbox-inner {
+        width: set-vw(30);
+        height: set-vw(30);
+        border: 1px solid #ccc;
+      }
+      .ant-checkbox-checked .ant-checkbox-inner::after {
+        border: set-vw(4) solid #999;
+        border-top: 0;
+        border-left: 0;
+        width: set-vw(10);
+        height: set-vw(16);
+      }
+      .ant-checkbox-disabled + span {
+        color: $black;
+      }
+      .ant-checkbox-disabled .ant-checkbox-inner {
+        background-color: $white;
+      }
+    }
+  }
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    height: 6px;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.noteTitle {
+  padding: set-vw(30);
+  margin-top: set-vw(30);
+  margin-bottom: set-vw(30);
+  @include fs-vw(28);
+  background-color: $white;
+}

@@ -1,0 +1,14 @@
+@import '@styles/variables';
+
+.hashtag-ranking-tab {
+  margin-top: 40px;
+
+  .tab {
+    &-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+    }
+  }
+}

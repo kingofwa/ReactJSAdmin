@@ -1,0 +1,187 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.rally {
+  background-color: $white;
+}
+
+.rallyContent {
+  padding: set-vw(37) set-vw(30) set-vw(30) set-vw(23);
+}
+
+.rallyTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .title {
+    font-weight: 700;
+    @include fs-vw(28);
+    color: $text-color;
+    margin: 0;
+  }
+
+  .icBackWrap {
+    width: set-vw(14);
+    height: set-vw(20);
+  }
+
+  .icBack {
+    width: set-vw(14);
+    height: set-vw(20);
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: set-vw(20);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: set-vw(37);
+  margin-bottom: set-vw(14);
+
+  .tag {
+    font-style: normal;
+    font-weight: bold;
+    color: $malibu;
+    @include fs-vw(24);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.reaction {
+  display: flex;
+  gap: set-vw(20);
+  align-items: center;
+
+  .reactionItem {
+    display: flex;
+    align-items: center;
+    margin-right: set-vw(30);
+    font-weight: bold;
+  }
+
+  .reactionIcon {
+    width: set-vw(30);
+    height: set-vw(30);
+    margin-right: set-vw(10);
+    cursor: pointer;
+  }
+
+  .reactionLabel {
+    font-weight: bold;
+    color: $black;
+    @include fs-vw(24);
+    font-weight: bold;
+  }
+}
+
+.shareWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .share {
+    background-color: $text-color;
+    color: $white;
+    border-radius: set-vw(8);
+    padding: set-vw(7) set-vw(10);
+    cursor: pointer;
+    line-height: 1;
+    font-weight: 700;
+    @include fs-vw(22);
+
+    .icShare {
+      width: set-vw(24);
+      height: set-vw(24);
+      margin-left: set-vw(10);
+    }
+  }
+}
+
+.rallyImage {
+  width: 100%;
+  height: set-vw(422);
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: set-vw(20);
+  bottom: set-vw(20);
+  background-color: $white;
+  padding: set-vw(10);
+  border-radius: 8px;
+
+  .userName {
+    margin-left: set-vw(10);
+    margin-right: set-vw(30);
+    @include fs-vw(20);
+    font-weight: 700;
+  }
+
+  .follow {
+    background-color: $text-color;
+    color: $white;
+    border-radius: set-vw(8);
+    padding: set-vw(7) set-vw(10);
+    cursor: pointer;
+    line-height: 1;
+    font-weight: 700;
+    @include fs-vw(22);
+  }
+
+  .avt {
+    width: set-vw(60);
+    height: set-vw(60);
+    border-radius: 50%;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: set-vw(16) set-vw(28);
+  border: 1px solid $border-color-primary;
+  background-color: $white;
+  .menuItem {
+    position: relative;
+    @include fs-vw(28);
+    font-weight: bold;
+    color: $silver;
+    letter-spacing: -0.05em;
+    line-height: set-vw(30);
+    &:first-child {
+      color: $black;
+    }
+    &:not(:last-child):after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: $border-color-primary;
+      left: calc(100% + set-vw(16));
+    }
+  }
+}

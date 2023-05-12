@@ -1,0 +1,41 @@
+.ant-modal {
+  // & &-content {
+  //   border-radius: 0;
+  // }
+  max-width: $max-width !important;
+
+  & &-header {
+    padding: 1.25rem 0;
+    border-bottom: 0;
+    border-radius: 0;
+  }
+
+  & &-body {
+    padding: 0 1rem;
+  }
+
+  & &-footer {
+    padding: 1.5rem 0 0.75rem;
+    border-top: 0;
+    border-radius: 0;
+    text-align: center;
+  }
+
+  & &-title {
+    font-size: 1.125rem;
+    font-weight: $font-weight-bold;
+    text-align: center;
+  }
+
+  .ant-modal-close-x {
+    width: set-vw(41);
+    height: set-vw(43);
+    line-height: set-vw(43);
+    margin: set-vw(12) set-vw(13) 0 0;
+    svg {
+      width: set-vw(41);
+      height: set-vw(43);
+      color: #dadada;
+    }
+  }
+}

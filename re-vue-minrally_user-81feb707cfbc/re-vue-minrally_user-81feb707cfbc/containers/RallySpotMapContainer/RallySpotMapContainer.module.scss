@@ -1,0 +1,67 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.icBack {
+  width: set-vw(36);
+  // height: set-vw(20);
+  position: absolute;
+  left: set-vw(30);
+  cursor: pointer;
+  // top: set-vw(30);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icBackWrap {
+  width: set-vw(14);
+  height: set-vw(20);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: set-vw(26) set-vw(30);
+  justify-content: center;
+  border-bottom: solid 1px $border-color-primary;
+  background-color: $white;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  @include fs-vw(28);
+  line-height: 1;
+}
+
+.map {
+  width: 100%;
+  height: 60vh;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.actions {
+  margin-top: set-vw(50);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+
+  :global {
+    button {
+      padding: set-vw(26) set-vw(52) !important;
+      background-color: $text-color !important;
+
+      span {
+        color: white !important;
+        @include fs-vw(28);
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+  }
+}

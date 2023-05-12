@@ -1,0 +1,23 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.Container {
+  padding-top: set-vw(80);
+  background: $concrete;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.Content {
+  background: $concrete;
+  min-height: calc(100vh - set-vw(100));
+  padding-bottom: set-vw(100);
+}
+
+.ContainerGrand {
+  background: #f2f2f2;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}

@@ -1,0 +1,75 @@
+.input-extra {
+  margin-top: 10px;
+}
+
+.form-coupon {
+
+  .form-item,
+  .upload-photos {
+    margin-bottom: 8px !important;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  .ant-form-item-explain-error {
+    font-size: 12px;
+  }
+}
+
+.extra {
+  margin-bottom: 0px;
+  margin-top: -8px;
+  margin-left: 8px;
+
+  label {
+    font-weight: normal;
+  }
+
+  .number-input {
+    input {
+      width: 5.5rem !important;
+    }
+  }
+
+  .number-input {
+    .number-input-suffix {
+      position: relative;
+      width: 350px;
+      margin-bottom: 24px;
+      margin-left: 5px;
+      left: unset;
+    }
+  }
+}
+
+.issue-group {
+  width: 100%;
+
+  .radio-with-textbox {
+    span {
+      display: inline-flex;
+    }
+  }
+}
+
+.coupon-setting {
+  .ant-radio-group {
+    label {
+      font-size: 12px;
+    }
+  }
+}
+
+.form-coupon {
+
+  label,
+  span {
+    font-size: 12px;
+  }
+}
+
+.form-item-hidden {
+  display: none;
+}

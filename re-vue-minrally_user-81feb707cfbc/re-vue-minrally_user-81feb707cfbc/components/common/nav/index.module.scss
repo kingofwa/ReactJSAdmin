@@ -1,0 +1,28 @@
+@import "@styles/variables";
+
+.nav {
+  position: relative;
+  min-height: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.backIcon {
+  background-image: url("/back-icon.png");
+}
+
+.title {
+  margin-bottom: 0;
+  padding: 0 2rem;
+  font-size: 1.125em;
+  font-weight: $font-weight-bold;
+}

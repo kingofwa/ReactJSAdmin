@@ -1,0 +1,28 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  padding: set-vw(30);
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  .infiniteScroll {
+    overflow: unset !important;
+  }
+  .descNoneResult {
+    margin-top: set-vw(169);
+    text-align: center;
+    @include fs-vw(26);
+    line-height: set-vw(26);
+    color: $black;
+  }
+  .note {
+    font-weight: 700;
+    @include fs-vw(26);
+    // line-height: set-vw(28);
+    text-align: center;
+    color: $text-color;
+    margin: set-vw(15);
+    margin-bottom: set-vw(30);
+  }
+}

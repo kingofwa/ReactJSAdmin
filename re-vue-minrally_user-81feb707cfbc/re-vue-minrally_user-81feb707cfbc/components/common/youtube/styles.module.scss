@@ -1,0 +1,9 @@
+@import "@styles/mixins";
+
+.video {
+  width: 100%;
+  iframe {
+    width: 100%;
+    height: set-vw(388);
+  }
+}

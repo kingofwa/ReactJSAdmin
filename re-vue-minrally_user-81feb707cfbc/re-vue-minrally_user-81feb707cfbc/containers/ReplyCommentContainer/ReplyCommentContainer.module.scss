@@ -1,0 +1,100 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.commentMain {
+  background-color: $white;
+  margin-bottom: set-vw(10);
+  padding: set-vw(4) set-vw(40);
+  margin-top: set-vw(79);
+  & > div {
+    border-bottom: unset;
+  }
+}
+.content {
+  padding: set-vw(24) set-vw(30);
+  background-color: $white;
+  :global {
+    .ant-list-pagination {
+      display: flex;
+      justify-content: center;
+      .ant-pagination-prev {
+        display: none;
+      }
+      .ant-pagination-item {
+        border: unset;
+        font-weight: bold;
+        height: set-vw(40);
+        min-width: set-vw(40);
+        @include fs-vw(28);
+        line-height: set-vw(40);
+        border-radius: unset;
+        a {
+          color: $black;
+        }
+        &.ant-pagination-item-active {
+          background-color: $border-color-primary;
+          a {
+            color: $white;
+          }
+        }
+      }
+      .ant-pagination-next {
+        display: none;
+      }
+    }
+  }
+  .formComment {
+    position: relative;
+    .label {
+      margin-bottom: set-vw(14);
+      @include fs-vw(28);
+      color: $black;
+      font-weight: bold;
+    }
+    .formItem {
+      position: relative;
+    }
+    .inputReply {
+      padding: set-vw(26) set-vw(34) set-vw(26) 0;
+      border-left: 0 !important;
+      border-right: 0 !important;
+      border-radius: unset !important;
+      @include fs-vw(26);
+      line-height: 1;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+    .btnSend {
+      position: absolute;
+      right: 0;
+      bottom: set-vw(20);
+      padding: 0;
+      height: auto !important;
+      background-color: $white !important;
+      .iconSend {
+        @include fs-vw(26);
+        color: $silver;
+        &.active {
+          color: $malibu;
+        }
+      }
+    }
+  }
+}
+
+.listNoData {
+  :global {
+    .ant-list-pagination {
+      display: none;
+    }
+    .ant-list-empty-text {
+      display: none;
+    }
+  }
+}

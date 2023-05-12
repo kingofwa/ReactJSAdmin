@@ -1,0 +1,10 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-bottom: set-vw(40);
+  background-color: $mercury;
+}

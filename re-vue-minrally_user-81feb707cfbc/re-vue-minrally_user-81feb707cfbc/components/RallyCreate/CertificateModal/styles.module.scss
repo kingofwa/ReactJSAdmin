@@ -1,0 +1,48 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.modalContainer {
+  max-width: $max-width;
+  margin: 0 auto;
+  top: 0;
+  height: 100vh;
+  :global {
+    .ant-modal-header {
+      background: $malibu;
+      border-bottom: none;
+      padding: set-vw(31) set-vw(25) set-vw(30);
+      .ant-modal-title {
+        @include fs-vw(28);
+        line-height: set-vw(28);
+        color: #333;
+      }
+    }
+    .ant-modal-close {
+      top: set-vw(17);
+      right: set-vw(25);
+      .ant-modal-close-x {
+        width: set-vw(56);
+        height: set-vw(56);
+        line-height: set-vw(56);
+        margin: 0;
+      }
+    }
+    .ant-modal-body {
+      padding: 0;
+      border: set-vw(10) solid $malibu;
+      background-color: #f2f2f2;
+      border-top: unset;
+      height: calc(100vh - set-vw(89));
+      overflow-y: scroll;
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  .icClose {
+    width: set-vw(40);
+    color: #333;
+  }
+}

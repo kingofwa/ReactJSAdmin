@@ -1,0 +1,11 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.searchCreatorContainer {
+  background-color: $concrete;
+}
+
+.searchInput {
+  padding: 0 set-vw(30);
+  margin: set-vw(30) 0;
+}

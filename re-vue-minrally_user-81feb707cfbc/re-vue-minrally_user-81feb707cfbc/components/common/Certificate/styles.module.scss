@@ -1,0 +1,104 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  // padding-bottom: set-vw(60);
+  .note {
+    margin-top: set-vw(40);
+    @include fs-vw(26);
+    text-align: center;
+  }
+  .content {
+    margin-top: set-vw(40);
+    // padding: set-vw(10);
+    background-color: $white;
+    .certificate {
+      position: relative;
+      width: set-vw(730);
+      height: set-vw(1005);
+      background-image: url("/img/bg-certificate.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: set-vw(90) set-vw(65) 0;
+      .formItemName {
+        width: 100%;
+        margin-bottom: 0 !important;
+        :global {
+          .ant-input {
+            // height: set-vw(94);
+            border-radius: set-vw(4);
+            @include fs-vw(80);
+            font-weight: bold;
+            text-align: center;
+            padding: 0;
+          }
+        }
+      }
+      .formItemDesc {
+        width: 100%;
+        margin: set-vw(20) 0 set-vw(15) !important;
+        :global {
+          .ant-input {
+            // height: set-vw(71);
+            border-radius: set-vw(4);
+            @include fs-vw(55);
+            font-weight: bold;
+            text-align: center;
+            padding: 0;
+          }
+        }
+      }
+      .rallyName {
+        margin-top: set-vw(40);
+        @include fs-vw(30);
+        line-height: set-vw(36);
+        font-weight: bold;
+        text-align: center;
+      }
+      .playerName {
+        margin-top: set-vw(15);
+        @include fs-vw(30);
+        line-height: set-vw(36);
+        font-weight: bold;
+      }
+
+      .date {
+        @include fs-vw(35);
+        line-height: set-vw(42);
+        font-weight: bold;
+      }
+      .desc {
+        margin-top: set-vw(48);
+        @include fs-vw(30);
+        font-weight: bold;
+        line-height: set-vw(40);
+      }
+      .signature {
+        margin-top: set-vw(40);
+        width: 100%;
+        justify-content: flex-end;
+        text-align: right;
+        @include fs-vw(26);
+        line-height: set-vw(36);
+        font-weight: bold;
+      }
+      .number {
+        position: absolute;
+        bottom: set-vw(35);
+        left: 50%;
+        transform: translateX(-50%);
+        @include fs-vw(24);
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: set-vw(60) auto set-vw(50);
+    width: set-vw(300);
+    background-color: $black;
+  }
+}

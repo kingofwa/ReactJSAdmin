@@ -1,0 +1,12 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  background: #f2f2f2;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding-top: set-vw(179); // header 100 + tab 79
+}

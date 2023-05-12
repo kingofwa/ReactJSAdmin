@@ -1,0 +1,38 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.headHistory {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: set-vw(79);
+  align-items: center;
+  background-color: $white;
+  color: $black;
+  font-weight: bold;
+  border-bottom: 1px solid $border-color-primary;
+  padding: 0 set-vw(30);
+  @include fs-vw(28);
+
+  .goBack {
+    cursor: pointer;
+    .imgBack {
+      width: set-vw(36);
+    }
+  }
+  .showMe {
+    background-color: $text-color;
+    color: $white;
+    margin: 0;
+    font-weight: 700;
+    padding: set-vw(6);
+    border-radius: set-vw(8);
+    @include fs-vw(22);
+  }
+
+  .headHistoryTitle {
+    display: flex;
+    align-items: center;
+    gap: set-vw(10);
+  }
+}

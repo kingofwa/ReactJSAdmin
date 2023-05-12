@@ -1,0 +1,287 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.tab {
+  display: flex;
+  justify-content: center;
+  padding: set-vw(13) 0;
+  background: $white;
+
+  & a:first-child {
+    border-right: 1px solid $border-color-primary;
+  }
+  a {
+    padding: 0 set-vw(30);
+    @include fs-vw(28);
+    line-height: set-vw(34);
+    font-weight: bold;
+    color: #999;
+  }
+  & .active {
+    color: $black;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% + set-vw(9));
+      left: set-vw(30);
+      width: calc(100% - set-vw(60)); //padding: 0 10px
+      background: #66ccff;
+      height: set-vw(4);
+      border-radius: 4px;
+    }
+  }
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .helpText {
+    margin: set-vw(70) 0 set-vw(50);
+    @include fs-vw(28);
+    line-height: set-vw(34);
+    font-weight: bold;
+    color: $text-color;
+  }
+  .btnTwitter,
+  .btnLine,
+  .btnGoogle {
+    width: set-vw(400);
+    margin-bottom: set-vw(40);
+    padding-left: set-vw(60) !important;
+  }
+  .btnTwitter {
+    background-color: #1d9bf0;
+  }
+  .btnLine {
+    background-color: #06c755;
+  }
+  .btnGoogle {
+    background: $white;
+    color: $text-color;
+    margin-bottom: set-vw(130);
+  }
+  .logo {
+    position: absolute;
+    left: set-vw(22);
+    top: 50%;
+    transform: translateY(-50%);
+    height: set-vw(40);
+  }
+  .description {
+    @include fs-vw(26);
+    line-height: 2;
+    text-align: center;
+    a {
+      color: $malibu;
+      font-weight: bold;
+    }
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  .upload {
+    margin-top: set-vw(70);
+    :global {
+      .ant-upload.ant-upload-select-picture-card {
+        margin: 0 auto;
+        width: set-vw(200);
+        height: auto;
+        background-color: transparent;
+        border: unset;
+        .ant-upload {
+          flex-direction: column;
+        }
+      }
+    }
+    .avatar {
+      width: set-vw(200);
+      height: set-vw(200);
+      border: 1px solid $border-color-primary;
+      cursor: pointer;
+    }
+    .btnImage {
+      margin-top: set-vw(20);
+      background: $black;
+      color: $white;
+      height: set-vw(60) !important;
+      width: set-vw(160);
+      font-size: set-vw(26);
+      line-height: set-vw(26);
+      font-weight: bold;
+      border-radius: set-vw(8);
+      border: unset;
+    }
+  }
+
+  .description {
+    @include fs-vw(24);
+    margin-bottom: set-vw(80);
+  }
+
+  .formItem {
+    margin-bottom: set-vw(20) !important;
+  }
+  .formItemDefault {
+    margin-bottom: set-vw(40) !important;
+    align-items: center;
+    :global {
+      .ant-form-item-label label {
+        @include fs-vw(24);
+        font-weight: bold;
+      }
+    }
+
+    .iconSelect {
+      @include fs-vw(26);
+    }
+    .radioGroup {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      :global {
+        .ant-radio-wrapper {
+          margin-bottom: 0 !important;
+          @include fs-vw(26);
+          span.ant-radio + * {
+            white-space: pre;
+          }
+          .ant-radio .ant-radio-inner {
+            border-color: #999;
+          }
+          .ant-radio-checked::after {
+            border-color: #999;
+          }
+          .ant-radio-inner {
+            border-radius: 50% !important;
+            width: set-vw(22);
+            height: set-vw(22);
+            border: 1px solid #999 !important;
+          }
+          .ant-radio-checked .ant-radio-inner::after {
+            display: unset;
+            margin-top: unset;
+            margin-left: unset;
+            border: unset;
+            width: set-vw(10);
+            height: set-vw(10);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: #999;
+          }
+        }
+      }
+    }
+  }
+
+  .formItemDefaultCustom {
+    display: flex;
+    align-items: center !important;
+    margin-bottom: set-vw(40) !important;
+
+    :global {
+      .ant-form-item-label label {
+        @include fs-vw(24);
+        font-weight: bold;
+      }
+
+      .ant-form-item-label {
+        flex: 1 1 !important;
+      }
+      .ant-form-item-control {
+        flex: 1 1 !important;
+      }
+      .ant-radio-group {
+        display: flex;
+
+        span.ant-radio + * {
+          white-space: pre;
+          @include fs-vw(26);
+        }
+      }
+      .ant-col-6 {
+        max-width: 31% !important;
+      }
+      .ant-form-item-label {
+        padding-bottom: 0 !important;
+      }
+      .ant-form-item-required {
+        &::before {
+          display: none !important;
+        }
+      }
+      .ant-select-arrow svg {
+        fill: #999 !important;
+      }
+    }
+    .radioGroup {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      :global {
+        .ant-radio-wrapper {
+          margin-bottom: 0 !important;
+          @include fs-vw(26);
+          .ant-radio .ant-radio-inner {
+            border-color: #999;
+          }
+          .ant-radio-checked::after {
+            border-color: #999;
+          }
+          .ant-radio-inner {
+            border-radius: 50% !important;
+            width: set-vw(22);
+            height: set-vw(22);
+            border: 1px solid #999 !important;
+          }
+          .ant-radio-checked .ant-radio-inner::after {
+            display: unset;
+            margin-top: unset;
+            margin-left: unset;
+            border: unset;
+            width: set-vw(10);
+            height: set-vw(10);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: #999;
+          }
+        }
+      }
+    }
+  }
+
+  .inputName {
+    border-radius: 4px;
+    max-width: 500px;
+    width: 100%;
+    height: set-vw(60);
+    border: 1px solid $border-color-primary;
+    margin: set-vw(60) 0 set-vw(10);
+    @include fs-vw(26);
+  }
+
+  .btnSubmit {
+    display: block;
+    margin: set-vw(80) auto 0;
+    background: #66ccff;
+    border: unset;
+    border-radius: 5px;
+    color: $white;
+    height: set-vw(80) !important;
+    @include fs-vw(28);
+    font-weight: bold;
+    padding: 0 set-vw(24);
+    box-shadow: 0 set-vw(4) set-vw(4) rgba(0, 0, 0, 0.25);
+  }
+}

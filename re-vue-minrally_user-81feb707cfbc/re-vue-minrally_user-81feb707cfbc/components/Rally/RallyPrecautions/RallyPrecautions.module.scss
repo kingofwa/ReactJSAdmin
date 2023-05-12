@@ -1,0 +1,90 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.RallyPrecautions {
+  padding: set-vw(24) set-vw(30);
+  background-color: $white;
+  margin-bottom: set-vw(26);
+  margin-top: set-vw(30);
+  padding-bottom: set-vw(15);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.rowTitle {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px $silver;
+  padding-bottom: set-vw(20);
+}
+
+.date {
+  font-weight: 400;
+  color: $text-color;
+  margin-bottom: 0;
+  @include fs-vw(22);
+  flex-shrink: 0;
+}
+
+.status {
+  font-weight: 700;
+  color: $white;
+  padding: set-vw(4) set-vw(20);
+  background-color: $malibu;
+  margin-left: set-vw(20);
+  margin-bottom: 0;
+  @include fs-vw(20);
+}
+
+.title {
+  font-weight: 700;
+  color: $text-color;
+  margin-bottom: 0;
+  margin-top: set-vw(6);
+  flex: 1;
+  @include fs-vw(26);
+  border-left: solid set-vw(4) $malibu;
+  padding-left: set-vw(10);
+}
+
+.content {
+  font-weight: 400;
+  color: $text-color;
+  margin-top: set-vw(20);
+  padding-left: set-vw(16);
+  @include fs-vw(24);
+  border-bottom: solid 1px $border-color-primary;
+  padding-bottom: set-vw(50);
+  white-space: break-spaces;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.collapseIcon {
+  width: set-vw(20);
+  height: set-vw(24);
+}
+
+.rowDescription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: set-vw(30) set-vw(10) 0 set-vw(10);
+}
+
+.description {
+  margin: 0;
+  font-weight: 700;
+  color: $text-color;
+  @include fs-vw(26);
+}
+.date {
+  font-weight: 400;
+  @include fs-vw(26);
+  color: $silver;
+}

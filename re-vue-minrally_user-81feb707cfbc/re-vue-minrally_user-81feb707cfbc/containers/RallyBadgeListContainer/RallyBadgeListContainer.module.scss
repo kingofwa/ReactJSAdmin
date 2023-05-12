@@ -1,0 +1,98 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.wrapper {
+  background-color: $white;
+  // height: 100%;
+  min-height: calc(100vh - set-vw(100));
+  overflow-y: auto;
+}
+
+.icBack {
+  width: set-vw(36);
+  position: absolute;
+  left: set-vw(30);
+  // top: set-vw(40);
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: set-vw(26) set-vw(30);
+  justify-content: center;
+  border-bottom: solid 1px $border-color-primary;
+}
+
+.title {
+  margin: 0;
+  font-weight: bold;
+  @include fs-vw(28);
+}
+
+.actions {
+  margin-top: set-vw(50);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+
+  :global {
+    button {
+      padding: set-vw(26) set-vw(24) !important;
+      background-color: $text-color !important;
+
+      span {
+        color: white !important;
+        @include fs-vw(28);
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+  }
+}
+
+.content {
+  padding: set-vw(40) set-vw(43);
+}
+
+.badgeTitle {
+  font-weight: 700;
+  @include fs-vw(46);
+  text-align: center;
+}
+
+.hightLight {
+  color: $malibu;
+}
+
+.badgeList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: set-vw(34);
+  justify-content: center;
+
+  .badge {
+    width: set-vw(140);
+    height: set-vw(140);
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .badgeName {
+    text-align: center;
+    margin-top: set-vw(30);
+    font-weight: 700;
+    @include fs-vw(24);
+    max-width: set-vw(149);
+    word-break: break-word;
+  }
+}

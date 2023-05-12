@@ -1,0 +1,43 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  padding: 0 set-vw(30) set-vw(50); // padding bot = height menu 100
+  background: #f2f2f2;
+  .infiniteScroll {
+    overflow: unset !important;
+  }
+}
+
+.totalResult {
+  font-weight: bold;
+  font-size: set-vw(24);
+  line-height: set-vw(24);
+  color: $text-color;
+}
+.switching {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: set-vw(30);
+  gap: set-vw(30);
+  margin-bottom: set-vw(30);
+}
+
+.label {
+  font-style: normal;
+  font-weight: 400;
+  @include fs-vw(26);
+  color: $black;
+}
+
+.icon {
+  width: set-vw(36);
+  height: set-vw(36);
+  cursor: pointer;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}

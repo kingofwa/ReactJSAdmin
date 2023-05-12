@@ -1,0 +1,55 @@
+@import "~include-media/dist/_include-media.scss";
+
+$primary-color: #6396c7;
+$secondary-color: #6396c7;
+$red-important-color: #ff6868;
+
+$text-color: #333333;
+$text-color-secondary: #404040;
+
+$bg-color: #00689f;
+
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+$font-style: normal;
+// $font-family: "corporate-logo-ver2, sans-serif";
+
+$gray: #838282;
+$wild-sand: #f4f4f4;
+$bittersweet: #ff6869;
+$white: #ffffff;
+$black: #000;
+$gallery: #ececec;
+
+$padding-x: 1.125rem;
+
+$border-radius: 5px;
+$border-color-primary: #cccccc;
+$mercury: #f2f2f2;
+$silver: #cccccc;
+$malibu: #66ccff;
+$dusty-gray: #999999;
+$concrete: #f2f2f2;
+
+$breakpoints: (
+  ip5: 320px,
+  sp: 375px,
+  tablet: 750px,
+  pc: 1024px,
+  lg: 1200px,
+  xl: 1366px
+);
+
+// landing page
+$height-header-pc: 120px;
+$height-header-sp: 64px;
+$height-footer-pc: 322px;
+$height-footer-sp: 464px;
+
+$color-notification: #ff6666;
+
+$max-width: 600px;
+
+$witch-haze: #fffa91;
+$bg-back-rgba: rgba(0, 0, 0, 0.5);

@@ -1,0 +1,4 @@
+REACT_APP_API_URL=https://dev-admin.37rally.com
+NODE_PATH=src
+REACT_APP_GOOGLE_KEY=
+REACT_APP_USER_SITE_URL=https://dev-phase2.37rally.com

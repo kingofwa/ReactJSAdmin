@@ -1,0 +1,81 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.history {
+  background: #f2f2f2;
+  padding: 20px;
+  .historyList {
+    padding-bottom: set-vw(40);
+    .historyItem {
+      position: relative;
+      padding-left: set-vw(16);
+      padding-bottom: set-vw(30);
+      border-left: 2px solid #66ccff;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 27px;
+        left: -3px;
+        width: 4px;
+        height: 4px;
+        background-color: #66ccff;
+        z-index: 3;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 17px;
+        left: -3px;
+        width: 4px;
+        height: 24px;
+        background-color: #f2f2f2;
+        z-index: 2;
+      }
+      .content {
+        position: relative;
+        background-color: $white;
+        min-height: set-vw(107);
+        padding: set-vw(16) set-vw(20);
+        font-weight: bold;
+        color: $black;
+        @include fs-vw(16);
+
+        &::after {
+          content: "";
+          position: absolute;
+          clip-path: polygon(70% 1%, 0 56%, 70% 100%);
+          background-color: $white;
+          left: -10px;
+          top: 15px;
+          width: set-vw(23);
+          height: set-vw(26);
+        }
+        .textLink {
+          color: #66ccff;
+        }
+
+        .date {
+          color: #999;
+          font-weight: 400;
+        }
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .btnShowAll {
+    display: block;
+    height: set-vw(80);
+    width: set-vw(300);
+    padding: 0;
+    margin: 0 auto;
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    @include fs-vw(28);
+    line-height: set-vw(80);
+    border-radius: 5px;
+  }
+}

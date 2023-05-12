@@ -1,0 +1,62 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.collapse {
+  border: unset;
+  background-color: unset;
+  border-radius: 0;
+  margin-top: set-vw(30);
+  :global {
+    .ant-collapse-item {
+      border-bottom: unset;
+      .ant-collapse-header {
+        background-color: $white;
+        border-radius: unset !important;
+        line-height: 1;
+        padding: set-vw(23) set-vw(30);
+        &::after {
+          content: "";
+          position: absolute;
+          height: set-vw(30);
+          width: set-vw(4);
+          left: set-vw(30);
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #66ccff;
+        }
+      }
+      .ant-collapse-content {
+        border-top: unset;
+        border-radius: unset;
+        &-box {
+          padding: 0;
+        }
+      }
+      .ant-collapse-arrow {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: set-vw(12) !important;
+      }
+    }
+  }
+  .iconArrow {
+    color: $black;
+    font-size: set-vw(20) !important;
+    right: set-vw(30) !important;
+  }
+  .title {
+    padding-left: set-vw(14);
+    font-weight: bold;
+    @include fs-vw(28);
+    line-height: set-vw(30);
+    color: $text-color;
+  }
+  .subTitle {
+    color: $border-color-primary;
+    @include fs-vw(28);
+    line-height: set-vw(30);
+    color: $black;
+  }
+}

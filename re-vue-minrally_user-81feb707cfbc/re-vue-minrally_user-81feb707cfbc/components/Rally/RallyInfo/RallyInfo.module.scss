@@ -1,0 +1,223 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.rally {
+  background-color: $white;
+}
+
+.rallyContent {
+  padding: set-vw(37) set-vw(30) set-vw(30) set-vw(23);
+}
+
+.rallyTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .title {
+    font-weight: 700;
+    @include fs-vw(28);
+    color: $text-color;
+    margin: 0;
+    padding: 0 set-vw(40);
+    text-align: center;
+  }
+
+  .icBackWrap {
+    width: set-vw(14);
+    height: set-vw(20);
+    padding: set-vw(15);
+  }
+
+  .icBack {
+    width: set-vw(36);
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.tags {
+  display: flex;
+  gap: set-vw(20);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: set-vw(37);
+  margin-bottom: set-vw(14);
+  font-weight: bold;
+
+  .tag {
+    font-style: normal;
+    font-weight: bold;
+    color: $malibu;
+    @include fs-vw(24);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.reaction {
+  display: flex;
+  gap: set-vw(20);
+  align-items: center;
+
+  .reactionItem {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .reactionIcon {
+    width: set-vw(30);
+    height: set-vw(30);
+    margin-right: set-vw(10);
+    cursor: pointer;
+  }
+
+  .reactionLabel {
+    color: $text-color;
+    @include fs-vw(20);
+    font-weight: bold;
+  }
+}
+
+.shareWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .share {
+    background-color: $text-color;
+    color: $white;
+    border-radius: set-vw(8);
+    padding: set-vw(7) set-vw(10);
+    cursor: pointer;
+    line-height: 1;
+    font-weight: 700;
+    @include fs-vw(22);
+
+    .icShare {
+      width: set-vw(24);
+      height: set-vw(24);
+      margin-left: set-vw(10);
+    }
+  }
+}
+
+.rallyImage {
+  width: 100%;
+  height: set-vw(422);
+  position: relative;
+
+  .img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.limitTime {
+  position: absolute;
+  left: set-vw(20);
+  bottom: set-vw(20);
+  background-color: black;
+  color: white;
+  @include fs-vw(26);
+  padding: set-vw(7) set-vw(28);
+  border-radius: set-vw(8);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: set-vw(20);
+  bottom: set-vw(20);
+  padding: set-vw(10);
+  border-radius: 8px;
+  max-width: set-vw(480);
+  background: rgba(255, 255, 255, 0.7);
+
+  .userName {
+    margin-left: set-vw(10);
+    margin-right: set-vw(30);
+    @include fs-vw(20);
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .follow {
+    background: $text-color;
+  }
+
+  .active {
+    background: $malibu;
+  }
+
+  .avt {
+    width: set-vw(60);
+    height: set-vw(60);
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  button {
+    position: relative !important;
+    right: 0;
+  }
+}
+
+.CouponWrapper {
+  background: $concrete;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: set-vw(20) set-vw(24);
+
+  .Coupon {
+    text-align: center;
+    color: $malibu;
+    padding: set-vw(22) 0;
+    border: solid 1px $malibu;
+    border-radius: set-vw(100);
+    font-weight: 700;
+    @include fs-vw(28);
+    line-height: set-vw(34);
+    width: 100%;
+    background-color: $white;
+    cursor: pointer;
+  }
+}
+.imageOverlay {
+  position: absolute;
+  background: $bg-back-rgba;
+  color: $white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  line-height: set-vw(60);
+  @include fs-vw(50);
+  font-weight: 700;
+}

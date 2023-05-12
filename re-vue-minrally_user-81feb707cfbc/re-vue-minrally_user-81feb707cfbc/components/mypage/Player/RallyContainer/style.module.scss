@@ -1,0 +1,8 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.container {
+  // padding-top: set-vw(79);
+  max-width: $max-width;
+  margin: 0 auto;
+}

@@ -1,0 +1,36 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.labelDate {
+  // margin-bottom: set-vw(40);
+  @include fs-vw(26);
+  line-height: 31px;
+}
+
+.formItemDefault {
+  :global {
+    .ant-form-item-control-input input {
+      margin-top: 0 !important;
+    }
+    .ant-select-selector {
+      height: set-vw(60);
+    }
+    .ant-select-selection-item,
+    .ant-select-selection-placeholder {
+      @include fs-vw(26);
+      font-weight: 400;
+      line-height: set-vw(60);
+    }
+    .ant-picker-input {
+      .ant-picker-suffix {
+        display: none;
+      }
+    }
+  }
+}
+
+.dateRange {
+  display: flex;
+  flex-direction: column;
+  gap: set-vw(20);
+}

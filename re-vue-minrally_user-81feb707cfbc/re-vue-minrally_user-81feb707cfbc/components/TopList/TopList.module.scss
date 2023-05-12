@@ -1,0 +1,298 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.grid {
+  :global {
+    .ant-list-items {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: min(30px, 4vw);
+      gap: min(30px, 4vw);
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: set-vw(186);
+    background-color: $mercury;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+
+  .card {
+    width: calc(50% - set-vw(15));
+    border-radius: 5px 5px 0px 0px;
+    background-color: $white;
+    margin-bottom: set-vw(10);
+    border-radius: 0 0 5px 5px;
+  }
+
+  .date {
+    @include fs-vw(20);
+  }
+
+  .listDate {
+    display: none;
+  }
+
+  .title {
+    @include fs-vw(24);
+    cursor: pointer;
+    line-height: 1;
+  }
+}
+
+.container {
+  padding: 0 set-vw(30);
+}
+
+.switching {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: set-vw(30);
+  gap: set-vw(30);
+  margin-bottom: set-vw(30);
+}
+
+.label {
+  font-style: normal;
+  font-weight: 400;
+  @include fs-vw(26);
+  color: $text-color;
+}
+
+.icon {
+  width: set-vw(36);
+  // height: set-vw(36);
+  cursor: pointer;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  padding: set-vw(30);
+  margin: 0 max(set-vw(-30), -30px);
+
+  .image {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: set-vw(30);
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px $gallery;
+  }
+
+  .card:last-child {
+    border: none;
+  }
+
+  .listDate {
+    font-weight: 400;
+    color: $dusty-gray;
+    white-space: nowrap;
+    @include fs-vw(22);
+  }
+}
+
+.single {
+  :global {
+    .ant-list-items {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: min(30px, 4vw);
+      gap: min(30px, 4vw);
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: set-vw(388);
+    background-color: $mercury;
+    position: relative;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .pr {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $dusty-gray;
+      color: $white;
+      border-radius: 4px 0 0 0;
+      line-height: 1;
+      @include fs-vw(20);
+      font-weight: 700;
+      padding: set-vw(11);
+    }
+
+    .date {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background-color: $dusty-gray;
+      color: $white;
+      padding: set-vw(9) set-vw(16);
+      font-weight: 700;
+      line-height: 1;
+      @include fs-vw(20);
+    }
+  }
+
+  .card {
+    width: 100%;
+    background-color: $white;
+    margin-bottom: set-vw(10);
+    border-radius: 0 0 5px 5px;
+  }
+
+  .listDate {
+    display: none;
+  }
+}
+
+.reaction {
+  display: flex;
+  gap: set-vw(20);
+  align-items: center;
+  margin-bottom: set-vw(18);
+
+  .reactionItem {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .reactionIcon {
+    width: set-vw(30);
+    height: set-vw(30);
+    margin-right: set-vw(10);
+  }
+
+  .reactionLabel {
+    color: black;
+    @include fs-vw(20);
+    font-weight: bold;
+  }
+}
+
+.userInfo {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .user {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .avatar {
+    width: set-vw(40);
+    height: set-vw(40);
+    border-radius: 50%;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .userName {
+    font-weight: 400;
+    margin-left: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $dusty-gray;
+    @include fs-vw(24);
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  margin: set-vw(24) 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include fs-vw(28);
+  color: $text-color;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.tags {
+  display: flex;
+  gap: set-vw(20);
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .tag {
+    font-style: normal;
+    font-weight: bold;
+    color: $malibu;
+    @include fs-vw(24);
+    white-space: nowrap;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+
+.info {
+  padding: set-vw(20);
+  width: 100%;
+}
+
+.pr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $dusty-gray;
+  color: $white;
+  border-radius: 4px 0 0 0;
+  font-weight: 400;
+  padding: set-vw(10);
+  @include fs-vw(20);
+  line-height: 1;
+}
+
+.date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: $dusty-gray;
+  color: $white;
+  padding: set-vw(13) set-vw(30);
+  font-weight: 400;
+  @include fs-vw(24);
+  line-height: 1;
+}

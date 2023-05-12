@@ -1,0 +1,25 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.search {
+  position: relative;
+  margin-bottom: set-vw(30) !important;
+  .searchIcon {
+    width: set-vw(40);
+    height: set-vw(40);
+    position: absolute;
+    right: set-vw(11);
+    top: 10px;
+    cursor: pointer;
+  }
+
+  :global {
+    .ant-input {
+      height: set-vw(60);
+      padding: set-vw(15);
+      font-size: set-vw(26);
+      line-height: set-vw(26);
+      padding-right: set-vw(60);
+    }
+  }
+}

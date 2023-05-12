@@ -1,0 +1,59 @@
+.image-upload {
+  margin-bottom: 0;
+
+  &.logo-input {
+    .ant-upload-picture-card-wrapper {
+      .ant-upload-list-item-thumbnail {
+        &, img {
+          object-fit: contain;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .ant-upload {
+    color: #c8c8c8;
+    flex-direction: column;
+
+    &-picture-card-wrapper {
+      flex: 0 0 120px;
+      height: 120px;
+      margin-right: 2rem;
+    }
+
+    &.ant-upload-select-picture-card {
+      margin: 0;
+      border-radius: 0;
+    }
+
+    &-list {
+      &-picture-card-container {
+        margin: 0;
+      }
+
+      &-item {
+        margin: 0 !important;
+        border-radius: 0 !important;
+      }
+    }
+
+    &-text {
+      font-weight: bold;
+    }
+  }
+
+  .anticon {
+    font-size: 2.75rem;
+  }
+
+  .ant-form-item-control-input-content {
+    display: flex;
+  }
+
+  &__note {
+    background: #e6e6e6;
+    color: black;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,123 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.completeItem {
+  padding-bottom: set-vw(10);
+  border-bottom: solid 1px $border-color-primary;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .title {
+    display: flex;
+    gap: set-vw(20);
+    font-weight: 700;
+    @include fs-vw(26);
+    padding: set-vw(30) set-vw(30) set-vw(10) set-vw(30);
+    position: relative;
+    cursor: pointer;
+  }
+
+  .collapseIcon {
+    width: set-vw(20);
+    height: set-vw(24);
+  }
+
+  .collapse {
+    position: absolute;
+    right: set-vw(30);
+  }
+
+  .row {
+    padding: 0 set-vw(30);
+    display: flex;
+    align-items: center;
+    gap: set-vw(20);
+    margin-top: set-vw(20);
+  }
+
+  .label {
+    font-weight: bold;
+    @include fs-vw(26);
+    margin-bottom: 0;
+  }
+
+  .info {
+    font-weight: normal;
+    @include fs-vw(26);
+  }
+
+  .certificate {
+    width: 100%;
+    height: set-vw(1005);
+    position: relative;
+    margin-top: set-vw(30);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .certificateTitle {
+      font-weight: bold;
+      @include fs-vw(80);
+      position: absolute;
+      top: set-vw(106);
+      left: set-vw(236);
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    .certificateSubTitle {
+      font-weight: 700;
+      @include fs-vw(32);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: set-vw(290);
+      text-align: center;
+    }
+
+    .certificateDescription {
+      font-weight: 700;
+      @include fs-vw(55);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: set-vw(420);
+      text-align: center;
+      span {
+        @include fs-vw(40);
+      }
+    }
+
+    .certificateSubDescription {
+      font-weight: 700;
+      @include fs-vw(30);
+      position: absolute;
+      left: set-vw(65);
+      right: set-vw(65);
+      top: set-vw(640);
+      text-align: left;
+    }
+
+    .certificateContent {
+      font-weight: 700;
+      @include fs-vw(26);
+      position: absolute;
+      right: set-vw(75);
+      top: set-vw(780);
+      text-align: right;
+    }
+
+    .certificateNo {
+      position: absolute;
+      @include fs-vw(24);
+      left: 0;
+      right: 0;
+      bottom: set-vw(35);
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,179 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.list {
+  padding-top: set-vw(24);
+  background-color: $white;
+  padding-bottom: set-vw(30);
+
+  .imgCopy {
+    width: set-vw(30);
+    margin-right: set-vw(10);
+  }
+  .partiItem {
+    padding: set-vw(20) 0;
+    margin: 0 set-vw(30);
+    border-bottom: 1px solid $border-color-primary;
+    &:first-child {
+      border-top: 1px solid $border-color-primary;
+    }
+    .rallyName {
+      cursor: pointer;
+      color: $text-color;
+    }
+    .grandName {
+      cursor: pointer;
+      color: $text-color;
+    }
+    .title {
+      display: flex;
+      align-items: center;
+      @include fs-vw(26);
+      font-weight: bold;
+      color: $text-color;
+      .tag {
+        background-color: $text-color;
+        width: set-vw(80);
+        text-align: center;
+        @include fs-vw(20);
+        color: $white;
+        margin-right: set-vw(20);
+        line-height: set-vw(30);
+        font-weight: bold;
+        cursor: pointer;
+        &.completed {
+          background-color: #66ccff;
+        }
+      }
+    }
+    .desc,
+    .result {
+      display: flex;
+      margin-top: set-vw(12);
+      @include fs-vw(20);
+      font-weight: bold;
+      color: $text-color;
+      div {
+        line-height: 1;
+        &:first-child {
+          margin-right: set-vw(30);
+        }
+        .textLink {
+          color: #66ccff;
+        }
+        span {
+          margin-left: set-vw(15);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .listItem {
+    padding: 0;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 set-vw(30);
+    border-bottom: 1px solid $border-color-primary;
+    // &:first-child {
+    //   border-top: 1px solid $border-color-primary;
+    // }
+    .userName {
+      cursor: pointer;
+      color: $text-color;
+      @include fs-vw(26);
+      font-weight: 700;
+    }
+
+    :global {
+      .ant-list-item-extra {
+        margin: 0;
+      }
+      .ant-list-item-main {
+        display: flex;
+        align-items: center;
+        padding: set-vw(23) 0;
+        color: $black;
+        @include fs-vw(24);
+        font-weight: bold;
+      }
+    }
+    .favorite {
+      cursor: pointer;
+    }
+    .image {
+      width: set-vw(40);
+    }
+    .avatar {
+      width: set-vw(80);
+      height: set-vw(80);
+      margin-right: set-vw(20);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    button {
+      position: relative !important;
+      right: 0;
+    }
+  }
+  :global {
+    .ant-list-pagination {
+      display: flex;
+      justify-content: center;
+      .ant-pagination-prev {
+        display: none;
+      }
+      .ant-pagination-item {
+        border: unset;
+        font-weight: bold;
+        height: set-vw(40);
+        min-width: set-vw(40);
+        @include fs-vw(28);
+        line-height: set-vw(40);
+        border-radius: unset;
+        a {
+          color: $black;
+        }
+        &.ant-pagination-item-active {
+          background-color: $border-color-primary;
+          a {
+            color: $white;
+          }
+        }
+      }
+      .ant-pagination-next {
+        display: none;
+      }
+    }
+  }
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.name {
+  color: $text-color;
+}
+
+.follower {
+  color: #999999;
+  font-weight: 400;
+  @include fs-vw(20);
+  line-height: set-vw(24);
+  padding: set-vw(1) set-vw(4);
+  background: #f2f2f2;
+  border-radius: set-vw(4);
+  max-width: fit-content;
+}
+
+.btnUnfollow {
+  padding: 5px;
+  width: 160px;
+  span {
+    color: #FF6666;
+  }
+}
+.btnFloat {
+  z-index: 1;
+}

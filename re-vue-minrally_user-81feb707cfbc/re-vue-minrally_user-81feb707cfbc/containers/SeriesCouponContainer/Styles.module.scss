@@ -1,0 +1,48 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.wrapper {
+  background-color: $white;
+  min-height: 100vh;
+}
+
+.icBack {
+  width: set-vw(36);
+  position: absolute;
+  left: set-vw(30);
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: set-vw(26) set-vw(30);
+  justify-content: center;
+  border-bottom: solid 1px $border-color-primary;
+  background-color: $white;
+}
+
+.rallyName {
+  margin-bottom: 0;
+  @include fs-vw(28);
+  font-weight: bold;
+  padding-left: set-vw(50);
+  text-align: center;
+  word-break: break-word;
+}
+
+.title {
+  text-align: center;
+  padding: set-vw(20) set-vw(30);
+  @include fs-vw(28);
+  color: $text-color;
+  font-weight: 700;
+  background-color: $white;
+}
+
+.content {
+  padding-top: set-vw(20);
+}

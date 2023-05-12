@@ -1,0 +1,63 @@
+@import "@styles/variables";
+@import "@styles/mixins";
+
+.seriesItem {
+  padding: set-vw(24) set-vw(30);
+  background-color: $white;
+  margin-bottom: set-vw(26);
+  margin-top: set-vw(30);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.rowTitle {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px $silver;
+  padding-bottom: set-vw(20);
+}
+
+.date {
+  font-weight: 400;
+  color: $text-color;
+  margin-bottom: 0;
+  @include fs-vw(22);
+}
+
+.status {
+  font-weight: 700;
+  color: $white;
+  padding: set-vw(4) set-vw(20);
+  background-color: $malibu;
+  margin-left: set-vw(20);
+  margin-bottom: 0;
+  @include fs-vw(20);
+}
+
+.title {
+  font-weight: 700;
+  color: $text-color;
+  margin-bottom: 0;
+  margin-top: set-vw(6);
+  flex: 1;
+  @include fs-vw(26);
+  border-left: solid 2px $malibu;
+  padding-left: set-vw(10);
+}
+
+.content {
+  font-weight: 400;
+  color: $text-color;
+  margin-top: set-vw(20);
+  padding-left: set-vw(16);
+  @include fs-vw(26);
+  white-space: break-spaces;
+}
+
+.collapseIcon {
+  width: set-vw(20);
+  height: set-vw(24);
+}

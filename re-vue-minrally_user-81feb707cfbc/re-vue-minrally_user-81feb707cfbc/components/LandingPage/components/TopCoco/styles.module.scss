@@ -1,0 +1,202 @@
+@import "@styles/variables";
+
+.main {
+  margin-bottom: 30px;
+
+  .textWrap {
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: $text-color;
+    margin-bottom: 30px;
+  }
+
+  .list {
+    .itemWrap {
+      position: relative;
+      padding-bottom: 100px;
+      margin-bottom: 50px;
+
+      .itemText {
+        height: 335px;
+        background: $concrete;
+        border-radius: 20px;
+
+        .itemTitle {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 38px;
+          padding-bottom: 20px;
+          padding-top: 30px;
+          text-align: center;
+        }
+
+        .itemTextDetail {
+          margin-bottom: 50px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 28px;
+          padding: 0 61px;
+        }
+      }
+
+      .imgBadge {
+        position: absolute;
+        width: calc(100% - 60px); //padding col itemWrap 30px
+        display: flex;
+        justify-content: center;
+        // bottom: 0;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-bottom: 10px;
+
+    .textWrap {
+      margin-top: 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .list {
+      .itemWrap {
+        padding-bottom: 75px;
+        margin-bottom: 40px;
+
+        .itemText {
+          max-width: 100%;
+          height: 335px;
+
+          .itemTitle {
+            font-size: 22px;
+            line-height: 32px;
+          }
+
+          .itemTextDetail {
+            font-size: 16px;
+            line-height: 26px;
+            padding: 0 20px;
+          }
+        }
+
+        .imgBadge {
+          width: 100%;
+          padding: 0 12px;
+        }
+      }
+    }
+  }
+
+  .mapDefine {
+    margin-bottom: 40px;
+
+    img {
+      width: 100%;
+      height: 135px;
+    }
+  }
+
+  .mapCheckin {
+    &Title {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    .textDetail {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  .signup {
+    button {
+      padding: 16px 8px;
+      font-size: 18px;
+      line-height: 18px;
+      cursor: pointer;
+    }
+  }
+}
+
+.isTop.main {
+  margin-bottom: 10px;
+
+  .textWrap {
+    margin-top: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .list {
+    .itemWrap {
+      padding-bottom: 75px;
+      margin-bottom: 40px;
+
+      .itemText {
+        max-width: 100%;
+        height: 335px;
+
+        .itemTitle {
+          font-size: 22px;
+          line-height: 32px;
+        }
+
+        .itemTextDetail {
+          font-size: 15px;
+          line-height: 26px;
+          padding: 0 20px;
+        }
+      }
+
+      .imgBadge {
+        width: 70%;
+        padding: 0 12px;
+      }
+    }
+  }
+}
+
+.mapDefine {
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+    height: 135px;
+  }
+}
+
+.mapCheckin {
+  &Title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .textDetail {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+
+.signup {
+  button {
+    padding: 16px 8px;
+    font-size: 18px;
+    line-height: 18px;
+    cursor: pointer;
+  }
+}

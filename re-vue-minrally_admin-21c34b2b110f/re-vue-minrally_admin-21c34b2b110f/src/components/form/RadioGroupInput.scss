@@ -1,0 +1,16 @@
+@import '@styles/variables';
+
+.radio-group-input-row {
+  display: flex;
+  align-items: center;
+
+  .ant-radio-wrapper {
+    span {
+      color: $black;
+    }
+  }
+
+  .extra-row {
+    margin-left: 10px;
+  }
+}
